@@ -1,0 +1,232 @@
+---
+title: "Sarah Honors Anlaysis"
+author: "Dan Yurovsky"
+date: "March 04, 2015"
+output:
+  html_document:
+    highlight: tango
+    theme: spacelab
+---
+```{r setup, include=FALSE}
+library(knitr)
+opts_chunk$set(message=FALSE, warning=FALSE, cache=TRUE)
+```
+
+Load libraries
+```{r, cache = FALSE}
+source("~/Projects/Other/Ranalysis/useful_dplyr.R")
+library(tidyr)
+library(magrittr)
+library(lme4)
+library(lmerTest)
+library(jsonlite)
+```
+
+Load Adult data
+```{r,cache=FALSE}
+all.result.files <- paste("adult_data/",
+                          list.files(path = "adult_data/", pattern = '*.json', 
+                                     all.files = FALSE), sep="");
+jsons <- lapply(all.result.files,fromJSON)
+workers <- sapply(jsons,function(x) x$WorkerId)
+adult.data <- bind_rows(sapply(jsons,function(x) x$answers$data,simplify=FALSE))
+
+adult.data$worker <- unlist(lapply(workers, function (x) rep(x,15)))
+```
+
+Munge adult data
+```{r}
+#Exclude multiple hits from a single participant
+firstHits <- adult.data %>%
+  group_by(worker) %>%
+  summarise(timeStamp = min(timestamp))
+
+adult.data <- inner_join(adult.data,firstHits) %>%
+  rename(condition = order) %>%
+  mutate(response = ifelse(response == "Y",TRUE,FALSE),
+         condition = ifelse(condition == 0,"Normal","Implausible")) %>%
+  mutate(condition = factor(condition,levels = c("Normal", "Implausible"))) %>%
+  rename(Literal = response) %>%
+  mutate(Literal = 1 - Literal)
+
+# How many people are left?
+ns <- adult.data %>%
+  group_by(condition) %>%
+  distinct(worker) %>%
+  summarise(n = n())
+
+print(ns)
+
+adult.train.data <- adult.data %>%
+  group_by(worker) %>%
+  filter(trialnum <= 8)
+# 
+# # Exclusions for wrong responses in training
+# adult.keep.train <- adult.train.data %>%
+#   summarise(Literal = mean(Literal)) %>%
+#   filter(Literal == 0)
+# 
+# # How many people are left?
+# print(nrow(adult.keep.train))
+
+adult.test.data <- adult.data %>%
+ # filter(worker %in% adult.keep.train$worker) %>%
+  group_by(condition,worker) %>%
+  filter(trialnum > 8)
+```
+
+Analyze adult data
+```{r}
+# Mixed effects model
+lm.adult <- glmer(Literal ~ condition + (1|worker) + (condition|pic1),
+                  family = "binomial", data = adult.test.data)
+
+print(summary(lm.adult))
+
+#subject level
+adult.mss <- adult.test.data %>%
+  summarise(Literal = mean(Literal))
+
+adult.ms <- adult.mss %>%
+  summarise_each(funs(mean,ci.high,ci.low),Literal) %>%
+  mutate(mean = mean-.5)
+```
+
+Plot adult data
+```{r}
+ggplot(adult.ms, aes(x=condition, y=mean)) +
+  geom_bar(stat="identity",position=position_dodge(1), fill = "steelblue")+
+  geom_linerange(aes(ymin = mean-ci.low,
+                      ymax = mean+ci.high),
+                  size = .8,
+                  show_guide = FALSE,
+                 position=position_dodge(1)) +
+  scale_fill_brewer(palette="Set1") +
+  theme_bw(base_size=14) +
+  geom_hline(aes(yintercept=0),lty=2)+
+  theme(legend.position="none", panel.grid=element_blank()) +
+  scale_x_discrete(name = "Condition") +
+    scale_y_continuous(name = "Preference for Literal",
+                     limits=c(-.25,.5))
+```
+
+Load child data
+```{r,cache=FALSE}
+child.data <- read.csv('sarah_honors_data_updated.csv')
+
+child.long.data <- gather(child.data,item,response,cat_kittens:pen) %>%
+  rename(condition = cond) %>%
+  mutate(condition = factor(condition,levels=c("normal","implausible"),
+                            labels = c("Normal", "Implausible"))) %>%
+  group_by(condition,item,subj_id) %>%
+  mutate(trial.type = ifelse(item %in% c("cat_kittens","book_table","shark_fish",
+                                         "wooden_blocks", "flowers_basket",
+                                         "house_door","bread_peanutbutter",
+                                         "knife_fork"), 
+                             "Familiar", "Novel")) %>%
+  rename(Literal = response) %>%
+  mutate(Literal = 1 - Literal)
+```
+
+Analayze child data
+
+Familiar data
+```{r,fig.height=5,fig.width=5}
+child.fam.data <- filter(child.long.data,trial.type=="Familiar") %>%
+  select(-trial.type)
+
+child.fam.ms <- child.fam.data %>%
+  group_by(condition) %>%
+  summarise_each(funs(na.mean,ci.high,ci.low),c(Literal)) %>%
+  mutate(type = "data") %>%
+  mutate(na.mean = na.mean-.5)
+
+ggplot(child.fam.ms, aes(x=condition, y=na.mean,fill=type)) +
+  geom_bar(stat="identity",position=position_dodge(1))+
+  geom_linerange(aes(ymin = na.mean-ci.low,
+                      ymax = na.mean+ci.high),
+                  size = .8,
+                  show_guide = FALSE,
+                 position=position_dodge(1)) +
+  scale_fill_brewer(palette="Set1") +
+  geom_hline(aes(yintercept=0),lty=2)+
+  theme_bw(base_size=14) +
+  theme(legend.position="none", panel.grid=element_blank()) +
+  scale_x_discrete(name = "Condition")+
+  scale_y_continuous(name = "Proportion Literal - .5",
+                     limits=c(-.5,.5))
+
+lm.child.fam <- glmer(Literal ~ condition + (1|subj_id) + (1|item),
+                family="binomial", data = child.fam.data)
+summary(lm.child.fam)
+```
+
+Analyze novel data
+```{r}
+child.fam.subj <- child.fam.data %>%
+  group_by(subj_id) %>%
+  summarise(Familiar = na.mean(Literal))
+
+child.nov.data <- child.long.data %>%
+  filter(trial.type == "Novel") %>%
+  left_join(child.fam.subj) %>%
+  select(-trial.type)
+
+
+child.lm <- glmer(Literal~ condition + (1|subj_id) + (condition|item),
+             family="binomial",data=child.nov.data)
+
+print(summary(child.lm))
+
+child.ms <- child.nov.data %>%
+  group_by(condition) %>%
+  summarise_each(funs(na.mean,ci.high,ci.low),Literal) %>%
+  mutate(type = "data") %>%
+  mutate(na.mean = na.mean - .5)
+```
+
+Plot
+```{r,fig.height=5,fig.width=6}
+#Plot alone
+ggplot(child.ms, aes(x=condition, y=na.mean,fill=type)) +
+  geom_bar(stat="identity",position=position_dodge(1))+
+  geom_linerange(aes(ymin = na.mean-ci.low,
+                      ymax = na.mean+ci.high),
+                  size = .8,
+                  show_guide = FALSE,
+                 position=position_dodge(1)) +
+  geom_hline(aes(yintercept=0),lty=2)+
+  scale_fill_brewer(palette="Set1") +
+  theme_bw(base_size=14) +
+  theme(legend.position="none", panel.grid=element_blank()) +
+  scale_x_discrete(name = "Condition")+
+  scale_y_continuous(name = "Proportion Literal Choices",
+                     limits=c(-.5,.5))
+```
+
+Plot all data together
+```{r,fig.width=5,fig.height=5}
+all.ms <- child.ms %>%
+  rename(mean = na.mean) %>%
+  mutate(group = "Children") %>%
+  bind_rows(mutate(adult.ms,group="Adults")) %>%
+  select(-type) %>%
+  mutate(group = factor(group,levels=c("Children","Adults")))
+
+ggplot(all.ms, aes(x=condition, y=mean,fill=group)) +
+  geom_bar(stat="identity",position=position_dodge(1))+
+  geom_linerange(aes(ymin = mean-ci.low,
+                      ymax = mean+ci.high),
+                  size = .8,
+                  show_guide = FALSE,
+                 position=position_dodge(1)) +
+  geom_hline(aes(yintercept=0),lty=2)+
+  scale_fill_brewer(palette="Set1") +
+  theme_bw(base_size=14) +
+  theme(legend.position=c(.2,.9), panel.grid=element_blank(),
+        legend.title=element_blank()) +
+  scale_x_discrete(name = "Condition")+
+  scale_y_continuous(name = "Preference for Literal Choices",
+                     limits=c(-.25,.5))
+
+```
