@@ -1,7 +1,7 @@
 ---
 title: "Sarah Honors Anlaysis"
 author: "Dan Yurovsky"
-date: "March 04, 2015"
+date: "May 12, 2015"
 output:
   html_document:
     highlight: tango
@@ -112,7 +112,7 @@ ggplot(adult.ms, aes(x=condition, y=mean)) +
 
 Load child data
 ```{r,cache=FALSE}
-child.data <- read.csv('sarah_honors_data_updated.csv')
+child.data <- read.csv('sarah_honors_data_updated_5-11.csv')
 
 child.long.data <- gather(child.data,item,response,cat_kittens:pen) %>%
   rename(condition = cond) %>%
