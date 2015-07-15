@@ -1,0 +1,142 @@
+---
+title: "Noisy Kids Replication Analysis"
+author: "Dan Yurovsky"
+date: "July 15, 2015"
+output:
+  html_document:
+    highlight: tango
+    theme: spacelab
+---
+```{r setup, include=FALSE}
+library(knitr)
+opts_chunk$set(message=FALSE, warning=FALSE, cache=TRUE)
+```
+
+Load libraries
+```{r, cache = FALSE}
+library(langcog)
+library(tidyr)
+library(magrittr)
+library(lme4)
+library(lmerTest)
+library(jsonlite)
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+library(readr)
+source('~/Projects/langcog/R/multiboot.R')
+```
+
+
+Load child data
+```{r load_child_data, cache=FALSE}
+#######################################################################
+############################ LOADING FILES ############################
+#######################################################################
+# grab all file names from data dir
+child.files <- list.files(path = "experiment_nicolette/data/", 
+                            pattern = 'results_*', all.files = FALSE)
+
+child.demos <- read_csv('experiment_nicolette/data/noisy_replication_demos.csv')
+
+# function for reading one child's data
+read.child <- function(filename) {
+  #read raw data and break up by html lists
+  data <- readLines(paste0("experiment_nicolette/data/",filename),warn=FALSE)
+  data <- unlist(strsplit(data,'<li>'))
+  data<- data[3:194]
+  
+  # clean up the data, getting rid of html escape characters, etc.
+  data <- gsub("\\\\\"","",data)
+  data <- gsub("</li>","",data)
+  data <- gsub("</ul>\\},\\{<ul>","",data)
+  data <- gsub("\"","",data)
+  data <- gsub("</ul>}]</ul>}","",data)
+  data <- gsub("{<ul>","",data,fixed=TRUE)
+    
+  # munge
+  split.data <- strsplit(data,": ")
+  split.frame <- data.frame(t(sapply(split.data,unlist)))
+  names(split.frame) <- c("measure", "value")
+  split.frame$subj <- filename
+  split.frame$trial <- sort(rep(1:12,16))
+  split.frame$order = split.frame$value[2]
+return(split.frame)
+}  
+
+child.long.data <- bind_rows(lapply(child.files,read.child)) %>%
+  filter(measure == "response") %>%
+  mutate(condition = factor(ifelse(order == "0", "Normal", "Implausible")),
+         trial.type = factor(ifelse(trial <= 8, "Familiar", "Novel")),
+         Literal = ifelse(value == "Y", 1, 0))
+
+child.demos$subj = unique(child.long.data$subj)
+child.long.data %<>% left_join(child.demos) %>%
+  filter(age >= 4, age <= 6) %>%
+  mutate(experiment = "replication") %>%
+  select(experiment,subj,age,condition,trial.type,Literal)
+```
+
+
+
+Load original child data
+```{r,cache=FALSE}
+original.child.data <- read.csv('sarah_honors_data_updated_5-11.csv')
+
+original.child.long.data <- gather(original.child.data,item,
+                                   response,cat_kittens:pen) %>%
+  rename(condition = cond, subj = subj_id) %>%
+  mutate(condition = factor(condition,levels=c("normal","implausible"),
+                            labels = c("Normal", "Implausible"))) %>%
+  group_by(condition,item,subj) %>%
+  mutate(trial.type = ifelse(item %in% c("cat_kittens","book_table","shark_fish",
+                                         "wooden_blocks", "flowers_basket",
+                                         "house_door","bread_peanutbutter",
+                                         "knife_fork"), 
+                             "Familiar", "Novel")) %>%
+  rename(Literal = response) %>%
+  mutate(Literal = 1 - Literal) %>%
+  filter(age >= 4, age <= 6) %>%
+  mutate(experiment = "original") %>%
+  ungroup() %>%
+  select(experiment, subj, age, condition,trial.type, Literal) 
+
+all.child.long.data <- bind_rows(child.long.data,original.child.long.data) %>%
+  group_by(experiment,condition, trial.type)
+```
+
+Analyze child data
+
+```{r child_analysis}
+ns <- all.child.long.data %>% 
+  ungroup() %>% 
+  select(experiment,trial.type,condition,subj) %>% 
+  distinct() %>% group_by(experiment,condition, trial.type) %>% 
+  summarise(n = n())
+
+kable(filter(ns, trial.type == "Novel"))
+
+child.results <- multi_boot(all.child.long.data, column="Literal",
+             statistics_functions = c("ci_lower","ci_upper")) %>%
+  left_join(summarise(all.child.long.data,Literal = mean(Literal))) %>%
+  left_join(ns)
+```
+
+Plot
+```{r child_plot,fig.height=5,fig.width=8}
+ggplot(child.results, aes(x=condition, y=Literal,fill=trial.type)) +
+  geom_bar(stat="identity",position=position_dodge(1))+
+  facet_grid(experiment~ trial.type) +
+  geom_linerange(aes(ymin = ci_lower,
+                      ymax = ci_upper),
+                  size = .8,
+                  show_guide = FALSE,
+                 position=position_dodge(1)) +
+  scale_fill_brewer(palette="Set1") +
+  geom_hline(aes(yintercept=.5),lty=2)+
+  theme_bw(base_size=14) +
+  theme(legend.position="none", panel.grid=element_blank()) +
+  scale_x_discrete(name = "Condition")+
+  scale_y_continuous(name = "Proportion choosing Literal",
+                     limits=c(0,1))
+```
