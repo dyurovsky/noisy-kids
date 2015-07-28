@@ -14,6 +14,7 @@ opts_chunk$set(message=FALSE, warning=FALSE, cache=TRUE)
 
 Load libraries
 ```{r, cache = FALSE}
+library(dplyr)
 library(langcog)
 library(tidyr)
 library(magrittr)
@@ -24,7 +25,6 @@ library(dplyr)
 library(tidyr)
 library(ggplot2)
 library(readr)
-source('~/Projects/langcog/R/multiboot.R')
 ```
 
 
@@ -37,7 +37,8 @@ Load child data
 child.files <- list.files(path = "experiment_nicolette/data/", 
                             pattern = 'results_*', all.files = FALSE)
 
-child.demos <- read_csv('experiment_nicolette/data/noisy_replication_demos.csv')
+child.demos <- read_csv('experiment_nicolette/data/noisy_replication_demos.csv') %>%
+  filter(Data==TRUE)
 
 # function for reading one child's data
 read.child <- function(filename) {
@@ -59,16 +60,34 @@ read.child <- function(filename) {
   split.frame <- data.frame(t(sapply(split.data,unlist)))
   names(split.frame) <- c("measure", "value")
   split.frame$subj <- filename
-  split.frame$trial <- sort(rep(1:12,16))
+  split.frame$trial <- sort(rep(1:16,12))
   split.frame$order = split.frame$value[2]
 return(split.frame)
 }  
 
+code.literal <- function(value,trial.type,condition) {
+  
+  literal = rep(0,length(value))
+  
+  literal[trial.type == "Familiar" & value == "Y"] <- 1
+  literal[condition == "Control" & value == "Y"] <- 1
+  literal[condition != "Control" & trial.type == "Novel" & value != "Y"] <- 1
+  
+  return(literal)
+}
+
+
 child.long.data <- bind_rows(lapply(child.files,read.child)) %>%
   filter(measure == "response") %>%
-  mutate(condition = factor(ifelse(order == "0", "Normal", "Implausible")),
-         trial.type = factor(ifelse(trial <= 8, "Familiar", "Novel")),
-         Literal = ifelse(value == "Y", 1, 0))
+  rowwise() %>%
+  mutate(condition = if(order == "0") "Normal"
+                            else if(order == "1") "Implausible"
+                            else "Control") %>%
+  ungroup() %>%
+  mutate(condition = factor(condition,
+                            levels = c("Normal", "Implausible", "Control")),
+         trial.type = factor(ifelse(trial <= 8, "Familiar", "Novel"))) %>%
+  mutate(Literal = code.literal(value,trial.type,condition))
 
 child.demos$subj = unique(child.long.data$subj)
 child.long.data %<>% left_join(child.demos) %>%
@@ -111,7 +130,8 @@ Analyze child data
 ns <- all.child.long.data %>% 
   ungroup() %>% 
   select(experiment,trial.type,condition,subj) %>% 
-  distinct() %>% group_by(experiment,condition, trial.type) %>% 
+  distinct() %>% 
+  group_by(experiment,condition, trial.type) %>% 
   summarise(n = n())
 
 kable(filter(ns, trial.type == "Novel"))
@@ -123,7 +143,7 @@ child.results <- multi_boot(all.child.long.data, column="Literal",
 ```
 
 Plot
-```{r child_plot,fig.height=5,fig.width=8}
+```{r child_plot,fig.height=5,fig.width=8, cache = FALSE}
 ggplot(child.results, aes(x=condition, y=Literal,fill=trial.type)) +
   geom_bar(stat="identity",position=position_dodge(1))+
   facet_grid(experiment~ trial.type) +
