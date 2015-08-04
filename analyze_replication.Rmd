@@ -26,6 +26,8 @@ library(tidyr)
 library(ggplot2)
 library(readr)
 library(jsonlite)
+
+na.mean <- function(x){mean(x, na.rm = TRUE)}
 ```
 
 
@@ -40,6 +42,8 @@ child.files <- list.files(path = "experiment_nicolette/data/",
 
 child.demos <- read_csv('experiment_nicolette/data/noisy_replication_demos.csv') %>%
   filter(Data==TRUE)
+
+child.overwrite <- read_csv('experiment_nicolette/data/overwrite.csv')
 
 # function for reading one child's data
 read.child <- function(filename) {
@@ -83,16 +87,28 @@ child.long.data <- bind_rows(lapply(child.files,read.child)) %>%
   rowwise() %>%
   mutate(condition = if(order == "0") "Normal"
                             else if(order == "1") "Implausible"
-                            else "Control") %>%
-  ungroup() %>%
-  mutate(condition = factor(condition,
-                            levels = c("Normal", "Implausible", "Control")),
-         trial.type = factor(ifelse(trial <= 8, "Training", "Test"))) %>%
-  mutate(Literal = code.literal(value,trial.type,condition))
+                            else if(order == "2") "Control"
+                            else "No Noise Implausible") 
+
 
 child.demos$subj = unique(child.long.data$subj)
-child.long.data %<>% left_join(child.demos) %>%
+
+child.overwrite.data <- left_join(child.long.data,child.demos)
+
+for(row in nrow(child.overwrite)) {
+  child.overwrite.data[child.overwrite.data$subj == child.overwrite[row,]$subj &
+                         child.overwrite.data$trial == child.overwrite[row,]$trial,
+                       ]$value = child.overwrite[row,]$response
+}
+
+child.overwrite.data %<>%
+  ungroup() %>%
+  mutate(condition = factor(condition,
+                            levels = c("Normal", "Implausible", 
+                                       "Control", "No Noise Implausible")),
+         trial.type = factor(ifelse(trial <= 8, "Training", "Test"))) %>%
   filter(age >= 4, age <= 6, Exclude == FALSE) %>%
+  mutate(Literal = code.literal(value,trial.type,condition)) %>%
   mutate(experiment = "replication") %>%
   select(experiment,subj,age,condition,trial.type,Literal)
 ```
@@ -119,7 +135,7 @@ original.child.long.data <- gather(original.child.data,item,
   ungroup() %>%
   select(experiment, subj, age, condition,trial.type, Literal) 
 
-all.child.long.data <- bind_rows(child.long.data,original.child.long.data) %>%
+all.child.long.data <- bind_rows(child.overwrite.data,original.child.long.data) %>%
   group_by(experiment,condition, trial.type) %>%
   ungroup() %>%
   mutate(trial.type = factor(trial.type, levels = c("Training", "Test"))) %>%
@@ -154,7 +170,6 @@ adult.long.data <- inner_join(adult.data,firstHits) %>%
          experiment = "adult", age = NA) %>%
   mutate(condition = factor(condition,levels = c("Normal", "Implausible"))) %>%
   rename(Literal = response) %>%
-  # mutate(Literal = ifelse(trial.type == "Training", response, 1 - response)) %>%
   select(experiment, subj, age, condition, trial.type, Literal)
 ```
 
@@ -163,7 +178,9 @@ Analyze child data
 ```{r child_analysis}
 all.long.data <- bind_rows(all.child.long.data,adult.long.data) %>%
   mutate(trial.type = factor(trial.type, levels = c("Training", "Test"))) %>%
-  group_by(experiment, condition, trial.type) 
+  mutate(condition = factor(condition, levels = c("Control", "Normal", 
+                                                  "Implausible", "No Noise Implausible"))) %>%
+  group_by(experiment, condition, trial.type)
 
 ns <- all.long.data %>% 
   ungroup() %>% 
@@ -174,17 +191,23 @@ ns <- all.long.data %>%
 
 kable(filter(ns, trial.type == "Test"))
 
-all.results <- multi_boot(all.long.data, column="Literal",
-             statistics_functions = c("ci_lower","ci_upper")) %>%
-  left_join(summarise(all.long.data,Literal = mean(Literal))) %>%
-  left_join(ns)
+all.results <- multi_boot(all.long.data, column="Literal", 
+                          summary_function = "na.mean",
+                          statistics_functions = c("ci_lower","ci_upper")) %>%
+  left_join(summarise(all.long.data,Literal = na.mean(Literal))) %>%
+  left_join(ns) %>%
+  ungroup() %>%
+  mutate(condition = factor(condition, levels = c("Control", "Normal", 
+                                                  "Implausible", "No Noise Implausible"),
+                             labels = c("Control", "Normal", 
+                                                  "Implausible", "No Noise\nImplausible")))
 ```
 
 Plot
 ```{r child_plot,fig.height=5,fig.width=8, cache = FALSE}
 ggplot(all.results, aes(x=condition, y=Literal,fill=trial.type)) +
   geom_bar(stat="identity",position=position_dodge(1))+
-  facet_grid(experiment~ trial.type) +
+  facet_grid(experiment ~ trial.type) +
   geom_linerange(aes(ymin = ci_lower,
                       ymax = ci_upper),
                   size = .8,
