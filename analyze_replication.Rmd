@@ -83,13 +83,14 @@ code.literal <- function(value,trial.type,condition) {
 
 
 child.long.data <- bind_rows(lapply(child.files,read.child)) %>%
-  filter(measure == "response") %>%
+  filter(measure %in% c("word", "response")) %>%
+  spread(measure,value) %>%
   rowwise() %>%
   mutate(condition = if(order == "0") "Normal"
-                            else if(order == "1") "Implausible"
-                            else if(order == "2") "Control"
-                            else "No Noise Implausible") 
-
+         else if(order == "1") "Implausible"
+         else if(order == "2") "Control"
+         else if(order == "3") "No Noise Normal"
+         else "No Noise Implausible") 
 
 child.demos$subj = unique(child.long.data$subj)
 
@@ -98,19 +99,20 @@ child.overwrite.data <- left_join(child.long.data,child.demos)
 for(row in nrow(child.overwrite)) {
   child.overwrite.data[child.overwrite.data$subj == child.overwrite[row,]$subj &
                          child.overwrite.data$trial == child.overwrite[row,]$trial,
-                       ]$value = child.overwrite[row,]$response
+                       ]$response = child.overwrite[row,]$response
 }
 
 child.overwrite.data %<>%
   ungroup() %>%
   mutate(condition = factor(condition,
                             levels = c("Normal", "Implausible", 
-                                       "Control", "No Noise Implausible")),
+                                       "Control", "No Noise Normal",
+                                       "No Noise Implausible")),
          trial.type = factor(ifelse(trial <= 8, "Training", "Test"))) %>%
   filter(age >= 4, age <= 6, Exclude == FALSE) %>%
-  mutate(Literal = code.literal(value,trial.type,condition)) %>%
+  mutate(Literal = code.literal(response,trial.type,condition)) %>%
   mutate(experiment = "replication") %>%
-  select(experiment,subj,age,condition,trial.type,Literal)
+  select(experiment,subj,age,condition,trial.type,word,Literal)
 ```
 
 Load original child data
@@ -130,10 +132,11 @@ original.child.long.data <- gather(original.child.data,item,
                              "Training", "Test")) %>%
   rowwise() %>%
   mutate(Literal = ifelse(trial.type == "Training", 1 - response, response)) %>% 
-  filter(age >= 4, age <= 6) %>%
+  filter(age >= 4, age <= 6, item != "avg_correct") %>%
   mutate(experiment = "original") %>%
   ungroup() %>%
-  select(experiment, subj, age, condition,trial.type, Literal) 
+  rename(word = item) %>%
+  select(experiment, subj, age, condition,trial.type, word, Literal) 
 
 all.child.long.data <- bind_rows(child.overwrite.data,original.child.long.data) %>%
   group_by(experiment,condition, trial.type) %>%
@@ -170,7 +173,38 @@ adult.long.data <- inner_join(adult.data,firstHits) %>%
          experiment = "adult", age = NA) %>%
   mutate(condition = factor(condition,levels = c("Normal", "Implausible"))) %>%
   rename(Literal = response) %>%
-  select(experiment, subj, age, condition, trial.type, Literal)
+  select(experiment, subj, age, condition, trial.type, word, Literal)
+```
+
+
+Model data
+```{r models}
+new.child.data <- child.overwrite.data %>%
+  rowwise() %>%
+  mutate(ambig.type = if(trial.type == "Training") as.character(NA)
+         else if(word %in% c("shirt_die", "carrots_bees", "fan_airport", 
+                             "coats_horses", "carrots_bees", "van_airport", 
+                             "goats_horses", "shirt_tie")) "consonant"
+         else "vowel") %>%
+  ungroup() %>%
+  mutate(speaker.type = ifelse(condition %in% c("Normal", "Normal No Noise"),
+                               "Plausible", "Implausible"),
+         noise.type = ifelse(condition %in% c("Normal", "Implausible", "Control"),
+                             "Noisy", "No Noise"),
+         test.type = ifelse(condition == "Control", "Control", "Ambiguous")) %>%
+  mutate(noise.type = factor(noise.type, levels = c("Noisy", "No Noise")))
+
+lm.child.v1 <- glmer(Literal ~ speaker.type + noise.type + test.type + (1|age) + 
+                       (1|word) + (1|subj),
+                  family = "binomial", data = filter(new.child.data,trial.type == "Test"))
+
+summary(lm.child.v1)
+
+lm.child.v2 <- glmer(Literal ~ condition  +  (1|age) + (1|word) + (1|subj),
+                  family = "binomial", data = filter(new.child.data,trial.type == "Test"))
+
+summary(lm.child.v2)
+
 ```
 
 
@@ -179,7 +213,8 @@ Analyze child data
 all.long.data <- bind_rows(all.child.long.data,adult.long.data) %>%
   mutate(trial.type = factor(trial.type, levels = c("Training", "Test"))) %>%
   mutate(condition = factor(condition, levels = c("Control", "Normal", 
-                                                  "Implausible", "No Noise Implausible"))) %>%
+                                                  "Implausible", "No Noise Normal",
+                                                  "No Noise Implausible"))) %>%
   group_by(experiment, condition, trial.type)
 
 ns <- all.long.data %>% 
@@ -191,21 +226,84 @@ ns <- all.long.data %>%
 
 kable(filter(ns, trial.type == "Test"))
 
-all.results <- multi_boot(all.long.data, column="Literal", 
-                          summary_function = "na.mean",
-                          statistics_functions = c("ci_lower","ci_upper")) %>%
-  left_join(summarise(all.long.data,Literal = na.mean(Literal))) %>%
+all.results <- multi_boot_standard(all.long.data, column = "Literal") %>%
   left_join(ns) %>%
   ungroup() %>%
   mutate(condition = factor(condition, levels = c("Control", "Normal", 
-                                                  "Implausible", "No Noise Implausible"),
-                             labels = c("Control", "Normal", 
-                                                  "Implausible", "No Noise\nImplausible")))
+                                                  "No Noise Normal", "Implausible",
+                                                  "No Noise Implausible"),
+                             labels = c("Control", "Normal","No Noise\nNormal",
+                                                  "Implausible", 
+                                        "No Noise\nImplausible")))
 ```
 
-Plot
-```{r child_plot,fig.height=5,fig.width=8, cache = FALSE}
-ggplot(all.results, aes(x=condition, y=Literal,fill=trial.type)) +
+Plot Separately
+```{r child_plot,fig.height=5,fig.width=9, cache = FALSE}
+new.child.results <- filter(all.results,experiment == "replication", trial.type == "Test")
+
+exp1.results <- filter(new.child.results, condition %in% c("Normal", "Implausible"))
+
+#quartz(width = 5, height = 4)
+ggplot(exp1.results, aes(x=condition, y=mean, fill=trial.type)) +
+  geom_bar(stat="identity",position=position_dodge(1))+
+  geom_linerange(aes(ymin = ci_lower,
+                      ymax = ci_upper),
+                  size = .8,
+                  show_guide = FALSE,
+                 position=position_dodge(1)) +
+  scale_fill_brewer(palette="Set1") +
+  geom_hline(aes(yintercept=.5),lty=2)+
+  theme_bw(base_size=14) +
+  theme(legend.position="none", panel.grid=element_blank()) +
+  scale_x_discrete(name = "Speaker Type")+
+  scale_y_continuous(name = "Proportion Choosing Plausible",
+                     limits=c(0,1))
+
+exp2.results <- filter(new.child.results, condition %in% c("Control", "Normal", 
+                                                           "Implausible"))
+
+#quartz(width = 6, height = 4)
+ggplot(exp2.results, aes(x=condition, y=mean, fill=trial.type)) +
+  geom_bar(stat="identity",position=position_dodge(1))+
+  geom_linerange(aes(ymin = ci_lower,
+                      ymax = ci_upper),
+                  size = .8,
+                  show_guide = FALSE,
+                 position=position_dodge(1)) +
+  scale_fill_brewer(palette="Set1") +
+  geom_hline(aes(yintercept=.5),lty=2)+
+  theme_bw(base_size=14) +
+  theme(legend.position="none", panel.grid=element_blank()) +
+  scale_x_discrete(name = "Speaker Type")+
+  scale_y_continuous(name = "Proportion Choosing Plausible",
+                     limits=c(0,1))
+
+
+exp3.results <- filter(new.child.results, condition %in% c("Control", "Normal", 
+                                                           "Implausible", "No Noise\nNormal"))
+
+
+#quartz(width = 7, height = 4)
+ggplot(exp3.results, aes(x=condition, y=mean, fill=trial.type)) +
+  geom_bar(stat="identity",position=position_dodge(1))+
+  geom_linerange(aes(ymin = ci_lower,
+                      ymax = ci_upper),
+                  size = .8,
+                  show_guide = FALSE,
+                 position=position_dodge(1)) +
+  scale_fill_brewer(palette="Set1") +
+  geom_hline(aes(yintercept=.5),lty=2)+
+  theme_bw(base_size=14) +
+  theme(legend.position="none", panel.grid=element_blank()) +
+  scale_x_discrete(name = "Speaker Type")+
+  scale_y_continuous(name = "Proportion Choosing Plausible",
+                     limits=c(0,1))
+```
+
+
+Plot Together
+```{r child_plot,fig.height=5,fig.width=9, cache = FALSE}
+ggplot(all.results, aes(x=condition, y=mean, fill=trial.type)) +
   geom_bar(stat="identity",position=position_dodge(1))+
   facet_grid(experiment ~ trial.type) +
   geom_linerange(aes(ymin = ci_lower,
