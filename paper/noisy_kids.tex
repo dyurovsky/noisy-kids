@@ -43,9 +43,9 @@ Word Count:
 \begin{document}
 \maketitle
 
-Imagine Bob heard Alice say ``I had carrots and bees for dinner.'' Perhaps she visited an exotic restaurant, and he should follow up and ask how they tasted. Or perhaps he misheard her, or she misspoke. Interpreting her utterance requires integrating perceptual information about what he heard with his expectations: about both what words usually go with ``carrots'' and ``dinner'' and also what foods people usually eat. Statistical language processing systems operate using a body of theory based on this idea---that language is a \emph{noisy channel}, and that Bob can correct for perceptual errors using linguistic expectations about what Alice was likely trying to say \cite{jelinek1976, shannon1948}. 
+Imagine Bob heard Alice say ``I had carrots and bees for dinner.'' Perhaps she visited an exotic restaurant, and he should follow up and ask how they tasted. Or perhaps he misheard her, or she misspoke---she actually had peas. Interpreting her utterance requires integrating perceptual information about what he heard with his expectations: about both what words usually go with ``carrots'' and ``dinner'' and also what foods people usually eat. Modern statistical language processing systems operate using a body of theory based on this idea---that language is a \emph{noisy channel}, and that Bob can correct for perceptual errors using linguistic expectations about what Alice was likely trying to say \cite{jelinek1976, shannon1948}. 
 
-Noisy channel principles provide a powerful framework for explaining how the human language processing system operate in complex and uncertain real-time communicative situations \cite{clayards2008, levy2008, jaeger2010, kleinschmidt2015}. On this view of human language, comprehenders integrate prior expectations with perceptual data; and they do so probabilistically, weighting each according to its reliability. In one demonstration of this sort of integration, \citeA{gibson2013} presented participants with semantically implausible sentences (e.g., ``The mother gave the candle the daughter''), which could have been produced by small typographical errors in otherwise much more plausible sentences (e.g., the omission of the word ``to''). Adult comprehenders were able to correct these errors, and they corrected them at especially high rates when they had reason to believe that the communicative channel was noisy (and hence the perceptual signal was unreliable). They also corrected these errors at lower rates when they believed they were in a ``silly'' context where many of the sentences they read were similarly implausible. Together, these manipulations suggested a flexible weighting on the perceptual signal---how noisy is the channel?---and prior expectations---how plausible is the speaker?.
+Noisy channel principles also provide a powerful framework for explaining how the human language processing system operates in complex and uncertain real-time communicative situations \cite{clayards2008, levy2008, jaeger2010, kleinschmidt2015}. On this view of human language, comprehenders integrate prior expectations with perceptual data; and they do so probabilistically, weighting each according to its reliability \cite{ernst2002}. In one demonstration of this sort of integration, \citeA{gibson2013} presented adults with semantically implausible sentences (e.g., ``The mother gave the candle the daughter''), which could have been produced by small typographical errors in otherwise much more plausible sentences (e.g., the omission of the word ``to''). Readers corrected these errors, and did soat especially high rates when they had reason to believe that the communicative channel was noisy (and hence the perceptual signal was unreliable). They also corrected these errors at lower rates when they believed they were in a ``silly'' context where many of the sentences they read were similarly implausible. Together, these manipulations suggested a flexible weighting on the perceptual signal---how noisy is the channel?---and prior expectations---how plausible is the speaker?.
 
 Is children's language comprehension rooted in the same kind of flexible, expectation-based processing? 
 
@@ -72,7 +72,7 @@ In the following experiments, we adapt \citeA{gibson2013}'s paradigm to test thr
             \includegraphics[width=0.4\textwidth]{figures/training.pdf}
         }\\
         \subfigure[]{
-           \label{fig:testing}
+           \label{fig:test}
            \includegraphics[width=0.4\textwidth]{figures/testing.pdf}
         }
     \end{center}
@@ -89,13 +89,17 @@ Adult participants for Experiment 1 were recruited through Amazon Mechnical Turk
 
 Children were recruited at the Bing Nursery School on Stanford's campus. Each child was asked if they would be willing to play a game with the experimenter, and informed that they could stop playing at any time. Children were randomly assigned to speaker conditions, and we collected data until there were at least 20 participants in each condition. Data from a total of 43 children was collected, Children were all between 4 and 6 years old, and approximately half were female. Neither age nor sex distribution varied significantly across conditions (Plausible: 23 children (12 girls), Mean age = 4.6 years (range = 4.0--5.3 years), Implausible: 20 children (10 girls), Mean age = 4.7 years (range = 4.1--5.4 years).
 
-\subsubsection{Stimuli}
+\subsubsection{Stimuli, Design, and Procedure}
 
-Stimuli for Experiment 1 were a series of screens on which participants saw two pictures and heard a sentence referring to one of them\footnote{All stimuli, as well as data and analyses are available in a public github repository at \small{\tt{http://github.com/dyurovsky/noisy-kids}}.} . The pictures were constructed from clipart freely available on the internet. Audio was recorded by a native English speaking female. 
+Experiment 1 consisted of a series of screens on which participants saw two pictures and heard a sentence referring to one of them\footnote{All stimuli, as well as data and analyses are available in a public github repository at \small{\tt{http://github.com/dyurovsky/noisy-kids}}.} . The pictures were constructed from clipart freely available on the internet. Audio was recorded by a native English speaking female. In order to increase the ambiguity of the spoken utterances, and thus give us more power to detect error-correction, all of the audio recordings were convolved with a small amount of Brown noise.
+
+Each trial contained one semantically plausible picture, and one semantically implausible picture. On Exposure trials, these pictures, and their corresponding referring expressions were highly distinct (Figure~\ref{fig:training}). In contrast, on Test trials the two pictures corresponded to referring expressions that were only one consonant or vowel apart (Figure~\ref{fig:test}).
+
+Each participant saw eight Exposure trials, followed by seven Test trials. The order of these trials within each of these two blocks was randomized across participants, as was the on-screen position of the two pictures on trial. For participants in the Plausible Speaker condition, the speaker referred to Plausible referent on each of the eight exposure trials. In contrast, for participants in the Implausible Speaker condition, the speaker referred to the implausible referent on each Exposure trial. For participants in both conditions, the Speaker referred to the implausible referent on all eight test trials.
 
 \subsubsection{Procedure}
 
-On each trial, participants saw two pictures on the screen and heard a short sentence referring to one of them. Each trial contained one semantically plausible picture, and one semantically implausible picture. On exposure trials, these pictures, and their corresponding referring expression that was used for them was quite distinct. Children saw two kinds of trials that manipulated the relationship of the pictures to each other. On introductory trials, children ... FIXME
+Children saw two kinds of trials that manipulated the relationship of the pictures to each other. On introductory trials, children ... FIXME
 
 \subsection{Results and Discussion}
 
