@@ -1,0 +1,235 @@
+---
+title: "Adults and preschoolers flexibly adapt to noisy linguistic input"
+author: "Daniel Yurovsky, Sarah Case, & Michael C. Frank"
+date: "September 17, 2015"
+output:
+  html_document:
+  highlight: tango
+theme: spacelab
+---
+  ```{r setup, include=FALSE}
+library(knitr)
+opts_chunk$set(message=FALSE, warning=FALSE, cache=FALSE)
+```
+
+Load libraries
+```{r, cache = FALSE}
+library(dplyr)
+library(langcog)
+library(tidyr)
+library(magrittr)
+library(lme4)
+library(lmerTest)
+library(jsonlite)
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+library(readr)
+library(jsonlite)
+```
+
+Load experiment 1 data
+```{r load_exp1, cache=FALSE}
+exp1_child_data <- read_csv("data/exp1_child.csv")
+exp1_adult_data <- read_csv("data/exp1_adult.csv")
+
+exp1_data <- bind_rows(exp1_child_data,exp1_adult_data) %>%
+  mutate(response = factor(response, levels = c("Implausible", "Plausible")))
+```
+
+Munge experiment 1 data
+```{r munge_exp1}
+child_demo_data <- exp1_child_data %>%
+  distinct(subject) %>%
+  group_by(condition) %>%
+  summarise(n = n(),
+            num_girls = sum(sex == "female"),
+            min_age = min(age),
+            mean_age = mean(age),
+            max_age = max(age))
+
+adult_demo_data <- exp1_adult_data %>%
+  distinct(subject) %>%
+  group_by(condition) %>%
+  summarise(n = n())
+
+kable(child_demo_data,
+      col.names = c("Speaker Condition", "Num Participants",
+                    "Num Girls","Min Age","Mean Age","Max. Age"))
+
+
+kable(adult_demo_data,
+      col.names = c("Speaker Condition", "Num Participants"))
+
+exp1_group_data <- exp1_data %>%
+  mutate(response = as.numeric(response)-1) %>%
+  group_by(group,condition,trial_type) %>%
+  multi_boot_standard("response", na.rm = T)
+```
+
+Analyze exposure and test trials
+```{r exp1_exposure}
+exp1_exposure_chance_lm <- glmer(response ~ 0 + group : condition + (1|word) + (1|subject), 
+                          family = "binomial",
+                          data = filter(exp1_data,trial_type == "Exposure"))
+summary(exp1_exposure_chance_lm)
+
+exp1_exposure_lm <- glmer(response ~ group * condition + (1|word) + (1|subject), 
+                          family = "binomial",
+                          data = filter(exp1_data,trial_type == "Exposure"))
+summary(exp1_exposure_lm)
+
+exp1_test_lm <- glmer(response ~ group * condition + (1|word) + (1|subject), 
+                          family = "binomial",
+                          data = filter(exp1_data,trial_type == "Test"))
+summary(exp1_test_lm)
+
+
+
+exp1_glm <- glmer(response ~ group * condition * trial_type + (1|word) + (1|subject), 
+                          family = "binomial", control=glmerControl(optimizer = "bobyqa"), 
+                          data = exp1_data)
+summary(exp1_glm)
+```
+
+```{r exp1_plots, fig.width=6,fig.height=4}
+#Exposure Trials
+ggplot(filter(exp1_group_data,trial_type == "Exposure"), 
+       aes(x=condition, y=mean, fill=group)) +
+  facet_grid(. ~ group) +
+  geom_bar(stat="identity",position=position_dodge(1))+
+  geom_linerange(aes(ymin = ci_lower,
+                      ymax = ci_upper),
+                  size = .8,
+                  show_guide = FALSE,
+                 position=position_dodge(1)) +
+  scale_fill_brewer(palette="Set1") +
+  geom_hline(aes(yintercept=.5),lty=2)+
+  theme_bw(base_size=14) +
+  theme(legend.position="none", panel.grid=element_blank()) +
+  scale_x_discrete(name = "\nSpeaker Condition")+
+  scale_y_continuous(name = "Proportion Choosing Plausible",
+                     limits=c(0,1))
+
+#Test Trials
+#quartz(width=6,height=4)
+ggplot(filter(exp1_group_data,trial_type == "Test"), 
+       aes(x=condition, y=mean, fill=group)) +
+  facet_grid(. ~ group) +
+  geom_bar(stat="identity",position=position_dodge(1))+
+  geom_linerange(aes(ymin = ci_lower,
+                      ymax = ci_upper),
+                  size = .8,
+                  show_guide = FALSE,
+                 position=position_dodge(1)) +
+  scale_fill_brewer(palette="Set1") +
+  geom_hline(aes(yintercept=.5),lty=2)+
+  theme_bw(base_size=14) +
+  theme(legend.position="none", panel.grid=element_blank()) +
+  scale_x_discrete(name = "\nSpeaker Condition")+
+  scale_y_continuous(name = "Proportion Choosing Plausible",
+                     limits=c(0,1))
+```
+
+
+Load experiment 2 data
+```{r load_exp2, cache=FALSE}
+exp2_child_data <- read_csv("data/exp2_child.csv") %>%
+  mutate(response = factor(response, levels = c("Implausible", "Plausible")),
+         condition = factor(condition, levels = c("Implausible", "Plausible", "Control")))
+```
+
+Munge experiment 2 data
+```{r munge_exp2}
+exp2_demo_data <- exp2_child_data %>%
+  distinct(subject) %>%
+  group_by(condition, noise) %>%
+  summarise(n = n(),
+            num_girls = sum(sex == "female", na.rm = T),
+            min_age = min(age),
+            mean_age = mean(age),
+            max_age = max(age))
+
+kable(exp2_demo_data,
+      col.names = c("Speaker Condition", "Noise Level", "Num Participants",
+                    "Num Girls","Min Age","Mean Age","Max. Age"))
+
+
+exp2_group_data <- exp2_child_data %>%
+  mutate(response = as.numeric(response)-1) %>%
+  group_by(group,condition,noise,trial_type) %>%
+  multi_boot_standard("response", na.rm = T)
+```
+
+
+
+Analyze exposure and test trials
+```{r exp2_exposure}
+exp2_exposure_chance_lm <- glmer(response ~ 0 + condition:noise + 
+                                   (1|word) + (1|subject), family = "binomial",
+                          data = filter(exp2_child_data,trial_type == "Exposure"))
+summary(exp2_exposure_chance_lm)
+
+exp2_exposure_lm <- glmer(response ~ condition * noise + (1|word) + (1|subject), 
+                          family = "binomial",
+                          data = filter(exp2_child_data,trial_type == "Exposure"))
+summary(exp2_exposure_lm)
+
+exp2_control_lm <-  glmer(response ~ condition + (1|word) + (1|subject), 
+                          family = "binomial",
+                          data = filter(exp2_child_data, trial_type == "Test",
+                                        noise == "Noisy"))
+
+summary(exp2_control_lm)
+
+
+exp2_test_lm <<- glmer(response ~ noise + condition + (1|word) + (1|subject), 
+                          family = "binomial",
+                          data = filter(exp2_child_data,trial_type == "Test",
+                                        condition != "Control"))
+summary(exp2_test_lm)
+```
+
+```{r exp2_plots, fig.width=7.5,fig.height=4}
+#Exposure Trials
+ggplot(filter(exp2_group_data,trial_type == "Exposure"), 
+       aes(x=condition, y=mean, fill=group)) +
+  facet_grid(. ~ noise) +
+  geom_bar(stat="identity",position=position_dodge(1))+
+  geom_linerange(aes(ymin = ci_lower,
+                      ymax = ci_upper),
+                  size = .8,
+                  show_guide = FALSE,
+                 position=position_dodge(1)) +
+  scale_fill_brewer(palette="Set1") +
+  geom_hline(aes(yintercept=.5),lty=2)+
+  theme_bw(base_size=14) +
+  theme(legend.position="none", panel.grid=element_blank()) +
+  scale_x_discrete(name = "\nSpeaker Condition")+
+  scale_y_continuous(name = "Proportion Choosing Plausible",
+                     limits=c(0,1))
+
+#Test Trials
+plotting_test_data <- filter(exp2_group_data,trial_type == "Test") %>%
+  mutate(width = ifelse(condition == "Control", .4, .9))
+
+#quartz(width=7.5,height=4)
+ggplot(plotting_test_data, 
+       aes(x=noise, y=mean, fill=group)) +
+  facet_grid(. ~ condition, scales = "free_x") +
+  geom_bar(aes(width = width),
+           stat="identity", position=position_dodge(1))+
+  geom_linerange(aes(ymin = ci_lower,
+                      ymax = ci_upper),
+                  size = .8,
+                  show_guide = FALSE,
+                 position=position_dodge(1)) +
+  scale_fill_brewer(palette="Set1") +
+  geom_hline(aes(yintercept=.5),lty=2)+
+  theme_bw(base_size=14) +
+  theme(legend.position="none", panel.grid=element_blank()) +
+  scale_x_discrete(name = "\nNoise Level")+
+  scale_y_continuous(name = "Proportion Choosing Plausible",
+                     limits=c(0,1))
+```
+
