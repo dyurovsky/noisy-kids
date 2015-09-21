@@ -7,19 +7,18 @@ output:
   highlight: tango
 theme: spacelab
 ---
-  ```{r setup, include=FALSE}
+```{r setup, include=FALSE}
 library(knitr)
-opts_chunk$set(message=FALSE, warning=FALSE, cache=FALSE)
+options(scipen = 1, digits = 3)
+opts_chunk$set(message=FALSE, warning=FALSE)
 ```
 
-Load libraries
-```{r, cache = FALSE}
+```{r, cache = FALSE, include = FALSE}
 library(dplyr)
 library(langcog)
 library(tidyr)
 library(magrittr)
 library(lme4)
-library(lmerTest)
 library(jsonlite)
 library(dplyr)
 library(tidyr)
@@ -28,7 +27,30 @@ library(readr)
 library(jsonlite)
 ```
 
-Load experiment 1 data
+```{r tab_func, include = FALSE} 
+kable_table <- function(lmer_results, predictors) {
+  
+  table <- as.data.frame(summary(lmer_results)$coef) %>%
+    mutate(Predictor = predictors) %>%
+    rowwise() %>%
+    mutate(stars = get_stars(`Pr(>|z|)`)) %>%
+    ungroup() %>%
+    mutate(`Pr(>|z|)` = sprintf("%.3f", `Pr(>|z|)`)) %>%
+    mutate(`Pr(>|z|)` = ifelse(`Pr(>|z|)` == "0.000", "< .001", `Pr(>|z|)`)) %>%
+    select(Predictor, Estimate, `Std. Error`, `z value`, `Pr(>|z|)`, stars) %>%
+    rename(`$z$ value` = `z value`,
+           `$p$ value` = `Pr(>|z|)`)
+  
+  rownames(table) <- NULL
+  names(table)[6] <- ""
+  
+  kable(table)
+}
+```
+
+<h3> Experiment 1 </h3>
+
+<h1> Load data </h1>
 ```{r load_exp1, cache=FALSE}
 exp1_child_data <- read_csv("data/exp1_child.csv")
 exp1_adult_data <- read_csv("data/exp1_adult.csv")
@@ -37,7 +59,7 @@ exp1_data <- bind_rows(exp1_child_data,exp1_adult_data) %>%
   mutate(response = factor(response, levels = c("Implausible", "Plausible")))
 ```
 
-Munge experiment 1 data
+Munge experiment data
 ```{r munge_exp1}
 child_demo_data <- exp1_child_data %>%
   distinct(subject) %>%
@@ -53,46 +75,40 @@ adult_demo_data <- exp1_adult_data %>%
   group_by(condition) %>%
   summarise(n = n())
 
-kable(child_demo_data,
-      col.names = c("Speaker Condition", "Num Participants",
-                    "Num Girls","Min Age","Mean Age","Max. Age"))
-
-
-kable(adult_demo_data,
-      col.names = c("Speaker Condition", "Num Participants"))
-
 exp1_group_data <- exp1_data %>%
-  mutate(response = as.numeric(response)-1) %>%
+  mutate(response = as.numeric(response) - 1) %>%
   group_by(group,condition,trial_type) %>%
   multi_boot_standard("response", na.rm = T)
+
+kable(child_demo_data,
+      col.names = c("Speaker Condition", "Num Participants",
+                    "Num Girls","Min Age","Mean Age","Max. Age"),
+      caption = "Child demographic data")
+
+kable(adult_demo_data,
+      col.names = c("Speaker Condition", "Num Participants"),
+      caption = "Adult demographic data")
 ```
 
-Analyze exposure and test trials
+<h1> Analyze exposure trials </h1>
 ```{r exp1_exposure}
 exp1_exposure_chance_lm <- glmer(response ~ 0 + group : condition + (1|word) + (1|subject), 
                           family = "binomial",
                           data = filter(exp1_data,trial_type == "Exposure"))
-summary(exp1_exposure_chance_lm)
+
+kable_table(exp1_exposure_chance_lm, c("Adults, Implausible", 
+                                       "Children, Implausible", 
+                                       "Adults, Plausible", 
+                                       "Children, Plausible"))
 
 exp1_exposure_lm <- glmer(response ~ group * condition + (1|word) + (1|subject), 
                           family = "binomial",
                           data = filter(exp1_data,trial_type == "Exposure"))
-summary(exp1_exposure_lm)
-
-exp1_test_lm <- glmer(response ~ group * condition + (1|word) + (1|subject), 
-                          family = "binomial",
-                          data = filter(exp1_data,trial_type == "Test"))
-summary(exp1_test_lm)
-
-
-
-exp1_glm <- glmer(response ~ group * condition * trial_type + (1|word) + (1|subject), 
-                          family = "binomial", control=glmerControl(optimizer = "bobyqa"), 
-                          data = exp1_data)
-summary(exp1_glm)
+kable_table(exp1_exposure_lm, c("Intercept", "Children", "Plausible", 
+                                "Children x Plausible"))
 ```
 
-```{r exp1_plots, fig.width=6,fig.height=4}
+```{r exp1_exposure_plots, fig.width=6, fig.height=4}
 #Exposure Trials
 ggplot(filter(exp1_group_data,trial_type == "Exposure"), 
        aes(x=condition, y=mean, fill=group)) +
@@ -110,7 +126,18 @@ ggplot(filter(exp1_group_data,trial_type == "Exposure"),
   scale_x_discrete(name = "\nSpeaker Condition")+
   scale_y_continuous(name = "Proportion Choosing Plausible",
                      limits=c(0,1))
+```
 
+<h1> Analyze Test trials </h1>
+```{r exp1_test}
+exp1_test_lm <- glmer(response ~ group * condition + (1|word) + (1|subject), 
+                          family = "binomial",
+                          data = filter(exp1_data,trial_type == "Test"))
+kable_table(exp1_test_lm, c("Intercept", "Children", "Plausible", 
+                                "Children x Plausible"))
+```
+
+```{r exp1_test_plots, fig.width=6,fig.height=4}
 #Test Trials
 #quartz(width=6,height=4)
 ggplot(filter(exp1_group_data,trial_type == "Test"), 
@@ -131,12 +158,16 @@ ggplot(filter(exp1_group_data,trial_type == "Test"),
                      limits=c(0,1))
 ```
 
+***
 
-Load experiment 2 data
+<h3> Experiment 2 </h3>
+
+Load 2 data
 ```{r load_exp2, cache=FALSE}
 exp2_child_data <- read_csv("data/exp2_child.csv") %>%
   mutate(response = factor(response, levels = c("Implausible", "Plausible")),
-         condition = factor(condition, levels = c("Implausible", "Plausible", "Control")))
+         condition = factor(condition, levels = c("Implausible", "Plausible", "Control"),
+                            labels = c("Implausible", "Plausible", "Implausible (Control)")))
 ```
 
 Munge experiment 2 data
@@ -165,29 +196,51 @@ exp2_group_data <- exp2_child_data %>%
 
 Analyze exposure and test trials
 ```{r exp2_exposure}
-exp2_exposure_chance_lm <- glmer(response ~ 0 + condition:noise + 
+exp2_exposure_chance_lm <- glmer(response ~ 0 + noise:condition + 
                                    (1|word) + (1|subject), family = "binomial",
                           data = filter(exp2_child_data,trial_type == "Exposure"))
-summary(exp2_exposure_chance_lm)
+
+kable_table(exp2_exposure_chance_lm, c("No Noise, Implausible", 
+                                       "Noisy, Implausible", 
+                                       "No Noise, Plausible", 
+                                       "Noisy, Plausible",
+                                       "Noisy, Implausible (Control)"))
 
 exp2_exposure_lm <- glmer(response ~ condition * noise + (1|word) + (1|subject), 
                           family = "binomial",
                           data = filter(exp2_child_data,trial_type == "Exposure"))
-summary(exp2_exposure_lm)
+
+kable_table(exp2_exposure_lm, c("Intercept", 
+                                       "Plausible", 
+                                       "Implausible (Control)", 
+                                       "Noisy",
+                                       "Plausible x Noisy"))
+
+
+control_data <- exp2_child_data %>%
+  filter(trial_type == "Test", noise == "Noisy") %>%
+  mutate(condition = factor(condition, levels = c("Plausible", "Implausible", 
+                                                  "Implausible (Control)")))
+  
 
 exp2_control_lm <-  glmer(response ~ condition + (1|word) + (1|subject), 
                           family = "binomial",
-                          data = filter(exp2_child_data, trial_type == "Test",
-                                        noise == "Noisy"))
+                          data = control_data)
 
-summary(exp2_control_lm)
+kable_table(exp2_control_lm, c("Intercept", 
+                               "Implausible", 
+                               "Implausible (Control)"))
 
 
-exp2_test_lm <<- glmer(response ~ noise + condition + (1|word) + (1|subject), 
-                          family = "binomial",
-                          data = filter(exp2_child_data,trial_type == "Test",
-                                        condition != "Control"))
-summary(exp2_test_lm)
+
+exp2_test_lm <- glmer(response ~ noise + condition + (1|word) + (1|subject), 
+                      family = "binomial",
+                      data = filter(exp2_child_data,trial_type == "Test",
+                                    condition != "Implausible (Control)"))
+
+kable_table(exp2_test_lm, c("Intercept", 
+                            "Noisy", 
+                            "Plausible"))
 ```
 
 ```{r exp2_plots, fig.width=7.5,fig.height=4}
@@ -211,11 +264,13 @@ ggplot(filter(exp2_group_data,trial_type == "Exposure"),
 
 #Test Trials
 plotting_test_data <- filter(exp2_group_data,trial_type == "Test") %>%
-  mutate(width = ifelse(condition == "Control", .4, .9))
+  mutate(width = ifelse(condition == "Implausible (Control)", .4, .9)) %>%
+  mutate(test_type = ifelse(condition == "Implausible (Control)", 
+                            "Plausible", "Implausible"))
 
 #quartz(width=7.5,height=4)
 ggplot(plotting_test_data, 
-       aes(x=noise, y=mean, fill=group)) +
+       aes(x=noise, y=mean, fill=test_type)) +
   facet_grid(. ~ condition, scales = "free_x") +
   geom_bar(aes(width = width),
            stat="identity", position=position_dodge(1))+

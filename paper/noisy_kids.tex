@@ -5,7 +5,8 @@
 \usepackage{amsmath}
 \usepackage{enumitem}
 \usepackage[section]{placeins}
-\usepackage{subfigure}
+\usepackage{caption}
+\usepackage{subcaption}
 
 \title{Adults and preschoolers flexibly adapt to noisy linguistic input}
 \author{Daniel Yurovsky, Sarah Case, and Michael C. Frank}
@@ -43,32 +44,31 @@ Word Count:
 \begin{document}
 \maketitle
 
-Imagine Bob heard Alice say ``I had carrots and bees for dinner.'' Perhaps she visited an exotic restaurant, and he should follow up and ask how they tasted. Or perhaps he misheard her, or she misspoke---she actually had peas. Interpreting her utterance requires integrating perceptual information about what he heard with his expectations: about both what words usually go with ``carrots'' and ``dinner'' and also what foods people usually eat. Modern statistical language processing systems operate using a body of theory based on this idea---that language is a \emph{noisy channel}, and that Bob can correct for perceptual errors using linguistic expectations about what Alice was likely trying to say \cite{jelinek1976, shannon1948}. 
+Imagine Bob hears Alice say ``I had carrots and bees for dinner.'' Perhaps she visited an exotic restaurant, and he should follow up and ask how they tasted. Or perhaps he misheard her, or she misspoke (she actually had peas). Interpreting her utterance requires integrating perceptual information about what he heard with his expectations: about both what words usually go with ``carrots'' and ``dinner'' and also what foods people usually eat. Modern statistical language processing systems operate using a body of theory based on this idea---that language is a \emph{noisy channel}, and that Bob can correct for perceptual errors using linguistic expectations about what Alice was likely trying to say \cite{jelinek1976, shannon1948}. 
 
-Noisy channel principles provide a powerful framework for explaining how the human language processing system operates in complex and uncertain real-time communicative situations \cite{clayards2008, levy2008, jaeger2010, kleinschmidt2015}. On this view of human language, comprehenders integrate prior expectations with perceptual data; and they do so probabilistically, weighting each according to its reliability \cite{ernst2002, jacobs1999}. In one demonstration of this sort of integration, \citeA{gibson2013} presented participants with semantically implausible sentences (e.g., ``The mother gave the candle the daughter''), which could have been produced by small typographical errors in otherwise much more plausible sentences (e.g., the omission of the word ``to''). Adult comprehenders were able to correct these errors, and they corrected them at especially high rates when they had reason to believe that the communicative channel was noisy (and hence the perceptual signal was unreliable). They also corrected these errors at lower rates when they believed they were in a ``silly'' context where many of the sentences they read were similarly implausible. Together, these manipulations suggested a flexible weighting on the perceptual signal---channel noise---and prior expectations---speaker plausibility. 
+Noisy channel principles provide a powerful framework for explaining how the human language processing system operates in complex and uncertain real-time communicative situations \cite{clayards2008, levy2008, jaeger2010, kleinschmidt2015}. On this view of human language, comprehenders integrate prior expectations with perceptual data; and they do so probabilistically, weighting each according to its reliability \cite{ernst2002, jacobs1999}. In one demonstration of this kind of integration, \citeA{gibson2013} presented participants with semantically implausible sentences (e.g., ``The mother gave the candle the daughter''), which could have been produced by small typographical errors in otherwise much more plausible sentences (e.g., the omission of the word ``to''). Adult comprehenders were able to correct these errors, and critically corrected them at higher rates when they had reason to believe that the communicative channel was noisy (and hence the perceptual signal was unreliable). Conversely, they corrected these errors at lower rates when they believed they were in a ``silly'' context where many of the sentences they read were similarly implausible. Together, these resutls suggested a flexible weighting on the perceptual signal---channel noise---and prior expectations---speaker plausibility. 
 
-Is children's language comprehension rooted in the same kind of flexible, expectation-based processing? Prior research on this topic is mixed. On the one hand, language comprehension in early childhood is rooted in pragmatic and social cues \cite{clark2009,carpenter1998}. And preschool children also show evidence of encoding stable features like the reliability of individual speakers \cite{koenig2004, harris2012}. But on the other hand, the same children sometimes show striking deficits in pragmatic reasoning about speakers' intentions \cite{noveck2001} and have trouble revising their first interpretation of syntactic ambiguities \cite{trueswell1999}. Our current experiments thus attempt to test whether young children flexibly integrate expectations about speakers with the noise on a communicative channel. 
+Do children also do the same kind of flexible, expectation-based language processing? Prior research on this topic is mixed. On one hand, infants and toddlers already make use of speakers' social and pragmatic cues to reference \cite{clark2009, carpenter1998}. And preschoolers show evidence of encoding stable features like the reliability of individual speakers \cite{koenig2004, harris2012}. On the other hand, the children at the same ages sometimes show striking deficits in pragmatic reasoning about speakers' intentions \cite{noveck2001} and have trouble revising their first interpretation of syntactic ambiguities \cite{trueswell1999}. Our current experiments thus attempt to test whether young children flexibly integrate expectations about speakers with the noise in a communicative channel. 
 
-We created a paradigm that allowed us to manipulate both expectations about a speaker's plausibility and perceptual noise. We introduced four- and five-year-old children (and adults) to either a plausible or implausible speaker, who initially uttered unambiguous sentences like ``my cat has three little [kittens/hammers]'' (Figure \ref{fig:training}). We then asked participants to resolve the intended meaning for ambiguous sentences such as the ``bees/peas'' example above, which could either be the product of a mishearing or phonological error, or could convey implausible content. We predicted that, if children are able to integrate speaker expectations and channel noise, then their interpretations should be a product of both of these. In Experiment 1, we provide a first test of this hypothesis by manipulating speaker plausibility. In Experiment 2, we replicate the findings of Experiment 1 and cross these with a manipulation of channel noise. The results of these two experiments support the idea that children, as well as adults, show evidence of flexibly trading off between information sources in language comprehension.
+We created a paradigm that allowed us to manipulate both expectations about a speaker's plausibility and perceptual noise. We introduced four- and five-year-old children (and adults) to either a plausible or implausible speaker, who initially uttered unambiguous sentences like ``my cat has three little [kittens/hammers]'' (Figure \ref{fig:exposure}). We then asked participants to resolve the intended meaning for ambiguous sentences such as the ``bees/peas'' example above, which could either be the product of a mishearing or phonological error, or could convey implausible content (Figure \ref{fig:test}). We predicted that, if children are able to integrate speaker expectations and channel noise, then their interpretations should be a product of both of these. In Experiment 1, we provide a first test of this hypothesis by manipulating speaker plausibility. In Experiment 2, we replicate the findings of Experiment 1 and cross these with a manipulation of channel noise. The results of these two experiments support the idea that children, as well as adults, show evidence of flexibly trading off between information sources in language comprehension.
 
-\section{Experiment 1}
-
-\begin{figure}[t]
-     \begin{center}
-        \subfigure[]{
-            \label{fig:training}
-            \includegraphics[width=0.4\textwidth]{figures/training.pdf}
-        }\\
-        \subfigure[]{
-           \label{fig:test}
-           \includegraphics[width=0.4\textwidth]{figures/testing.pdf}
-        }
-    \end{center}
-    \caption{Training and test stimuli
-     }%
+\begin{figure}[tb]
+     \centering
+        \begin{subfigure}[b]{.4 \textwidth}
+            \caption{\label{fig:exposure}}
+            \includegraphics[width=\textwidth]{figures/exposure.pdf}
+        \end{subfigure}\\
+        \vspace{12 pt}
+        \begin{subfigure}[b]{.4 \textwidth}
+           \caption{\label{fig:test}}
+           \includegraphics[width=\textwidth]{figures/testing.pdf}
+        \end{subfigure}
+    \caption{Example Exposure and Test trials. On Exposure trials, the two pictures and their corresponding referring expressions were highly distinct (e.g. ``my cat has three little [kittens/hammers].'' In contrast, the two pictures on Test trials could be referred to by expressions that contained a single phonological error (e.g. I had carrots and [beas/peas] for dinner.'' For participants in the Implausible condition, the speaker referred to the implausible referent (e.g. ``hammers'') on all Exposure trials. For participants in the Plausible condition, the speaker referred to to the plausible referent on all Exposure trials (e.g. ``kittens''). On test trials, the speaker always referred to the implausible referent (``bees'').}
    \label{fig:stimuli}
 \end{figure}
 
+
+\section{Experiment 1}
 
 \subsection{Method}
 \subsubsection{Participants}
@@ -79,17 +79,13 @@ Children were recruited at the Bing Nursery School on Stanford's campus. Each ch
 
 \subsubsection{Stimuli, Design, and Procedure}
 
-Experiment 1 consisted of a series of screens on which participants saw two pictures and heard a sentence referring to one of them\footnote{All stimuli, as well as data and analyses are available in a public github repository at \small{\tt{http://github.com/dyurovsky/noisy-kids}}.} . The pictures were constructed from clipart freely available on the internet. Audio was recorded by a native English speaking female. In order to increase the ambiguity of the spoken utterances, and thus give us more power to detect error-correction, all of the audio recordings were convolved with a small amount of Brown noise.
+Experiment 1 consisted of a series of screens on which participants saw two pictures and heard a sentence referring to one of them\footnote{All stimuli, as well as data and analyses are available in a public repository at \small{\tt{http://github.com/dyurovsky/noisy-kids}}.} . The pictures were constructed from clipart freely available on the internet. Audio was recorded by a native English speaking female. In order to increase the ambiguity of the spoken utterances, and thus give us more power to detect error-correction, all of the audio recordings were convolved with a small amount of Brown noise.
 
-Each trial contained one semantically plausible picture, and one semantically implausible picture. On Exposure trials, these pictures, and their corresponding referring expressions were highly distinct (Figure~\ref{fig:training}). In contrast, on Test trials the two pictures corresponded to referring expressions that were only one consonant or vowel apart (Figure~\ref{fig:test}).
+Each trial contained one semantically plausible picture, and one semantically implausible picture. On Exposure trials, these pictures, and their corresponding referring expressions were highly distinct (Figure~\ref{fig:exposure}). In contrast, on Test trials the two pictures corresponded to referring expressions that were only one consonant or vowel apart (Figure~\ref{fig:test}). Each participant saw eight Exposure trials, followed by seven Test trials. The order of these trials within each of these two blocks was randomized across participants, as was the on-screen position of the two pictures on trial. For participants in the Plausible Speaker condition, the speaker referred to Plausible referent on each of the eight exposure trials. In contrast, for participants in the Implausible Speaker condition, the speaker referred to the implausible referent on each Exposure trial. For participants in both conditions, the Speaker referred to the implausible referent on all eight test trials.
 
-Each participant saw eight Exposure trials, followed by seven Test trials. The order of these trials within each of these two blocks was randomized across participants, as was the on-screen position of the two pictures on trial. For participants in the Plausible Speaker condition, the speaker referred to Plausible referent on each of the eight exposure trials. In contrast, for participants in the Implausible Speaker condition, the speaker referred to the implausible referent on each Exposure trial. For participants in both conditions, the Speaker referred to the implausible referent on all eight test trials.
+For all participants, the experiment began with a short introduction to Katie, the speaker who would be referring to pictures for the remainder of the task. After this introduction, participants completed the remaining trials either, responding either with the mouse (adults), or by touching one of the pictures on an iPad (children). Adults were instructed by a series of text prompts, children were given instructions by a live experimenter.
 
-\subsubsection{Procedure}
-
-Children saw two kinds of trials that manipulated the relationship of the pictures to each other. On introductory trials, children ... FIXME
-
-\subsection{Results and Discussion}
+\subsection{Results}
 
 In order to establish that both children and adults understood the task, and encoded the differences between the Plausible and Implausible speakers, we first analyze their performance on exposure trials. First, we ask whether participants selected the plausible referent when it was asked for by the Plausible speaker, and selected the implausible referent when it was asked for by the Implausible speaker. We submitted performance for each group and condition separately to a mixed-effects logistic regression with random effects of subject and trial. Both children and adults were significantly more likely to choose the plausible referent in the Plausible condition ($\beta_{adult} = 5.66$, $z = 6.76$, $p <.001$; $\beta_{child} = 2.62$, $z = 5.43$, $p <.001$), and significantly less likely than chance to choose the plausible referent in the Implausible condition ($\beta_{adult} = -3.87$, $z = -7.13$, $p <.001$; $\beta_{child} = -1.9$, $z = 5.61$, $p <.001$). To test the difference between the conditions directly, we further fit a mixed-effects regression predicting choice on Exposure trials from group, condition, and their interaction, and found significant effects of all three ($\beta_{child} = 1.96$,  $z = 3.33$, $p <.001$, $\beta_{Plausible Speaker} = 9.52$,  $z = 7.87$, $p <.001$,  $\beta_{group x condition} = -5$,  $z = -4.12$, $p <.001$). Thus, both children and adults were sensitive to the speaker manipulation during Exposure trials, selecting the appropriate referent whether or not the request was implausible, although adults showed a greater sensitivity to the manipulation.
 
@@ -97,17 +93,19 @@ In order to establish that both children and adults understood the task, and enc
      \begin{center}
      \includegraphics[width=0.5\textwidth]{figures/exp1_results.pdf}
     \end{center}
-    \caption{Explaining away}%
+    \caption{Experiment 1 test trial selections for both children and adults. In line with the predictions of a noisy channel model of language processing, both children and adults were more likely to correct the phonological error during test trials when they were previously exposed to a plausible speaker. Bars show group-averaged proportion of plausible item selection at test, error bars show 95\% confidence intervals computed by non-parametric bootstrap.}%
    \label{fig:exp1_results}
 \end{figure}
 
 Did this exposure to a Plausible vs. Implausible speaker change participants' expectations during the ambiguous test trials? Figure~\ref{fig:exp1_results} shows the proportion of both children and adults who selected the plausible referent at test in both conditions. As predicted, both groups were sensitive to the manipulation, selecting the plausible referent more often in the Plausible Speaker condition. However, while children children were overall more likely to pick the plausible referent in both conditions, the size of the difference between conditions was comparable across adults and children, indicating a similar sensitivity to the speaker's prior productions. To confirm these findings formally, we again fit a mixed effects regression predicting choice on test trials from group (child vs. adult), condition (Plausible vs. Implausible Speaker), and their interaction. Both of the main effects were significant, but the interaction was not, indicating that both children and FIXME ($\beta_{child} = 1.96$,  $z = 3.33$, $p <.001$, $\beta_{Plausible Speaker} = 2.33$,  $z = 4.40$, $p <.001$,  $\beta_{group x condition} = -1.01$,  $z = -1.53$, $p = .13$).
 
-Taken together, these results show that both adults and children are sensitive to the past productions of a novel speaker, rapidly learning the kinds of things they are likely to say. Further, they use this information to alter their expectations about what this speaker will say, and they use these expectations when interpreting ambiguous. Intriguingly, children did not alter their expectations significantly less than adults, showing that they adapt their expectations quite rapidly. Children were, however, more likely overall to pick the plausible referent during ambiguous test trials, suggesting that they may have a larger bias to rely on their language models rather than the acoustic signal. This is consonant with other evidence showing significantly more noise in children's perceptual systems (CITES).
+Taken together, these results show that both adults and children are sensitive to the past productions of a novel speaker, rapidly learning the kinds of things they are likely to say. Further, they use this information to alter their expectations about what this speaker will say, and they use these expectations when interpreting ambiguous. Intriguingly, children did not alter their expectations significantly less than adults, showing that they adapt their expectations quite rapidly. Children were, however, more likely overall to pick the plausible referent during ambiguous test trials, suggesting that they may have a larger bias to rely on their language models rather than the acoustic signal. This is consonant with other evidence showing significantly more noise in children's perceptual systems \cite{neuman1983}.
 
 \section{Experiment 2}
 
-NEED CONTROL CONDITIONS SO...
+The results from Experiment 1 show that children, to the same degree as adults, flexibly adapt their on-line language processing in accord with their expectations about what a speaker is likely to say. When children and adults were exposed to a speaker who was likely to produce semantically implausible utterances (e.g. ``my cat has three little hammers''), the were more likely to interpret ambiguous utterances literally instead of error-correcting to a more semantically plausible alternative. Thus, as both child and adult listeners gain exposure to a speaker, and thus gain more confidence in their language models, they rely more on these models in interpreting new utterances. In Experiment 2, we replicate this finding and also test the the converse prediction: as the acoustic input becomes less noisy, listeners should rely more on the acoustic input independent of their languages models. 
+
+In addition, because all of the Test trials asked the listener to select the semantically implausible referent, it is possible that exposure to an Implausible speaker induced listeners to select the implausible referent at test generally, independent of their acoustic input. In Experiment 2, we provide a control condition in which the Implausible speaker from training asked for the semantically plausible referent at test.
 
 \subsection{Method}
 
