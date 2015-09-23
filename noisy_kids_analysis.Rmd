@@ -233,14 +233,15 @@ kable_table(exp2_control_lm, c("Intercept",
 
 
 
-exp2_test_lm <- glmer(response ~ noise + condition + (1|word) + (1|subject), 
+exp2_test_lm <- glmer(response ~ noise * condition + (1|word) + (1|subject), 
                       family = "binomial",
                       data = filter(exp2_child_data,trial_type == "Test",
                                     condition != "Implausible (Control)"))
 
 kable_table(exp2_test_lm, c("Intercept", 
                             "Noisy", 
-                            "Plausible"))
+                            "Plausible",
+                            "Noisy x Plausible"))
 ```
 
 ```{r exp2_plots, fig.width=7.5,fig.height=4}
