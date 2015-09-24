@@ -51,9 +51,9 @@ kable_table <- function(lmer_results, predictors) {
 }
 ```
 
-<h3> Experiment 1 </h3>
+<h2> Experiment 1 </h2>
 
-<h1> Load data </h1>
+<h3> Load data </h3>
 ```{r load_exp1, cache=FALSE}
 exp1_child_data <- read_csv("data/exp1_child.csv")
 exp1_adult_data <- read_csv("data/exp1_adult.csv")
@@ -62,7 +62,7 @@ exp1_data <- bind_rows(exp1_child_data,exp1_adult_data) %>%
   mutate(response = factor(response, levels = c("Implausible", "Plausible")))
 ```
 
-Munge experiment data
+<h3>Munge experiment data</h3>
 ```{r munge_exp1}
 child_demo_data <- exp1_child_data %>%
   distinct(subject) %>%
@@ -93,7 +93,7 @@ kable(adult_demo_data,
       caption = "Adult demographic data")
 ```
 
-<h1> Analyze exposure trials </h1>
+<h3> Analyze exposure trials </h3>
 ```{r exp1_exposure}
 exp1_exposure_chance_lm <- glmer(response ~ 0 + group : condition + (1|word) + (1|subject), 
                           family = "binomial",
@@ -112,7 +112,6 @@ kable_table(exp1_exposure_lm, c("Intercept", "Children", "Plausible",
 ```
 
 ```{r exp1_exposure_plots, fig.width=6, fig.height=4}
-#Exposure Trials
 ggplot(filter(exp1_group_data,trial_type == "Exposure"), 
        aes(x=condition, y=mean, fill=group)) +
   facet_grid(. ~ group) +
@@ -131,7 +130,7 @@ ggplot(filter(exp1_group_data,trial_type == "Exposure"),
                      limits=c(0,1))
 ```
 
-<h1> Analyze Test trials </h1>
+<h3> Analyze Test trials </h3>
 ```{r exp1_test}
 exp1_test_lm <- glmer(response ~ group * condition + (1|word) + (1|subject), 
                           family = "binomial",
@@ -156,7 +155,6 @@ kable(exp1_es, caption = "Effect sizes for adults and children",
 ```
 
 ```{r exp1_test_plots, fig.width=6,fig.height=4}
-#Test Trials
 #quartz(width=6,height=4)
 ggplot(filter(exp1_group_data,trial_type == "Test"), 
        aes(x=condition, y=mean, fill=group)) +
@@ -178,9 +176,9 @@ ggplot(filter(exp1_group_data,trial_type == "Test"),
 
 ***
 
-<h3> Experiment 2 </h3>
+<h2> Experiment 2 </h2>
 
-Load 2 data
+<h3> Load data </h3>
 ```{r load_exp2, cache=FALSE}
 exp2_child_data <- read_csv("data/exp2_child.csv") %>%
   mutate(response = factor(response, levels = c("Implausible", "Plausible")),
@@ -188,7 +186,7 @@ exp2_child_data <- read_csv("data/exp2_child.csv") %>%
                             labels = c("Implausible", "Plausible", "Implausible (Control)")))
 ```
 
-Munge experiment 2 data
+<h3>Munge experiment 2 data</h3>
 ```{r munge_exp2}
 exp2_demo_data <- exp2_child_data %>%
   distinct(subject) %>%
@@ -210,9 +208,7 @@ exp2_group_data <- exp2_child_data %>%
   multi_boot_standard("response", na.rm = T)
 ```
 
-
-
-Analyze exposure and test trials
+<h3>Analyze exposure trials</h3>
 ```{r exp2_exposure}
 exp2_exposure_chance_lm <- glmer(response ~ 0 + noise:condition + 
                                    (1|word) + (1|subject), family = "binomial",
@@ -233,37 +229,9 @@ kable_table(exp2_exposure_lm, c("Intercept",
                                        "Implausible (Control)", 
                                        "Noisy",
                                        "Plausible x Noisy"))
-
-
-control_data <- exp2_child_data %>%
-  filter(trial_type == "Test", noise == "Noisy") %>%
-  mutate(condition = factor(condition, levels = c("Plausible", "Implausible", 
-                                                  "Implausible (Control)")))
-  
-
-exp2_control_lm <-  glmer(response ~ condition + (1|word) + (1|subject), 
-                          family = "binomial",
-                          data = control_data)
-
-kable_table(exp2_control_lm, c("Intercept", 
-                               "Implausible", 
-                               "Implausible (Control)"))
-
-
-
-exp2_test_lm <- glmer(response ~ noise * condition + (1|word) + (1|subject), 
-                      family = "binomial",
-                      data = filter(exp2_child_data,trial_type == "Test",
-                                    condition != "Implausible (Control)"))
-
-kable_table(exp2_test_lm, c("Intercept", 
-                            "Noisy", 
-                            "Plausible",
-                            "Noisy x Plausible"))
 ```
 
-```{r exp2_plots, fig.width=7.5,fig.height=4}
-#Exposure Trials
+```{r exp2_exposure_plots, fig.width=7.5,fig.height=4}
 ggplot(filter(exp2_group_data,trial_type == "Exposure"), 
        aes(x=condition, y=mean, fill=group)) +
   facet_grid(. ~ noise) +
@@ -280,8 +248,22 @@ ggplot(filter(exp2_group_data,trial_type == "Exposure"),
   scale_x_discrete(name = "\nSpeaker Condition")+
   scale_y_continuous(name = "Proportion Choosing Plausible",
                      limits=c(0,1))
+```
 
-#Test Trials
+<h3>Analyze test trials</h3>
+```{r exp2_test}
+exp2_test_lm <- glmer(response ~ noise * condition + (1|word) + (1|subject), 
+                      family = "binomial",
+                      data = filter(exp2_child_data,trial_type == "Test",
+                                    condition != "Implausible (Control)"))
+
+kable_table(exp2_test_lm, c("Intercept", 
+                            "Noisy", 
+                            "Plausible",
+                            "Noisy x Plausible"))
+```
+
+```{r exp2_plot_test}
 plotting_test_data <- filter(exp2_group_data,trial_type == "Test") %>%
   mutate(width = ifelse(condition == "Implausible (Control)", .4, .9)) %>%
   mutate(test_type = ifelse(condition == "Implausible (Control)", 
@@ -305,5 +287,22 @@ ggplot(plotting_test_data,
   scale_x_discrete(name = "\nNoise Level")+
   scale_y_continuous(name = "Proportion Choosing Plausible",
                      limits=c(0,1))
+```
+
+<h3>Analyze Control condition</h3>
+```{r exp2_control}
+control_data <- exp2_child_data %>%
+  filter(trial_type == "Test", noise == "Noisy") %>%
+  mutate(condition = factor(condition, levels = c("Plausible", "Implausible", 
+                                                  "Implausible (Control)")))
+  
+
+exp2_control_lm <-  glmer(response ~ condition + (1|word) + (1|subject), 
+                          family = "binomial",
+                          data = control_data)
+
+kable_table(exp2_control_lm, c("Intercept", 
+                               "Implausible", 
+                               "Implausible (Control)"))
 ```
 
