@@ -25,6 +25,9 @@ library(tidyr)
 library(ggplot2)
 library(readr)
 library(jsonlite)
+library(compute.es)
+
+colors <- c("#e41a1c", "#377eb8", "#4daf4a")
 ```
 
 ```{r tab_func, include = FALSE} 
@@ -119,7 +122,7 @@ ggplot(filter(exp1_group_data,trial_type == "Exposure"),
                   size = .8,
                   show_guide = FALSE,
                  position=position_dodge(1)) +
-  scale_fill_brewer(palette="Set1") +
+  scale_fill_manual(values = colors) +
   geom_hline(aes(yintercept=.5),lty=2)+
   theme_bw(base_size=14) +
   theme(legend.position="none", panel.grid=element_blank()) +
@@ -135,6 +138,21 @@ exp1_test_lm <- glmer(response ~ group * condition + (1|word) + (1|subject),
                           data = filter(exp1_data,trial_type == "Test"))
 kable_table(exp1_test_lm, c("Intercept", "Children", "Plausible", 
                                 "Children x Plausible"))
+
+exp1_es <- exp1_data %>%
+  filter(trial_type == "Test") %>%
+  mutate(response = as.numeric(response) - 1) %>%
+  group_by(group, condition, subject) %>%
+  summarise(response = mean(response)) %>%
+  summarise(mean = mean(response),
+            sd = sd(response),
+            n = n()) %>%
+  group_by(group) %>%
+  summarise(d = mes(mean[2],mean[1],sd[2],sd[1],n[2],n[1], verbose = FALSE)$d)
+
+kable(exp1_es, caption = "Effect sizes for adults and children", 
+      column.names = c("group", "Cohen's $d$"))
+
 ```
 
 ```{r exp1_test_plots, fig.width=6,fig.height=4}
@@ -149,7 +167,7 @@ ggplot(filter(exp1_group_data,trial_type == "Test"),
                   size = .8,
                   show_guide = FALSE,
                  position=position_dodge(1)) +
-  scale_fill_brewer(palette="Set1") +
+  scale_fill_manual(values = colors) +
   geom_hline(aes(yintercept=.5),lty=2)+
   theme_bw(base_size=14) +
   theme(legend.position="none", panel.grid=element_blank()) +
@@ -255,7 +273,7 @@ ggplot(filter(exp2_group_data,trial_type == "Exposure"),
                   size = .8,
                   show_guide = FALSE,
                  position=position_dodge(1)) +
-  scale_fill_brewer(palette="Set1") +
+  scale_fill_manual(values = colors[2:3]) +
   geom_hline(aes(yintercept=.5),lty=2)+
   theme_bw(base_size=14) +
   theme(legend.position="none", panel.grid=element_blank()) +
@@ -280,7 +298,7 @@ ggplot(plotting_test_data,
                   size = .8,
                   show_guide = FALSE,
                  position=position_dodge(1)) +
-  scale_fill_brewer(palette="Set1") +
+  scale_fill_manual(values = colors[2:3]) +
   geom_hline(aes(yintercept=.5),lty=2)+
   theme_bw(base_size=14) +
   theme(legend.position="none", panel.grid=element_blank()) +
