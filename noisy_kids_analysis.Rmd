@@ -112,7 +112,10 @@ exp1_group_data <- exp1_data %>%
   mutate(response = as.numeric(response) - 1) %>%
   group_by(group,condition,trial_type) %>%
   multi_boot_standard("response", na.rm = T)
+```
 
+<h3> Demographics </h3>
+```{r exp1_demos}
 kable(child_demo_data,
       col.names = c("Speaker Condition", "Num Participants",
                     "Num Girls","Min Age","Mean Age","Max. Age"),
@@ -261,7 +264,11 @@ exp2_group_data <- exp2_data %>%
   mutate(response = as.numeric(response) - 1) %>%
   group_by(age_group, condition, trial_type) %>%
   multi_boot_standard("response", na.rm = T)
-  
+```
+
+<h3> Demographics </h3>
+
+```{r exp2_demos}
 kable(exp2_demo_data,
       col.names = c("Speaker Condition", "Age Group", "Num Participants",
                     "Num Girls","Min Age","Mean Age","Max. Age"),
@@ -432,15 +439,17 @@ exp3_demo_data <- exp3_data %>%
             mean_age = mean(age),
             max_age = max(age))
 
-kable(exp3_demo_data,
-      col.names = c("Speaker Condition", "Noise Level", "Num Participants",
-                    "Num Girls","Min Age","Mean Age","Max. Age"))
-
-
 exp3_group_data <- exp3_data %>%
   mutate(response = as.numeric(response)-1) %>%
   group_by(group,condition,noise,trial_type) %>%
   multi_boot_standard("response", na.rm = T)
+```
+
+<h3> Demographics </h3>
+```{r exp3_demos}
+kable(exp3_demo_data,
+      col.names = c("Speaker Condition", "Noise Level", "Num Participants",
+                    "Num Girls","Min Age","Mean Age","Max. Age"))
 ```
 
 <h3> Exposure trials </h3>
