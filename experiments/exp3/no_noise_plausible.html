@@ -1,0 +1,153 @@
+<html>
+  <head>
+    <title>What is she talking about?</title>
+    <script src="js/jquery.js"></script>
+
+    <script src="spriteData.js"></script>
+    <script src="mmturkey.js"></script>
+     <script src="js/bootstrap.min.js"></script>
+
+    
+     <!--<meta name="viewport" content="width=device-width">  -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap-iso.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <style>
+    body {
+        padding-top: 70px;
+        /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    }
+    </style>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" href="stylecentered.css" />
+
+</head>
+  <body>
+
+  <!-- Navigation -->
+   <div class = "bootstrap-iso">
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">Noisy-Kids</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="../../analysis.html">Analysis</a>
+                    </li>
+                   <li class="dropdown">
+                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Experiments 1/2<b class="caret"></b></a>
+                     <ul class="dropdown-menu">
+                       <li><a href="../exp1/plausible.html">Plausible</a></li>
+                       <li><a href="../exp1/implausible.html">Implausible</a></li>
+                     </ul>
+                    <li class="dropdown">
+                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Experiment 3<b class="caret"></b></a>
+                     <ul class="dropdown-menu">
+                       <li><a href="noisy_plausible.html">Noisy-Plausible</a></li>
+                       <li><a href="noisy_implausible.html">Noisy-Implausible</a></li>
+                       <li><a href="noisy_control.html">Noisy-Implausible (Control)</a></li>
+                       <li><a href="no_noise_plausible.html">No Noise-Plausible</a></li>
+                       <li><a href="no_noise_implausible.html">No Noise-Implausible</a></li>
+                     </ul>
+                   </li>
+                    <li>
+                        <a href="http://callab.uchicago.edu/papers/ycf-underreview.pdf">Paper</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/dyurovsky/noisy-kids">GitHub</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+    </div>
+
+  
+   <div class="slide" id="instructions">
+        
+        <img src="images/stanford.png" alt="Stanford University">
+        <h2 ID="blurb" class="textDiv"><b>What is she talking about?</b></h2>
+    <br />
+    <p class="textDiv" id="whatword"><b>In this short game, you will hear Katie talk about some objects and be asked to decide what she is talking about.</p></b>
+    <p ID="accept" class="textDiv">Note: You must accept the HIT to begin the survey</p>
+        
+        <p class="block-text" id="legal">By answering the
+      following questions, you are participating in a study being performed by
+      cognitive scientists in the Stanford Department of Psychology. If you have
+      questions about this research, please contact us at <a
+      href="mailto://langcoglab@stanford.edu">langcoglab@stanford.edu</a>.
+      You must be  at least 18 years old to participate. Your participation in this research is voluntary. You may
+      decline to answer any or all of the following questions. You may decline
+      further participation, at any time, without adverse consequences. Your
+      anonymity is assured; the researchers who have requested your
+      participation will not receive any personal information about you. 
+      Note however that we have recently been made aware that your public Amazon.com 
+      profile can be accessed via your worker ID if you do not choose to opt out. 
+      If you would like to opt out of this feature, you may follow instructions available 
+      <a href="https://www.amazon.com/gp/help/customer/display.html?nodeId=16465241">here</a>.</p>
+      
+       <button type="button" id="startbutton" onClick="this.blur(); experiment.test()">Start</button>
+    </div>
+ 
+ 
+  <!--<div class="slide" id="training"></div>-->
+
+  <div class="slide" id="prestudy">
+        <p class="block-text"  id="instructions">In this game, you will hear Katie describe her things.  She will say a sentence and show you two pictures.  Click on the picture that best matches what Katie said.  
+        </p> 
+        <img src="tabletobjects/katie_face2.jpg" alt="Girl Image" class="centered" style= "width:35%">
+         <p class="block-text"  id="note">Note: The red outline that appears around the picture you click on does NOT mean anything significant - it just tells you that the program has registered your click.  
+        </p> 
+        <center><button type="button" onClick="this.blur(); experiment.preStudy()">Begin</button></center>
+  </div>
+
+   <div class="slide" id="stage">
+      <div id="labelInst"> </div> <!--dynamically built in javascript-->
+      <div id="objects"> </div> <!--dynamically built in javascript-->
+
+      <audio id="sound_player">
+        <source src="glued.mp3" type="audio/mp3">
+      </audio>  
+
+   </div>
+
+   <div class="slide" id="filler">
+      <div id="filler"> </div> <!--dynamically built in javascript-->
+    </div>
+
+    <div class="slide" id="finished">
+      <br><br><br><br>
+    <p ID="s8text2" class="textDiv">Please click 'Submit' to end the study - it will automatically submit to Mechanical Turk.</p><br /> 
+	
+	<!--Make sure you change this to experiment.submit-->
+	<button type="button" id="debriefSubmit" onClick="this.blur(); experiment.submit();">Submit</button>
+    </p>
+  </div>
+
+    
+    <script src="plausible.js"></script>
+    
+  </body>
+</html>
