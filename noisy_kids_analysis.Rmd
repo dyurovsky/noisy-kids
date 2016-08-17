@@ -2,7 +2,6 @@
 title: "Preschoolers flexibly adapt to linguistic input in a noisy channel"
 author: "Daniel Yurovsky, Sarah Case, & Michael C. Frank"
 date: "`r Sys.Date()`"
-theme: spacelab
 output:
   html_document:
     highlight: tango
@@ -11,12 +10,13 @@ output:
     toc: true
     toc_float: true
     collapsed: false
+    css: style.css
 ---
 
 ```{r setup, include = FALSE}
 library(knitr)
 options(scipen = 1, digits = 3)
-opts_chunk$set(message=FALSE, warning=FALSE, fig.align = "center")
+opts_chunk$set(message=FALSE, warning=FALSE, fig.align = "center", cache = TRUE)
 ```
 
 ```{r load_libraries, cache = FALSE, include = FALSE}
@@ -34,7 +34,6 @@ library(jsonlite)
 library(compute.es)
 library(broom)
 library(purrr)
-
 colors <- c("#e41a1c", "#377eb8", "#4daf4a")
 ```
 
@@ -55,6 +54,27 @@ tidy_lmer <- function(lmer_results, predictors = NA) {
     rename(`$z$ value` = statistic,
            `$p$ value` = p.value,
            `std. error` = std.error)
+}
+
+tidy_anova <- function(anova_results) {
+  
+  tidy_results <- tidy(anova_results) %>%
+    mutate(stars = "")
+  
+  tidy_results[2, "stars"] <- get_stars(tidy_results[2,"p.value"])
+  tidy_results[2, "p.value"] <- sprintf("%.3f", tidy_results[2, "p.value"])
+  tidy_results[2, "statistic"] <- sprintf("%.3f", tidy_results[2, "statistic"])
+  tidy_results[2, "p.value"] <- ifelse(tidy_results[2, "p.value"] == "0.000", 
+                                       "< .001", 
+                                       tidy_results[2, "p.value"])
+  
+  tidy_results[1, "p.value"] <- ""
+  tidy_results[1, "Chi.Df"] <- ""
+  tidy_results[1, "statistic"] <- ""
+  
+  tidy_results %>%
+        rename(`$\\chi^{2}$ value` = statistic,
+           `$p$ value` = p.value)
 }
 
 #Compute effect sizes for means in a dataframe
@@ -83,8 +103,11 @@ mes_df <- function(df) {
 
 ## Experiment 1 ##
 
-Load data
-```{r load_exp1, cache = FALSE}
+We created a paradigm to independently manipulate expectations about speaker plausibility and perceptual noise. We introduced preschoolers (and adults) to either a Plausible or Implausible Speaker who initially uttered unambiguously different sentences like "my cat has three little [kittens/hammers]." Participants were then asked to resolve the intended meaning for ambiguous sentences like the "I had carrots and *bees* for dinner,"  which could either be produced by a perceptual error, or could convey implausible content. If children integrate speaker expectations and channel noise, their interpretations should be a product of both.
+
+
+Load in data
+```{r load_exp1}
 exp1_child_data <- read_csv("data/exp1_child.csv")
 exp1_adult_data <- read_csv("data/exp1_adult.csv")
 
@@ -95,7 +118,7 @@ exp1_data <- bind_rows(exp1_child_data, exp1_adult_data) %>%
 Munge data
 ```{r munge_exp1}
 child_demo_data <- exp1_child_data %>%
-  distinct(subject) %>%
+  distinct(subject, .keep_all = TRUE) %>%
   group_by(condition) %>%
   summarise(n = n(),
             num_girls = sum(sex == "female"),
@@ -104,7 +127,7 @@ child_demo_data <- exp1_child_data %>%
             max_age = max(age))
 
 adult_demo_data <- exp1_adult_data %>%
-  distinct(subject) %>%
+  distinct(subject, .keep_all = TRUE) %>%
   group_by(condition) %>%
   summarise(n = n())
 
@@ -112,7 +135,10 @@ exp1_group_data <- exp1_data %>%
   mutate(response = as.numeric(response) - 1) %>%
   group_by(group,condition,trial_type) %>%
   multi_boot_standard("response", na.rm = T)
+```
 
+<h3> Demographics </h3>
+```{r exp1_demos}
 kable(child_demo_data,
       col.names = c("Speaker Condition", "Num Participants",
                     "Num Girls","Min Age","Mean Age","Max. Age"),
@@ -152,8 +178,21 @@ exp1_exposure_lm <- glmer(response ~ group * condition + (1|word) + (1|subject),
                           family = "binomial",
                           data = filter(exp1_data,trial_type == "Exposure"))
 
+
 kable(tidy_lmer(exp1_exposure_lm, c("Intercept", "Children",  "Plausible", 
                                 "Children x Plausible")))
+
+
+```
+
+Verify Wald Z-test p values using log-likelihood to compare the interaction model to the simple effects model.
+```{r exp1_exposure_modelcomp}
+exp1_exposure_lm_simple <- glmer(response ~ group + condition + (1|word) + (1|subject), 
+                          family = "binomial",
+                          data = filter(exp1_data,trial_type == "Exposure"))
+
+kable(tidy_anova(anova(exp1_exposure_lm_simple, exp1_exposure_lm)))
+
 ```
 
 ```{r exp1_exposure_plots, fig.width=6, fig.height=4}
@@ -174,6 +213,8 @@ ggplot(filter(exp1_group_data,trial_type == "Exposure"),
   scale_y_continuous(name = "Proportion Choosing Plausible",
                      limits=c(0,1))
 ```
+
+Thus, both children and adults were sensitive to the speaker manipulation during Exposure trials, selecting the appropriate referent whether or not the request was implausible, although adults selected the correct referent more often in both conditions.
 
 <h3>Test trials </h3>
 ```{r exp1_test}
@@ -204,8 +245,20 @@ exp1_test_lm <- glmer(response ~ group * condition + (1|word) + (1|subject),
                           family = "binomial",
                           data = filter(exp1_data,trial_type == "Test"))
 
+
+
 kable(tidy_lmer(exp1_test_lm, c("Intercept", "Children", "Plausible", 
                             "Children x Plausible")))
+```
+
+Verify Wald Z-test p values using log-likelihood to compare the interaction model to the simple effects model.
+
+```{r exp1_test_modelcomp}
+exp1_test_lm_simple <- glmer(response ~ group + condition + (1|word) + (1|subject), 
+                          family = "binomial",
+                          data = filter(exp1_data,trial_type == "Test"))
+
+kable(tidy_anova(anova(exp1_test_lm_simple, exp1_test_lm)))
 ```
 
 ```{r exp1_test_plots, fig.width=6,fig.height=4}
@@ -228,12 +281,16 @@ ggplot(filter(exp1_group_data,trial_type == "Test"),
                      limits=c(0,1))
 ```
 
+Thus, children and adults, to the same degree, were more likely to select the plausible referent on ambiguous Test trials when the speaker had previously referred to plausible referent on unambiguous Exposure trials.
+When children and adults were exposed to a speaker who was likely to produce semantically implausible utterances (e.g. “my cat has three little hammers”), they were more likely to interpret ambiguous utterances literally instead of error-correcting to a more semantically plausible alternative. Intriguingly, the size of this adaptation was nearly identical in both groups, suggesting that 4- and 5-year-olds are already adapting as rapidly as adults. Children were, however, more likely overall to pick the plausible referent during ambiguous test trials, suggesting that they generally rely more on their expectations than do adults.
 ***
 
 ## Experiment 2 ##
 
+Experiment 2 replicates Experiment 1 in a larger and developmentally-broader sample of children. We ask two related questions: (1) Does the use of speaker-expectations increase over development, and (2) if so, is due to improving abilities to form these expectations or to bring them bear in processing ambiguous utterances.
+
 Load data
-```{r load_exp2, cache=FALSE}
+```{r load_exp2}
 exp2_data <- read_csv("data/exp2.csv") %>%
   mutate(response = factor(response, levels = c("Implausible", "Plausible")),
          age_group = floor(age))
@@ -242,7 +299,7 @@ exp2_data <- read_csv("data/exp2.csv") %>%
 Munge data
 ```{r munge_exp2}
 exp2_indiv_data <- exp2_data %>%
-  distinct(subject)
+  distinct(subject, .keep_all = TRUE)
   
 exp2_low_english <- exp2_indiv_data %>%
   filter(english <= 25) %>%
@@ -261,7 +318,11 @@ exp2_group_data <- exp2_data %>%
   mutate(response = as.numeric(response) - 1) %>%
   group_by(age_group, condition, trial_type) %>%
   multi_boot_standard("response", na.rm = T)
-  
+```
+
+<h3> Demographics </h3>
+
+```{r exp2_demos}
 kable(exp2_demo_data,
       col.names = c("Speaker Condition", "Age Group", "Num Participants",
                     "Num Girls","Min Age","Mean Age","Max. Age"),
@@ -301,6 +362,40 @@ kable(tidy_lmer(exp2_exposure_lm, c("Intercept", "Age",  "Plausible",
                                 "Age x Plausible")))
 ```
 
+Verify Wald Z-test p values using log-likelihood to compare the interaction model to the simple effects model. Also, because there are significant sex-imbalances across conditions, check to see whether this affects the Exposure results.
+
+```{r exp2_exposure_modelcomp}
+exp2_exposure_lm_simple <- glmer(response ~ age + condition + (1|word) +
+                            (1|subject), family = "binomial",
+                          data = filter(exp2_data,trial_type == "Exposure"))
+
+
+kable(tidy_anova(anova(exp2_exposure_lm_simple, exp2_exposure_lm)))
+
+exp2_exposure_lm_sex_simple <- glmer(response ~ age * condition + sex + (1|word) +
+                            (1|subject), family = "binomial",
+                          data = filter(exp2_data,trial_type == "Exposure"))
+
+exp2_exposure_lm_sex_interaction <- glmer(response ~ age * condition * sex + (1|word) +
+                            (1|subject), family = "binomial",
+                          data = filter(exp2_data,trial_type == "Exposure"),
+                          control=glmerControl(optimizer="bobyqa",
+                                         optCtrl=list(maxfun=2e5)))
+
+kable(tidy_lmer(exp2_exposure_lm_sex_simple, c("Intercept", "Age",  "Plausible", 
+                                        "Male", "Age x Plausible")))
+
+kable(tidy_lmer(exp2_exposure_lm_sex_interaction, c("Intercept", "Age",  "Plausible", 
+                                        "Male", "Age x Plausible", "Age x Male", 
+                                        "Plausible x Male", "Age x Plausible x Male")))
+
+kable(tidy_anova(anova(exp2_exposure_lm_sex_simple, 
+                       exp2_exposure_lm_sex_interaction)))
+
+kable(tidy_anova(anova(exp2_exposure_lm_sex_simple, exp2_exposure_lm)))
+kable(tidy_anova(anova(exp2_exposure_lm_sex_interaction, exp2_exposure_lm)))
+```
+
 ```{r exp2_exposure_plots, fig.width=6, fig.height=4}
 ggplot(filter(exp2_group_data,trial_type == "Exposure"), 
        aes(x=condition, y=mean, fill=as.factor(age_group))) +
@@ -319,6 +414,8 @@ ggplot(filter(exp2_group_data,trial_type == "Exposure"),
   scale_y_continuous(name = "Proportion Choosing Plausible",
                      limits=c(0,1))
 ```
+
+Older children showed a greater sensitivity to the speaker on the unambiguous Exposure trials.
 
 <h3> Test trials </h3>
 ```{r exp2_test}
@@ -353,6 +450,42 @@ kable(tidy_lmer(exp2_test_lm, c("Intercept", "Age", "Plausible",
                             "Age x Plausible")))
 ```
 
+Verify Wald Z-test p values using log-likelihood to compare the interaction model to the simple effects model. Also, because there are significant sex-imbalances across conditions, check to see whether this affects the Txposure results.
+
+```{r exp2_test_modelcomp}
+exp2_test_lm_simple <- glmer(response ~ age + condition + (1|word) + (1|subject), 
+                          family = "binomial",
+                          data = filter(exp2_data,trial_type == "Test"))
+
+kable(tidy_anova(anova(exp2_test_lm_simple, exp2_test_lm)))
+
+
+exp2_test_lm_sex_simple <- glmer(response ~ age * condition + sex +
+                                   (1|word) + (1|subject), 
+                          family = "binomial",
+                          data = filter(exp2_data,trial_type == "Test"))
+
+kable(tidy_lmer(exp2_test_lm_sex_simple, c("Intercept", "Age",  "Plausible", 
+                                        "Male", "Age x Plausible")))
+
+
+exp2_test_lm_sex_interaction <- glmer(response ~ age * condition * sex + 
+                                        (1|word) + (1|subject), 
+                          family = "binomial",
+                          data = filter(exp2_data,trial_type == "Test"),
+                          control = glmerControl(optimizer = "bobyqa", 
+                                                 optCtrl = list(maxfun = 2e5)))
+
+kable(tidy_lmer(exp2_test_lm_sex_interaction, c("Intercept", "Age",  "Plausible", 
+                                        "Male", "Age x Plausible",
+                                    "Age x Male", "Plausible x Male", 
+                                    "Age x Plausible x Male")))
+
+kable(tidy_anova(anova(exp2_test_lm_sex_simple, exp2_test_lm_sex_interaction)))
+kable(tidy_anova(anova(exp2_test_lm_sex_simple, exp2_test_lm)))
+kable(tidy_anova(anova(exp2_test_lm_sex_interaction, exp2_test_lm)))
+```
+
 ```{r exp2_test_plots, fig.width=8,fig.height=4}
 #quartz(width=8,height=4)
 ggplot(filter(exp2_group_data, trial_type == "Test"), 
@@ -374,8 +507,14 @@ ggplot(filter(exp2_group_data, trial_type == "Test"),
                      limits=c(0,1))
 ```
 
+In line with previous work, these results show that 3-year-old children have trouble using top-down speaker expectations when processing ambiguous utterances. However, children appear to improve significantly over the next two years.
+
+Older children were thus more sensitive to the speaker’s utterances on unambiguous Exposure trials, and relied more on their speaker-expectations on ambiguous Test trials. Did older children rely more on their speaker-expectations because they had built stronger expectations on Exposure trial? If so, individual differences in children’s performance on Exposure trials should explain away the effect of age on Test trials. In contrast, if the ability to leverage these expectations is improving over development, age should predict additional variance in ambiguous Test trial responses over and above children’s responses on Exposure trials.
+
+To answer this question, we fit an additional model including the proportion of Exposure trials on which individual children had selected the plausible referent. We assume that children who more frequently selected the plausible referent in the Plausible referent in the Plausible Speaker condition, or less frequently selected the plausible referent in the Implausible Speaker condition were encoding more information about the Speaker’s plausibility.
+
 <h3> Exposure predicts test </h3> 
-```{r e2_exposure_test}
+```{r exp2_exposure_test}
 exp2_bykid_data <- exp2_data %>%
   filter(trial_type == "Exposure") %>%
   group_by(age, age_group, condition, subject) %>%
@@ -388,6 +527,51 @@ exp2_bykid_lmer <- glmer(response ~  age + condition * Exposure + (1|subject) +
                                          optCtrl=list(maxfun=2e5)))
 
 kable(tidy_lmer(exp2_bykid_lmer, c("Intercept", "Age", "Plausible", 
+                              "Exposure", "Plausible x Exposure")))
+```
+
+Compare this model to both simpler and more complex models. Also show that the same results hold when only the 4- and 5-year-olds kids were analyzed.
+
+```{r exp2_exposure_test_modelcomp}
+exp2_bykid_lmer_simple <- glmer(response ~  age + condition + Exposure + (1|subject) +
+                      (1|word), family = "binomial", data = exp2_bykid_data,
+                    control=glmerControl(optimizer="bobyqa",
+                                         optCtrl=list(maxfun=2e5)))
+
+kable(tidy_anova(anova(exp2_bykid_lmer_simple, exp2_bykid_lmer)))
+
+exp2_bykid_lmer_3way <- glmer(response ~  age * condition * Exposure + (1|subject) +
+                      (1|word), family = "binomial", data = exp2_bykid_data,
+                    control=glmerControl(optimizer="bobyqa",
+                                         optCtrl=list(maxfun=2e5)))
+
+kable(tidy_anova(anova(exp2_bykid_lmer_3way, exp2_bykid_lmer)))
+
+exp2_bykid_lmer_2way_other1 <- glmer(response ~  age * condition + Exposure +
+                                       (1|subject) + (1|word), 
+                                     family = "binomial", data = exp2_bykid_data,
+                    control=glmerControl(optimizer="bobyqa",
+                                         optCtrl=list(maxfun=2e5)))
+
+kable(tidy_anova(anova(exp2_bykid_lmer_2way_other1, exp2_bykid_lmer)))
+
+
+exp2_bykid_lmer_2way_other2 <- glmer(response ~  age * Exposure + condition +
+                                       (1|subject) + (1|word), 
+                                     family = "binomial", data = exp2_bykid_data,
+                    control=glmerControl(optimizer="bobyqa",
+                                         optCtrl=list(maxfun=2e5)))
+
+kable(tidy_anova(anova(exp2_bykid_lmer_2way_other2, exp2_bykid_lmer)))
+
+
+exp2_bykid_lmer_younger <- glmer(response ~  age + condition * Exposure + (1|subject) +
+                      (1|word), family = "binomial", 
+                      data = filter(exp2_bykid_data, age >= 4),
+                    control=glmerControl(optimizer="bobyqa",
+                                         optCtrl=list(maxfun=2e5)))
+
+kable(tidy_lmer(exp2_bykid_lmer_younger, c("Intercept", "Age", "Plausible", 
                               "Exposure", "Plausible x Exposure")))
 ```
 
@@ -408,12 +592,16 @@ ggplot(aes(x = Exposure, y = Test, color = age), data = exp2_cor_data) +
                      limits=c(-.1, 1.1), breaks = seq(0, 1, .2))
 ```
 
+Thus, it appears that older children relied more on speaker expectations because they had formed stronger expectations rather than because they rely on expectations differently. Experiments 1 and 2 thus show that children’s reliance on speaker-expectations remains relatively constant across the 3–6 year range, but that their ability to build these expectations improves gradually across development.
+
 ***
 
 ## Experiment 3 ##
 
+Experiment 3 tests a second prediction of noisy channel processing: As speech becomes noisier, and thus less reliable, children should rely more on their expectations.
+
 Load data
-```{r load_exp3, cache=FALSE}
+```{r load_exp3}
 exp3_data <- read_csv("data/exp3.csv") %>%
   mutate(response = factor(response, levels = c("Implausible", "Plausible")),
          condition = factor(condition, levels = c("Implausible", "Plausible", "Control"),
@@ -424,7 +612,7 @@ exp3_data <- read_csv("data/exp3.csv") %>%
 Munge data
 ```{r munge_exp3}
 exp3_demo_data <- exp3_data %>%
-  distinct(subject) %>%
+  distinct(subject, .keep_all = TRUE) %>%
   group_by(condition, noise) %>%
   summarise(n = n(),
             num_girls = sum(sex == "female", na.rm = T),
@@ -432,15 +620,17 @@ exp3_demo_data <- exp3_data %>%
             mean_age = mean(age),
             max_age = max(age))
 
+exp3_group_data <- exp3_data %>%
+  mutate(response = as.numeric(response)-1) %>%
+  group_by(condition,noise,trial_type) %>%
+  multi_boot_standard("response", na.rm = T)
+```
+
+<h3> Demographics </h3>
+```{r exp3_demos}
 kable(exp3_demo_data,
       col.names = c("Speaker Condition", "Noise Level", "Num Participants",
                     "Num Girls","Min Age","Mean Age","Max. Age"))
-
-
-exp3_group_data <- exp3_data %>%
-  mutate(response = as.numeric(response)-1) %>%
-  group_by(group,condition,noise,trial_type) %>%
-  multi_boot_standard("response", na.rm = T)
 ```
 
 <h3> Exposure trials </h3>
@@ -475,22 +665,32 @@ exp3_exposure_lm <- glmer(response ~ noise * condition + (1|word) +
                             (1|subject), family = "binomial",
                           data = filter(exp3_data,trial_type == "Exposure"))
 
-kable(tidy_lmer(exp3_exposure_lm, c("Intercept", "Plausible", 
+kable(tidy_lmer(exp3_exposure_lm, c("Intercept", "Noisy", "Plausible",
                                     "Implausible (Control)", 
-                                    "Noisy", "Plausible x Noisy")))
+                                    "Plausible x Noisy")))
+```
+
+Verify Wald Z-test p values using log-likelihood to compare the interaction model to the simple effects model.
+
+```{r exp3_exposure_modelcomp}
+
+exp3_exposure_lm_simple <- glmer(response ~ noise + condition + (1|word) +
+                            (1|subject), family = "binomial",
+                          data = filter(exp3_data,trial_type == "Exposure"))
+
+anova(exp3_exposure_lm_simple, exp3_exposure_lm)
 ```
 
 ```{r exp3_exposure_plots, fig.width=7.5,fig.height=4}
 ggplot(filter(exp3_group_data,trial_type == "Exposure"), 
-       aes(x=condition, y=mean, fill=group)) +
+       aes(x = condition, y = mean)) +
   facet_grid(. ~ noise) +
-  geom_bar(stat="identity",position=position_dodge(1))+
+  geom_bar(stat="identity", position=position_dodge(1), fill = colors[2])+
   geom_linerange(aes(ymin = ci_lower,
                       ymax = ci_upper),
                   size = .8,
                   show.legend = FALSE,
                  position=position_dodge(1)) +
-  scale_fill_manual(values = colors[2:3]) +
   geom_hline(aes(yintercept=.5),lty=2)+
   theme_bw(base_size=14) +
   theme(legend.position="none", panel.grid=element_blank()) +
@@ -498,6 +698,8 @@ ggplot(filter(exp3_group_data,trial_type == "Exposure"),
   scale_y_continuous(name = "Proportion Choosing Plausible",
                      limits=c(0,1))
 ```
+
+Compared to the Implausible Speaker condition, children exposed to the Plausible Speaker were more likely to pick the plausible referent on Exposure trials. Children exposed to the Control speaker did not perform differently on Exposure trials from those exposed to the  Implausible speaker, as predicted. Further, the model showed a marginal effect of Noise level and a significant interaction between Noise level and Speaker, indicating that the addition of noise moved children in both conditions closer to chance.
 
 <h3>Test trials</h3>
 ```{r exp3_test}
@@ -534,13 +736,23 @@ exp3_test_lm <- glmer(response ~ noise * condition + (1|word) + (1|subject),
                                     condition != "Implausible (Control)"))
 
 
-kable(tidy_lmer(exp3_test_lm, c("Intercept", 
-                            "Noisy", 
+kable(tidy_lmer(exp3_test_lm, c("Intercept", "Noisy", 
                             "Plausible",
                             "Noisy x Plausible")))
 ```
 
-```{r exp3_plot_test}
+Verify Wald Z-test p values using log-likelihood to compare the interaction model to the simple effects model.
+
+```{r exp3_test_modelcomp}
+exp3_test_lm_simple <- glmer(response ~ noise + condition + (1|word) + (1|subject), 
+                      family = "binomial",
+                      data = filter(exp3_data,trial_type == "Test",
+                                    condition != "Implausible (Control)"))
+
+kable(tidy_anova(anova(exp3_test_lm_simple, exp3_test_lm)))
+```
+
+```{r exp3_plot_test, fig.width = 7.5, fig.height = 4}
 plotting_test_data <- filter(exp3_group_data, trial_type == "Test") %>%
   mutate(width = ifelse(condition == "Implausible (Control)", .4, .9)) %>%
   mutate(test_type = ifelse(condition == "Implausible (Control)", 
@@ -566,6 +778,10 @@ ggplot(plotting_test_data,
                      limits=c(0,1))
 ```
 
+As predicted, children showed sensitivity to both speaker reliability and acoustic noise. Children selected the plausible referent at Test, correcting the error in their acoustic input, more often when the speaker had said plausible things on Exposure trials. In addition, regardless of Speaker plausibility, children selected the plausible referent more frequently when the acoustic input was noisy. To quantify this pattern, we again fit a mixed-effects regression predicting choice on test trials from Speaker type and Noise level as well as their interaction. As predicted, both main effects were significant, but their interaction was not
+
+Finally, one alternative explanation for the difference between Speaker conditions is that children simply followed their expectations at all times, e.g., that those exposed to the Implausible speaker chose “silly” responses regardless of the question. To test this alternative, we asked whether children who responded to an Implausible speaker on Exposure trials always chose the implausible referent on Test trials even when the speaker referred to the plausible referent (Implausible Control condition).
+
 <h3> Control condition </h3>
 ```{r exp3_control}
 control_data <- exp3_data %>%
@@ -573,7 +789,6 @@ control_data <- exp3_data %>%
   mutate(condition = factor(condition, levels = c("Plausible", "Implausible", 
                                                   "Implausible (Control)")))
   
-
 exp3_control_lm <-  glmer(response ~ condition + (1|word) + (1|subject), 
                           family = "binomial",
                           data = control_data)
@@ -581,5 +796,12 @@ exp3_control_lm <-  glmer(response ~ condition + (1|word) + (1|subject),
 kable(tidy_lmer(exp3_control_lm, c("Intercept", 
                                "Implausible", 
                                "Implausible (Control)")))
+
+exp3_control_lm_simple <-  glmer(response ~  (1|word) + (1|subject), 
+                          family = "binomial",
+                          data = control_data)
+
+kable(tidy_anova(anova(exp3_control_lm, exp3_control_lm_simple)))
 ```
 
+Thus, children who were asked for the plausible referent at Test selected it, even when the speaker had previously always referred to the implausible referent. This Control condition provides further evidence that children were attending to and responding to the acoustic input from the speaker on Test trials, integrating it with their prior expectations

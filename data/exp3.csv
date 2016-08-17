@@ -1,0 +1,1777 @@
+experiment,subject,age,sex,condition,noise,trial_type,word,response
+3,exp3_1,4.17,male,Plausible,Noisy,Exposure,bread_peanutbutter,Plausible
+3,exp3_1,4.17,male,Plausible,Noisy,Exposure,knife_fork,Plausible
+3,exp3_1,4.17,male,Plausible,Noisy,Exposure,shark_fish,Plausible
+3,exp3_1,4.17,male,Plausible,Noisy,Exposure,wooden_blocks,Plausible
+3,exp3_1,4.17,male,Plausible,Noisy,Exposure,cat_kittens,Plausible
+3,exp3_1,4.17,male,Plausible,Noisy,Exposure,house_door,Plausible
+3,exp3_1,4.17,male,Plausible,Noisy,Exposure,flowers_basket,Plausible
+3,exp3_1,4.17,male,Plausible,Noisy,Exposure,book_table,Plausible
+3,exp3_1,4.17,male,Plausible,Noisy,Test,shirt_die,Plausible
+3,exp3_1,4.17,male,Plausible,Noisy,Test,beach_bowl,Implausible
+3,exp3_1,4.17,male,Plausible,Noisy,Test,paper_pan,Plausible
+3,exp3_1,4.17,male,Plausible,Noisy,Test,carrots_bees,Implausible
+3,exp3_1,4.17,male,Plausible,Noisy,Test,fan_airport,Plausible
+3,exp3_1,4.17,male,Plausible,Noisy,Test,coats_horses,Plausible
+3,exp3_1,4.17,male,Plausible,Noisy,Test,worms_bags,Plausible
+3,exp3_1,4.17,male,Plausible,Noisy,Test,marker_cup,Implausible
+3,exp3_2,5.9,male,Implausible,Noisy,Exposure,bread_ketchup,Implausible
+3,exp3_2,5.9,male,Implausible,Noisy,Exposure,shark_racecar,Implausible
+3,exp3_2,5.9,male,Implausible,Noisy,Exposure,wooden_apples,Implausible
+3,exp3_2,5.9,male,Implausible,Noisy,Exposure,book_plane,Implausible
+3,exp3_2,5.9,male,Implausible,Noisy,Exposure,cat_hammers,Implausible
+3,exp3_2,5.9,male,Implausible,Noisy,Exposure,knife_camel,Implausible
+3,exp3_2,5.9,male,Implausible,Noisy,Exposure,flowers_donut,Implausible
+3,exp3_2,5.9,male,Implausible,Noisy,Exposure,house_nose,Implausible
+3,exp3_2,5.9,male,Implausible,Noisy,Test,carrots_bees,Implausible
+3,exp3_2,5.9,male,Implausible,Noisy,Test,coats_horses,Implausible
+3,exp3_2,5.9,male,Implausible,Noisy,Test,fan_airport,Implausible
+3,exp3_2,5.9,male,Implausible,Noisy,Test,beach_bowl,Implausible
+3,exp3_2,5.9,male,Implausible,Noisy,Test,paper_pan,Implausible
+3,exp3_2,5.9,male,Implausible,Noisy,Test,shirt_die,Implausible
+3,exp3_2,5.9,male,Implausible,Noisy,Test,marker_cup,Implausible
+3,exp3_2,5.9,male,Implausible,Noisy,Test,worms_bags,Implausible
+3,exp3_3,4.43,female,Plausible,Noisy,Exposure,flowers_basket,Implausible
+3,exp3_3,4.43,female,Plausible,Noisy,Exposure,bread_peanutbutter,Implausible
+3,exp3_3,4.43,female,Plausible,Noisy,Exposure,shark_fish,Plausible
+3,exp3_3,4.43,female,Plausible,Noisy,Exposure,book_table,Implausible
+3,exp3_3,4.43,female,Plausible,Noisy,Exposure,knife_fork,Plausible
+3,exp3_3,4.43,female,Plausible,Noisy,Exposure,house_door,Implausible
+3,exp3_3,4.43,female,Plausible,Noisy,Exposure,wooden_blocks,Plausible
+3,exp3_3,4.43,female,Plausible,Noisy,Exposure,cat_kittens,Plausible
+3,exp3_3,4.43,female,Plausible,Noisy,Test,shirt_die,Plausible
+3,exp3_3,4.43,female,Plausible,Noisy,Test,marker_cup,Implausible
+3,exp3_3,4.43,female,Plausible,Noisy,Test,beach_bowl,Plausible
+3,exp3_3,4.43,female,Plausible,Noisy,Test,carrots_bees,Plausible
+3,exp3_3,4.43,female,Plausible,Noisy,Test,paper_pan,Implausible
+3,exp3_3,4.43,female,Plausible,Noisy,Test,worms_bags,Plausible
+3,exp3_3,4.43,female,Plausible,Noisy,Test,fan_airport,Implausible
+3,exp3_3,4.43,female,Plausible,Noisy,Test,coats_horses,Implausible
+3,exp3_4,5.51,female,Plausible,Noisy,Exposure,house_door,Plausible
+3,exp3_4,5.51,female,Plausible,Noisy,Exposure,bread_peanutbutter,Plausible
+3,exp3_4,5.51,female,Plausible,Noisy,Exposure,wooden_blocks,Plausible
+3,exp3_4,5.51,female,Plausible,Noisy,Exposure,book_table,Plausible
+3,exp3_4,5.51,female,Plausible,Noisy,Exposure,flowers_basket,Plausible
+3,exp3_4,5.51,female,Plausible,Noisy,Exposure,shark_fish,Plausible
+3,exp3_4,5.51,female,Plausible,Noisy,Exposure,cat_kittens,Plausible
+3,exp3_4,5.51,female,Plausible,Noisy,Exposure,knife_fork,Plausible
+3,exp3_4,5.51,female,Plausible,Noisy,Test,carrots_bees,Plausible
+3,exp3_4,5.51,female,Plausible,Noisy,Test,worms_bags,Implausible
+3,exp3_4,5.51,female,Plausible,Noisy,Test,beach_bowl,Plausible
+3,exp3_4,5.51,female,Plausible,Noisy,Test,paper_pan,Plausible
+3,exp3_4,5.51,female,Plausible,Noisy,Test,marker_cup,Implausible
+3,exp3_4,5.51,female,Plausible,Noisy,Test,fan_airport,Plausible
+3,exp3_4,5.51,female,Plausible,Noisy,Test,coats_horses,Plausible
+3,exp3_4,5.51,female,Plausible,Noisy,Test,shirt_die,Plausible
+3,exp3_5,4.02,male,Plausible,Noisy,Exposure,flowers_basket,Plausible
+3,exp3_5,4.02,male,Plausible,Noisy,Exposure,house_door,Plausible
+3,exp3_5,4.02,male,Plausible,Noisy,Exposure,shark_fish,Plausible
+3,exp3_5,4.02,male,Plausible,Noisy,Exposure,bread_peanutbutter,Plausible
+3,exp3_5,4.02,male,Plausible,Noisy,Exposure,cat_kittens,Plausible
+3,exp3_5,4.02,male,Plausible,Noisy,Exposure,book_table,Plausible
+3,exp3_5,4.02,male,Plausible,Noisy,Exposure,wooden_blocks,Plausible
+3,exp3_5,4.02,male,Plausible,Noisy,Exposure,knife_fork,Plausible
+3,exp3_5,4.02,male,Plausible,Noisy,Test,shirt_die,Plausible
+3,exp3_5,4.02,male,Plausible,Noisy,Test,marker_cup,Plausible
+3,exp3_5,4.02,male,Plausible,Noisy,Test,carrots_bees,Implausible
+3,exp3_5,4.02,male,Plausible,Noisy,Test,worms_bags,Implausible
+3,exp3_5,4.02,male,Plausible,Noisy,Test,fan_airport,Implausible
+3,exp3_5,4.02,male,Plausible,Noisy,Test,beach_bowl,Implausible
+3,exp3_5,4.02,male,Plausible,Noisy,Test,coats_horses,Plausible
+3,exp3_5,4.02,male,Plausible,Noisy,Test,paper_pan,Plausible
+3,exp3_6,5.59,female,Plausible,Noisy,Exposure,knife_fork,Plausible
+3,exp3_6,5.59,female,Plausible,Noisy,Exposure,book_table,Plausible
+3,exp3_6,5.59,female,Plausible,Noisy,Exposure,bread_peanutbutter,Plausible
+3,exp3_6,5.59,female,Plausible,Noisy,Exposure,shark_fish,Plausible
+3,exp3_6,5.59,female,Plausible,Noisy,Exposure,flowers_basket,Plausible
+3,exp3_6,5.59,female,Plausible,Noisy,Exposure,cat_kittens,Plausible
+3,exp3_6,5.59,female,Plausible,Noisy,Exposure,house_door,Plausible
+3,exp3_6,5.59,female,Plausible,Noisy,Exposure,wooden_blocks,Plausible
+3,exp3_6,5.59,female,Plausible,Noisy,Test,paper_pan,Plausible
+3,exp3_6,5.59,female,Plausible,Noisy,Test,coats_horses,Implausible
+3,exp3_6,5.59,female,Plausible,Noisy,Test,beach_bowl,Plausible
+3,exp3_6,5.59,female,Plausible,Noisy,Test,shirt_die,Plausible
+3,exp3_6,5.59,female,Plausible,Noisy,Test,carrots_bees,Implausible
+3,exp3_6,5.59,female,Plausible,Noisy,Test,worms_bags,Plausible
+3,exp3_6,5.59,female,Plausible,Noisy,Test,marker_cup,Plausible
+3,exp3_6,5.59,female,Plausible,Noisy,Test,fan_airport,Implausible
+3,exp3_7,5.76,NaN,Plausible,Noisy,Exposure,shark_fish,Plausible
+3,exp3_7,5.76,NaN,Plausible,Noisy,Exposure,book_table,Plausible
+3,exp3_7,5.76,NaN,Plausible,Noisy,Exposure,house_door,Plausible
+3,exp3_7,5.76,NaN,Plausible,Noisy,Exposure,bread_peanutbutter,Plausible
+3,exp3_7,5.76,NaN,Plausible,Noisy,Exposure,wooden_blocks,Plausible
+3,exp3_7,5.76,NaN,Plausible,Noisy,Exposure,cat_kittens,Plausible
+3,exp3_7,5.76,NaN,Plausible,Noisy,Exposure,flowers_basket,Plausible
+3,exp3_7,5.76,NaN,Plausible,Noisy,Exposure,knife_fork,Plausible
+3,exp3_7,5.76,NaN,Plausible,Noisy,Test,worms_bags,Implausible
+3,exp3_7,5.76,NaN,Plausible,Noisy,Test,marker_cup,Plausible
+3,exp3_7,5.76,NaN,Plausible,Noisy,Test,fan_airport,Plausible
+3,exp3_7,5.76,NaN,Plausible,Noisy,Test,shirt_die,Implausible
+3,exp3_7,5.76,NaN,Plausible,Noisy,Test,paper_pan,Plausible
+3,exp3_7,5.76,NaN,Plausible,Noisy,Test,carrots_bees,Plausible
+3,exp3_7,5.76,NaN,Plausible,Noisy,Test,coats_horses,Plausible
+3,exp3_7,5.76,NaN,Plausible,Noisy,Test,beach_bowl,Plausible
+3,exp3_8,5.6,female,Plausible,Noisy,Exposure,wooden_blocks,Plausible
+3,exp3_8,5.6,female,Plausible,Noisy,Exposure,house_door,Plausible
+3,exp3_8,5.6,female,Plausible,Noisy,Exposure,knife_fork,Plausible
+3,exp3_8,5.6,female,Plausible,Noisy,Exposure,bread_peanutbutter,Plausible
+3,exp3_8,5.6,female,Plausible,Noisy,Exposure,flowers_basket,Plausible
+3,exp3_8,5.6,female,Plausible,Noisy,Exposure,shark_fish,Plausible
+3,exp3_8,5.6,female,Plausible,Noisy,Exposure,book_table,Plausible
+3,exp3_8,5.6,female,Plausible,Noisy,Exposure,cat_kittens,Plausible
+3,exp3_8,5.6,female,Plausible,Noisy,Test,beach_bowl,Plausible
+3,exp3_8,5.6,female,Plausible,Noisy,Test,marker_cup,Plausible
+3,exp3_8,5.6,female,Plausible,Noisy,Test,carrots_bees,Implausible
+3,exp3_8,5.6,female,Plausible,Noisy,Test,shirt_die,Plausible
+3,exp3_8,5.6,female,Plausible,Noisy,Test,worms_bags,Plausible
+3,exp3_8,5.6,female,Plausible,Noisy,Test,paper_pan,Plausible
+3,exp3_8,5.6,female,Plausible,Noisy,Test,fan_airport,Plausible
+3,exp3_8,5.6,female,Plausible,Noisy,Test,coats_horses,Plausible
+3,exp3_9,4.65,female,Plausible,Noisy,Exposure,wooden_blocks,Plausible
+3,exp3_9,4.65,female,Plausible,Noisy,Exposure,house_door,Plausible
+3,exp3_9,4.65,female,Plausible,Noisy,Exposure,cat_kittens,Plausible
+3,exp3_9,4.65,female,Plausible,Noisy,Exposure,bread_peanutbutter,Implausible
+3,exp3_9,4.65,female,Plausible,Noisy,Exposure,shark_fish,Plausible
+3,exp3_9,4.65,female,Plausible,Noisy,Exposure,flowers_basket,Plausible
+3,exp3_9,4.65,female,Plausible,Noisy,Exposure,book_table,Plausible
+3,exp3_9,4.65,female,Plausible,Noisy,Exposure,knife_fork,Plausible
+3,exp3_9,4.65,female,Plausible,Noisy,Test,worms_bags,Implausible
+3,exp3_9,4.65,female,Plausible,Noisy,Test,coats_horses,Implausible
+3,exp3_9,4.65,female,Plausible,Noisy,Test,shirt_die,Plausible
+3,exp3_9,4.65,female,Plausible,Noisy,Test,beach_bowl,Implausible
+3,exp3_9,4.65,female,Plausible,Noisy,Test,fan_airport,Plausible
+3,exp3_9,4.65,female,Plausible,Noisy,Test,marker_cup,Plausible
+3,exp3_9,4.65,female,Plausible,Noisy,Test,paper_pan,Plausible
+3,exp3_9,4.65,female,Plausible,Noisy,Test,carrots_bees,Plausible
+3,exp3_10,5.31,female,Plausible,Noisy,Exposure,house_door,Plausible
+3,exp3_10,5.31,female,Plausible,Noisy,Exposure,book_table,Plausible
+3,exp3_10,5.31,female,Plausible,Noisy,Exposure,knife_fork,Plausible
+3,exp3_10,5.31,female,Plausible,Noisy,Exposure,shark_fish,Plausible
+3,exp3_10,5.31,female,Plausible,Noisy,Exposure,flowers_basket,Plausible
+3,exp3_10,5.31,female,Plausible,Noisy,Exposure,cat_kittens,Plausible
+3,exp3_10,5.31,female,Plausible,Noisy,Exposure,bread_peanutbutter,Plausible
+3,exp3_10,5.31,female,Plausible,Noisy,Exposure,wooden_blocks,Plausible
+3,exp3_10,5.31,female,Plausible,Noisy,Test,shirt_die,Plausible
+3,exp3_10,5.31,female,Plausible,Noisy,Test,paper_pan,Plausible
+3,exp3_10,5.31,female,Plausible,Noisy,Test,coats_horses,Plausible
+3,exp3_10,5.31,female,Plausible,Noisy,Test,worms_bags,Plausible
+3,exp3_10,5.31,female,Plausible,Noisy,Test,beach_bowl,Plausible
+3,exp3_10,5.31,female,Plausible,Noisy,Test,fan_airport,Plausible
+3,exp3_10,5.31,female,Plausible,Noisy,Test,marker_cup,Plausible
+3,exp3_10,5.31,female,Plausible,Noisy,Test,carrots_bees,Plausible
+3,exp3_11,5.44,female,Implausible,Noisy,Exposure,knife_camel,Plausible
+3,exp3_11,5.44,female,Implausible,Noisy,Exposure,house_nose,Implausible
+3,exp3_11,5.44,female,Implausible,Noisy,Exposure,book_plane,Plausible
+3,exp3_11,5.44,female,Implausible,Noisy,Exposure,shark_racecar,Implausible
+3,exp3_11,5.44,female,Implausible,Noisy,Exposure,bread_ketchup,Implausible
+3,exp3_11,5.44,female,Implausible,Noisy,Exposure,flowers_donut,Implausible
+3,exp3_11,5.44,female,Implausible,Noisy,Exposure,wooden_apples,Implausible
+3,exp3_11,5.44,female,Implausible,Noisy,Exposure,cat_hammers,Implausible
+3,exp3_11,5.44,female,Implausible,Noisy,Test,paper_pan,Implausible
+3,exp3_11,5.44,female,Implausible,Noisy,Test,worms_bags,Implausible
+3,exp3_11,5.44,female,Implausible,Noisy,Test,fan_airport,Plausible
+3,exp3_11,5.44,female,Implausible,Noisy,Test,carrots_bees,Implausible
+3,exp3_11,5.44,female,Implausible,Noisy,Test,coats_horses,Implausible
+3,exp3_11,5.44,female,Implausible,Noisy,Test,marker_cup,Implausible
+3,exp3_11,5.44,female,Implausible,Noisy,Test,shirt_die,Implausible
+3,exp3_11,5.44,female,Implausible,Noisy,Test,beach_bowl,Implausible
+3,exp3_12,4.78,male,Plausible,Noisy,Exposure,cat_kittens,Plausible
+3,exp3_12,4.78,male,Plausible,Noisy,Exposure,wooden_blocks,Plausible
+3,exp3_12,4.78,male,Plausible,Noisy,Exposure,house_door,Plausible
+3,exp3_12,4.78,male,Plausible,Noisy,Exposure,knife_fork,Plausible
+3,exp3_12,4.78,male,Plausible,Noisy,Exposure,bread_peanutbutter,Plausible
+3,exp3_12,4.78,male,Plausible,Noisy,Exposure,flowers_basket,Plausible
+3,exp3_12,4.78,male,Plausible,Noisy,Exposure,book_table,Plausible
+3,exp3_12,4.78,male,Plausible,Noisy,Exposure,shark_fish,Plausible
+3,exp3_12,4.78,male,Plausible,Noisy,Test,marker_cup,Implausible
+3,exp3_12,4.78,male,Plausible,Noisy,Test,worms_bags,Plausible
+3,exp3_12,4.78,male,Plausible,Noisy,Test,paper_pan,Plausible
+3,exp3_12,4.78,male,Plausible,Noisy,Test,fan_airport,Plausible
+3,exp3_12,4.78,male,Plausible,Noisy,Test,carrots_bees,Plausible
+3,exp3_12,4.78,male,Plausible,Noisy,Test,shirt_die,Plausible
+3,exp3_12,4.78,male,Plausible,Noisy,Test,beach_bowl,Implausible
+3,exp3_12,4.78,male,Plausible,Noisy,Test,coats_horses,Plausible
+3,exp3_13,4.48,male,Plausible,Noisy,Exposure,flowers_basket,Plausible
+3,exp3_13,4.48,male,Plausible,Noisy,Exposure,house_door,Plausible
+3,exp3_13,4.48,male,Plausible,Noisy,Exposure,wooden_blocks,Plausible
+3,exp3_13,4.48,male,Plausible,Noisy,Exposure,bread_peanutbutter,Plausible
+3,exp3_13,4.48,male,Plausible,Noisy,Exposure,book_table,Plausible
+3,exp3_13,4.48,male,Plausible,Noisy,Exposure,cat_kittens,Plausible
+3,exp3_13,4.48,male,Plausible,Noisy,Exposure,shark_fish,Plausible
+3,exp3_13,4.48,male,Plausible,Noisy,Exposure,knife_fork,Plausible
+3,exp3_13,4.48,male,Plausible,Noisy,Test,coats_horses,Implausible
+3,exp3_13,4.48,male,Plausible,Noisy,Test,fan_airport,Plausible
+3,exp3_13,4.48,male,Plausible,Noisy,Test,beach_bowl,Plausible
+3,exp3_13,4.48,male,Plausible,Noisy,Test,paper_pan,Plausible
+3,exp3_13,4.48,male,Plausible,Noisy,Test,shirt_die,Plausible
+3,exp3_13,4.48,male,Plausible,Noisy,Test,marker_cup,Plausible
+3,exp3_13,4.48,male,Plausible,Noisy,Test,worms_bags,Plausible
+3,exp3_13,4.48,male,Plausible,Noisy,Test,carrots_bees,Implausible
+3,exp3_14,4.19,female,Plausible,Noisy,Exposure,flowers_basket,Plausible
+3,exp3_14,4.19,female,Plausible,Noisy,Exposure,house_door,Plausible
+3,exp3_14,4.19,female,Plausible,Noisy,Exposure,knife_fork,Plausible
+3,exp3_14,4.19,female,Plausible,Noisy,Exposure,book_table,Plausible
+3,exp3_14,4.19,female,Plausible,Noisy,Exposure,bread_peanutbutter,Plausible
+3,exp3_14,4.19,female,Plausible,Noisy,Exposure,shark_fish,Plausible
+3,exp3_14,4.19,female,Plausible,Noisy,Exposure,wooden_blocks,Plausible
+3,exp3_14,4.19,female,Plausible,Noisy,Exposure,cat_kittens,Plausible
+3,exp3_14,4.19,female,Plausible,Noisy,Test,worms_bags,Plausible
+3,exp3_14,4.19,female,Plausible,Noisy,Test,beach_bowl,Plausible
+3,exp3_14,4.19,female,Plausible,Noisy,Test,carrots_bees,Plausible
+3,exp3_14,4.19,female,Plausible,Noisy,Test,marker_cup,Implausible
+3,exp3_14,4.19,female,Plausible,Noisy,Test,coats_horses,Implausible
+3,exp3_14,4.19,female,Plausible,Noisy,Test,shirt_die,Plausible
+3,exp3_14,4.19,female,Plausible,Noisy,Test,fan_airport,Plausible
+3,exp3_14,4.19,female,Plausible,Noisy,Test,paper_pan,Plausible
+3,exp3_15,4.62,male,Plausible,Noisy,Exposure,shark_fish,Plausible
+3,exp3_15,4.62,male,Plausible,Noisy,Exposure,bread_peanutbutter,Implausible
+3,exp3_15,4.62,male,Plausible,Noisy,Exposure,flowers_basket,Plausible
+3,exp3_15,4.62,male,Plausible,Noisy,Exposure,wooden_blocks,Plausible
+3,exp3_15,4.62,male,Plausible,Noisy,Exposure,knife_fork,Plausible
+3,exp3_15,4.62,male,Plausible,Noisy,Exposure,book_table,Plausible
+3,exp3_15,4.62,male,Plausible,Noisy,Exposure,cat_kittens,Plausible
+3,exp3_15,4.62,male,Plausible,Noisy,Exposure,house_door,Plausible
+3,exp3_15,4.62,male,Plausible,Noisy,Test,coats_horses,Implausible
+3,exp3_15,4.62,male,Plausible,Noisy,Test,carrots_bees,Plausible
+3,exp3_15,4.62,male,Plausible,Noisy,Test,shirt_die,Plausible
+3,exp3_15,4.62,male,Plausible,Noisy,Test,paper_pan,Plausible
+3,exp3_15,4.62,male,Plausible,Noisy,Test,marker_cup,Plausible
+3,exp3_15,4.62,male,Plausible,Noisy,Test,worms_bags,Plausible
+3,exp3_15,4.62,male,Plausible,Noisy,Test,beach_bowl,Plausible
+3,exp3_15,4.62,male,Plausible,Noisy,Test,fan_airport,Plausible
+3,exp3_16,4.62,female,Plausible,Noisy,Exposure,flowers_basket,Plausible
+3,exp3_16,4.62,female,Plausible,Noisy,Exposure,house_door,Plausible
+3,exp3_16,4.62,female,Plausible,Noisy,Exposure,knife_fork,Plausible
+3,exp3_16,4.62,female,Plausible,Noisy,Exposure,shark_fish,Plausible
+3,exp3_16,4.62,female,Plausible,Noisy,Exposure,cat_kittens,Plausible
+3,exp3_16,4.62,female,Plausible,Noisy,Exposure,wooden_blocks,Plausible
+3,exp3_16,4.62,female,Plausible,Noisy,Exposure,bread_peanutbutter,Plausible
+3,exp3_16,4.62,female,Plausible,Noisy,Exposure,book_table,Plausible
+3,exp3_16,4.62,female,Plausible,Noisy,Test,paper_pan,Plausible
+3,exp3_16,4.62,female,Plausible,Noisy,Test,worms_bags,Plausible
+3,exp3_16,4.62,female,Plausible,Noisy,Test,shirt_die,Plausible
+3,exp3_16,4.62,female,Plausible,Noisy,Test,beach_bowl,Plausible
+3,exp3_16,4.62,female,Plausible,Noisy,Test,marker_cup,Plausible
+3,exp3_16,4.62,female,Plausible,Noisy,Test,coats_horses,Implausible
+3,exp3_16,4.62,female,Plausible,Noisy,Test,fan_airport,Plausible
+3,exp3_16,4.62,female,Plausible,Noisy,Test,carrots_bees,Plausible
+3,exp3_17,5.6,male,Implausible,Noisy,Exposure,cat_hammers,Implausible
+3,exp3_17,5.6,male,Implausible,Noisy,Exposure,knife_camel,Implausible
+3,exp3_17,5.6,male,Implausible,Noisy,Exposure,shark_racecar,Implausible
+3,exp3_17,5.6,male,Implausible,Noisy,Exposure,house_nose,Implausible
+3,exp3_17,5.6,male,Implausible,Noisy,Exposure,wooden_apples,Plausible
+3,exp3_17,5.6,male,Implausible,Noisy,Exposure,flowers_donut,Implausible
+3,exp3_17,5.6,male,Implausible,Noisy,Exposure,book_plane,Implausible
+3,exp3_17,5.6,male,Implausible,Noisy,Exposure,bread_ketchup,Plausible
+3,exp3_17,5.6,male,Implausible,Noisy,Test,carrots_bees,Plausible
+3,exp3_17,5.6,male,Implausible,Noisy,Test,worms_bags,Plausible
+3,exp3_17,5.6,male,Implausible,Noisy,Test,coats_horses,Plausible
+3,exp3_17,5.6,male,Implausible,Noisy,Test,marker_cup,Plausible
+3,exp3_17,5.6,male,Implausible,Noisy,Test,beach_bowl,Implausible
+3,exp3_17,5.6,male,Implausible,Noisy,Test,paper_pan,Plausible
+3,exp3_17,5.6,male,Implausible,Noisy,Test,fan_airport,Implausible
+3,exp3_17,5.6,male,Implausible,Noisy,Test,shirt_die,Implausible
+3,exp3_18,4.11,male,Implausible,Noisy,Exposure,wooden_apples,Implausible
+3,exp3_18,4.11,male,Implausible,Noisy,Exposure,cat_hammers,Implausible
+3,exp3_18,4.11,male,Implausible,Noisy,Exposure,shark_racecar,Implausible
+3,exp3_18,4.11,male,Implausible,Noisy,Exposure,bread_ketchup,Implausible
+3,exp3_18,4.11,male,Implausible,Noisy,Exposure,house_nose,Implausible
+3,exp3_18,4.11,male,Implausible,Noisy,Exposure,knife_camel,Implausible
+3,exp3_18,4.11,male,Implausible,Noisy,Exposure,book_plane,Implausible
+3,exp3_18,4.11,male,Implausible,Noisy,Exposure,flowers_donut,Implausible
+3,exp3_18,4.11,male,Implausible,Noisy,Test,paper_pan,Implausible
+3,exp3_18,4.11,male,Implausible,Noisy,Test,fan_airport,Plausible
+3,exp3_18,4.11,male,Implausible,Noisy,Test,marker_cup,Implausible
+3,exp3_18,4.11,male,Implausible,Noisy,Test,beach_bowl,Implausible
+3,exp3_18,4.11,male,Implausible,Noisy,Test,worms_bags,Plausible
+3,exp3_18,4.11,male,Implausible,Noisy,Test,shirt_die,Plausible
+3,exp3_18,4.11,male,Implausible,Noisy,Test,carrots_bees,Implausible
+3,exp3_18,4.11,male,Implausible,Noisy,Test,coats_horses,Implausible
+3,exp3_19,5.31,male,Implausible,Noisy,Exposure,house_nose,Implausible
+3,exp3_19,5.31,male,Implausible,Noisy,Exposure,shark_racecar,Implausible
+3,exp3_19,5.31,male,Implausible,Noisy,Exposure,bread_ketchup,Implausible
+3,exp3_19,5.31,male,Implausible,Noisy,Exposure,cat_hammers,Implausible
+3,exp3_19,5.31,male,Implausible,Noisy,Exposure,book_plane,Plausible
+3,exp3_19,5.31,male,Implausible,Noisy,Exposure,flowers_donut,Implausible
+3,exp3_19,5.31,male,Implausible,Noisy,Exposure,knife_camel,Plausible
+3,exp3_19,5.31,male,Implausible,Noisy,Exposure,wooden_apples,Implausible
+3,exp3_19,5.31,male,Implausible,Noisy,Test,marker_cup,Plausible
+3,exp3_19,5.31,male,Implausible,Noisy,Test,paper_pan,Plausible
+3,exp3_19,5.31,male,Implausible,Noisy,Test,shirt_die,Plausible
+3,exp3_19,5.31,male,Implausible,Noisy,Test,coats_horses,Plausible
+3,exp3_19,5.31,male,Implausible,Noisy,Test,beach_bowl,Plausible
+3,exp3_19,5.31,male,Implausible,Noisy,Test,worms_bags,Implausible
+3,exp3_19,5.31,male,Implausible,Noisy,Test,carrots_bees,Implausible
+3,exp3_19,5.31,male,Implausible,Noisy,Test,fan_airport,Plausible
+3,exp3_20,5.84,male,Plausible,Noisy,Exposure,knife_fork,Plausible
+3,exp3_20,5.84,male,Plausible,Noisy,Exposure,house_door,Plausible
+3,exp3_20,5.84,male,Plausible,Noisy,Exposure,flowers_basket,Plausible
+3,exp3_20,5.84,male,Plausible,Noisy,Exposure,shark_fish,Implausible
+3,exp3_20,5.84,male,Plausible,Noisy,Exposure,bread_peanutbutter,Implausible
+3,exp3_20,5.84,male,Plausible,Noisy,Exposure,book_table,Plausible
+3,exp3_20,5.84,male,Plausible,Noisy,Exposure,cat_kittens,Plausible
+3,exp3_20,5.84,male,Plausible,Noisy,Exposure,wooden_blocks,Plausible
+3,exp3_20,5.84,male,Plausible,Noisy,Test,marker_cup,Plausible
+3,exp3_20,5.84,male,Plausible,Noisy,Test,worms_bags,Implausible
+3,exp3_20,5.84,male,Plausible,Noisy,Test,paper_pan,Plausible
+3,exp3_20,5.84,male,Plausible,Noisy,Test,beach_bowl,Plausible
+3,exp3_20,5.84,male,Plausible,Noisy,Test,carrots_bees,Plausible
+3,exp3_20,5.84,male,Plausible,Noisy,Test,fan_airport,Plausible
+3,exp3_20,5.84,male,Plausible,Noisy,Test,shirt_die,Plausible
+3,exp3_20,5.84,male,Plausible,Noisy,Test,coats_horses,Plausible
+3,exp3_21,4.66,female,Plausible,Noisy,Exposure,bread_peanutbutter,Plausible
+3,exp3_21,4.66,female,Plausible,Noisy,Exposure,house_door,Plausible
+3,exp3_21,4.66,female,Plausible,Noisy,Exposure,cat_kittens,Plausible
+3,exp3_21,4.66,female,Plausible,Noisy,Exposure,flowers_basket,Plausible
+3,exp3_21,4.66,female,Plausible,Noisy,Exposure,book_table,Plausible
+3,exp3_21,4.66,female,Plausible,Noisy,Exposure,shark_fish,Plausible
+3,exp3_21,4.66,female,Plausible,Noisy,Exposure,knife_fork,Plausible
+3,exp3_21,4.66,female,Plausible,Noisy,Exposure,wooden_blocks,Plausible
+3,exp3_21,4.66,female,Plausible,Noisy,Test,beach_bowl,Plausible
+3,exp3_21,4.66,female,Plausible,Noisy,Test,shirt_die,Plausible
+3,exp3_21,4.66,female,Plausible,Noisy,Test,worms_bags,Plausible
+3,exp3_21,4.66,female,Plausible,Noisy,Test,paper_pan,Plausible
+3,exp3_21,4.66,female,Plausible,Noisy,Test,fan_airport,Plausible
+3,exp3_21,4.66,female,Plausible,Noisy,Test,coats_horses,Plausible
+3,exp3_21,4.66,female,Plausible,Noisy,Test,marker_cup,Plausible
+3,exp3_21,4.66,female,Plausible,Noisy,Test,carrots_bees,Plausible
+3,exp3_22,5.94,female,Plausible,Noisy,Exposure,cat_kittens,Plausible
+3,exp3_22,5.94,female,Plausible,Noisy,Exposure,knife_fork,Plausible
+3,exp3_22,5.94,female,Plausible,Noisy,Exposure,wooden_blocks,Plausible
+3,exp3_22,5.94,female,Plausible,Noisy,Exposure,bread_peanutbutter,Plausible
+3,exp3_22,5.94,female,Plausible,Noisy,Exposure,house_door,Plausible
+3,exp3_22,5.94,female,Plausible,Noisy,Exposure,book_table,Plausible
+3,exp3_22,5.94,female,Plausible,Noisy,Exposure,shark_fish,Plausible
+3,exp3_22,5.94,female,Plausible,Noisy,Exposure,flowers_basket,Plausible
+3,exp3_22,5.94,female,Plausible,Noisy,Test,coats_horses,Implausible
+3,exp3_22,5.94,female,Plausible,Noisy,Test,beach_bowl,Plausible
+3,exp3_22,5.94,female,Plausible,Noisy,Test,carrots_bees,Plausible
+3,exp3_22,5.94,female,Plausible,Noisy,Test,fan_airport,Plausible
+3,exp3_22,5.94,female,Plausible,Noisy,Test,paper_pan,Plausible
+3,exp3_22,5.94,female,Plausible,Noisy,Test,shirt_die,Plausible
+3,exp3_22,5.94,female,Plausible,Noisy,Test,worms_bags,Implausible
+3,exp3_22,5.94,female,Plausible,Noisy,Test,marker_cup,Plausible
+3,exp3_23,4.75,female,Implausible,Noisy,Exposure,wooden_apples,Implausible
+3,exp3_23,4.75,female,Implausible,Noisy,Exposure,cat_hammers,Implausible
+3,exp3_23,4.75,female,Implausible,Noisy,Exposure,knife_camel,Implausible
+3,exp3_23,4.75,female,Implausible,Noisy,Exposure,bread_ketchup,Implausible
+3,exp3_23,4.75,female,Implausible,Noisy,Exposure,house_nose,Implausible
+3,exp3_23,4.75,female,Implausible,Noisy,Exposure,shark_racecar,Implausible
+3,exp3_23,4.75,female,Implausible,Noisy,Exposure,book_plane,Implausible
+3,exp3_23,4.75,female,Implausible,Noisy,Exposure,flowers_donut,Implausible
+3,exp3_23,4.75,female,Implausible,Noisy,Test,beach_bowl,Plausible
+3,exp3_23,4.75,female,Implausible,Noisy,Test,coats_horses,Implausible
+3,exp3_23,4.75,female,Implausible,Noisy,Test,worms_bags,Implausible
+3,exp3_23,4.75,female,Implausible,Noisy,Test,marker_cup,Implausible
+3,exp3_23,4.75,female,Implausible,Noisy,Test,paper_pan,Plausible
+3,exp3_23,4.75,female,Implausible,Noisy,Test,fan_airport,Plausible
+3,exp3_23,4.75,female,Implausible,Noisy,Test,shirt_die,Plausible
+3,exp3_23,4.75,female,Implausible,Noisy,Test,carrots_bees,Implausible
+3,exp3_24,5.05,male,Plausible,Noisy,Exposure,bread_peanutbutter,Plausible
+3,exp3_24,5.05,male,Plausible,Noisy,Exposure,shark_fish,Plausible
+3,exp3_24,5.05,male,Plausible,Noisy,Exposure,house_door,Implausible
+3,exp3_24,5.05,male,Plausible,Noisy,Exposure,book_table,Plausible
+3,exp3_24,5.05,male,Plausible,Noisy,Exposure,knife_fork,Plausible
+3,exp3_24,5.05,male,Plausible,Noisy,Exposure,flowers_basket,Plausible
+3,exp3_24,5.05,male,Plausible,Noisy,Exposure,wooden_blocks,Plausible
+3,exp3_24,5.05,male,Plausible,Noisy,Exposure,cat_kittens,Plausible
+3,exp3_24,5.05,male,Plausible,Noisy,Test,coats_horses,Plausible
+3,exp3_24,5.05,male,Plausible,Noisy,Test,fan_airport,Plausible
+3,exp3_24,5.05,male,Plausible,Noisy,Test,marker_cup,Implausible
+3,exp3_24,5.05,male,Plausible,Noisy,Test,shirt_die,Implausible
+3,exp3_24,5.05,male,Plausible,Noisy,Test,beach_bowl,Implausible
+3,exp3_24,5.05,male,Plausible,Noisy,Test,worms_bags,Implausible
+3,exp3_24,5.05,male,Plausible,Noisy,Test,paper_pan,Plausible
+3,exp3_24,5.05,male,Plausible,Noisy,Test,carrots_bees,Implausible
+3,exp3_25,5.43,male,Plausible,Noisy,Exposure,flowers_basket,Plausible
+3,exp3_25,5.43,male,Plausible,Noisy,Exposure,cat_kittens,Plausible
+3,exp3_25,5.43,male,Plausible,Noisy,Exposure,knife_fork,Implausible
+3,exp3_25,5.43,male,Plausible,Noisy,Exposure,bread_peanutbutter,Plausible
+3,exp3_25,5.43,male,Plausible,Noisy,Exposure,house_door,Plausible
+3,exp3_25,5.43,male,Plausible,Noisy,Exposure,book_table,Plausible
+3,exp3_25,5.43,male,Plausible,Noisy,Exposure,wooden_blocks,Implausible
+3,exp3_25,5.43,male,Plausible,Noisy,Exposure,shark_fish,Implausible
+3,exp3_25,5.43,male,Plausible,Noisy,Test,shirt_die,Plausible
+3,exp3_25,5.43,male,Plausible,Noisy,Test,fan_airport,Plausible
+3,exp3_25,5.43,male,Plausible,Noisy,Test,beach_bowl,Implausible
+3,exp3_25,5.43,male,Plausible,Noisy,Test,coats_horses,Implausible
+3,exp3_25,5.43,male,Plausible,Noisy,Test,marker_cup,Implausible
+3,exp3_25,5.43,male,Plausible,Noisy,Test,worms_bags,Implausible
+3,exp3_25,5.43,male,Plausible,Noisy,Test,paper_pan,Plausible
+3,exp3_25,5.43,male,Plausible,Noisy,Test,carrots_bees,Plausible
+3,exp3_26,4.51,male,Implausible,Noisy,Exposure,house_nose,Implausible
+3,exp3_26,4.51,male,Implausible,Noisy,Exposure,flowers_donut,Plausible
+3,exp3_26,4.51,male,Implausible,Noisy,Exposure,wooden_apples,Implausible
+3,exp3_26,4.51,male,Implausible,Noisy,Exposure,shark_racecar,Implausible
+3,exp3_26,4.51,male,Implausible,Noisy,Exposure,cat_hammers,Implausible
+3,exp3_26,4.51,male,Implausible,Noisy,Exposure,bread_ketchup,Implausible
+3,exp3_26,4.51,male,Implausible,Noisy,Exposure,knife_camel,Implausible
+3,exp3_26,4.51,male,Implausible,Noisy,Exposure,book_plane,Implausible
+3,exp3_26,4.51,male,Implausible,Noisy,Test,worms_bags,Implausible
+3,exp3_26,4.51,male,Implausible,Noisy,Test,beach_bowl,Implausible
+3,exp3_26,4.51,male,Implausible,Noisy,Test,marker_cup,Implausible
+3,exp3_26,4.51,male,Implausible,Noisy,Test,shirt_die,Implausible
+3,exp3_26,4.51,male,Implausible,Noisy,Test,coats_horses,Implausible
+3,exp3_26,4.51,male,Implausible,Noisy,Test,carrots_bees,Implausible
+3,exp3_26,4.51,male,Implausible,Noisy,Test,paper_pan,Plausible
+3,exp3_26,4.51,male,Implausible,Noisy,Test,fan_airport,Plausible
+3,exp3_27,4.93,male,Plausible,Noisy,Exposure,flowers_basket,Plausible
+3,exp3_27,4.93,male,Plausible,Noisy,Exposure,wooden_blocks,Plausible
+3,exp3_27,4.93,male,Plausible,Noisy,Exposure,cat_kittens,Plausible
+3,exp3_27,4.93,male,Plausible,Noisy,Exposure,house_door,Plausible
+3,exp3_27,4.93,male,Plausible,Noisy,Exposure,bread_peanutbutter,Implausible
+3,exp3_27,4.93,male,Plausible,Noisy,Exposure,book_table,Plausible
+3,exp3_27,4.93,male,Plausible,Noisy,Exposure,knife_fork,Plausible
+3,exp3_27,4.93,male,Plausible,Noisy,Exposure,shark_fish,Plausible
+3,exp3_27,4.93,male,Plausible,Noisy,Test,carrots_bees,Implausible
+3,exp3_27,4.93,male,Plausible,Noisy,Test,fan_airport,Implausible
+3,exp3_27,4.93,male,Plausible,Noisy,Test,shirt_die,Plausible
+3,exp3_27,4.93,male,Plausible,Noisy,Test,worms_bags,Implausible
+3,exp3_27,4.93,male,Plausible,Noisy,Test,coats_horses,Implausible
+3,exp3_27,4.93,male,Plausible,Noisy,Test,beach_bowl,Implausible
+3,exp3_27,4.93,male,Plausible,Noisy,Test,paper_pan,Plausible
+3,exp3_27,4.93,male,Plausible,Noisy,Test,marker_cup,Implausible
+3,exp3_28,5.81,male,Plausible,Noisy,Exposure,house_door,Plausible
+3,exp3_28,5.81,male,Plausible,Noisy,Exposure,book_table,Plausible
+3,exp3_28,5.81,male,Plausible,Noisy,Exposure,wooden_blocks,Plausible
+3,exp3_28,5.81,male,Plausible,Noisy,Exposure,bread_peanutbutter,Plausible
+3,exp3_28,5.81,male,Plausible,Noisy,Exposure,knife_fork,Plausible
+3,exp3_28,5.81,male,Plausible,Noisy,Exposure,shark_fish,Plausible
+3,exp3_28,5.81,male,Plausible,Noisy,Exposure,flowers_basket,Plausible
+3,exp3_28,5.81,male,Plausible,Noisy,Exposure,cat_kittens,Plausible
+3,exp3_28,5.81,male,Plausible,Noisy,Test,fan_airport,Plausible
+3,exp3_28,5.81,male,Plausible,Noisy,Test,worms_bags,Plausible
+3,exp3_28,5.81,male,Plausible,Noisy,Test,coats_horses,Plausible
+3,exp3_28,5.81,male,Plausible,Noisy,Test,shirt_die,Plausible
+3,exp3_28,5.81,male,Plausible,Noisy,Test,beach_bowl,Plausible
+3,exp3_28,5.81,male,Plausible,Noisy,Test,paper_pan,Plausible
+3,exp3_28,5.81,male,Plausible,Noisy,Test,marker_cup,Plausible
+3,exp3_28,5.81,male,Plausible,Noisy,Test,carrots_bees,Plausible
+3,exp3_29,4.24,male,Implausible,Noisy,Exposure,cat_hammers,Implausible
+3,exp3_29,4.24,male,Implausible,Noisy,Exposure,knife_camel,Implausible
+3,exp3_29,4.24,male,Implausible,Noisy,Exposure,house_nose,Implausible
+3,exp3_29,4.24,male,Implausible,Noisy,Exposure,bread_ketchup,Implausible
+3,exp3_29,4.24,male,Implausible,Noisy,Exposure,flowers_donut,Implausible
+3,exp3_29,4.24,male,Implausible,Noisy,Exposure,book_plane,Implausible
+3,exp3_29,4.24,male,Implausible,Noisy,Exposure,wooden_apples,Implausible
+3,exp3_29,4.24,male,Implausible,Noisy,Exposure,shark_racecar,Implausible
+3,exp3_29,4.24,male,Implausible,Noisy,Test,carrots_bees,Implausible
+3,exp3_29,4.24,male,Implausible,Noisy,Test,paper_pan,Implausible
+3,exp3_29,4.24,male,Implausible,Noisy,Test,fan_airport,Implausible
+3,exp3_29,4.24,male,Implausible,Noisy,Test,shirt_die,Plausible
+3,exp3_29,4.24,male,Implausible,Noisy,Test,worms_bags,Implausible
+3,exp3_29,4.24,male,Implausible,Noisy,Test,coats_horses,Implausible
+3,exp3_29,4.24,male,Implausible,Noisy,Test,marker_cup,Implausible
+3,exp3_29,4.24,male,Implausible,Noisy,Test,beach_bowl,Implausible
+3,exp3_30,5.19,male,Plausible,Noisy,Exposure,shark_fish,Plausible
+3,exp3_30,5.19,male,Plausible,Noisy,Exposure,knife_fork,Plausible
+3,exp3_30,5.19,male,Plausible,Noisy,Exposure,wooden_blocks,Plausible
+3,exp3_30,5.19,male,Plausible,Noisy,Exposure,cat_kittens,Plausible
+3,exp3_30,5.19,male,Plausible,Noisy,Exposure,book_table,Plausible
+3,exp3_30,5.19,male,Plausible,Noisy,Exposure,bread_peanutbutter,Plausible
+3,exp3_30,5.19,male,Plausible,Noisy,Exposure,house_door,Plausible
+3,exp3_30,5.19,male,Plausible,Noisy,Exposure,flowers_basket,Plausible
+3,exp3_30,5.19,male,Plausible,Noisy,Test,beach_bowl,Implausible
+3,exp3_30,5.19,male,Plausible,Noisy,Test,fan_airport,Plausible
+3,exp3_30,5.19,male,Plausible,Noisy,Test,paper_pan,Plausible
+3,exp3_30,5.19,male,Plausible,Noisy,Test,shirt_die,Plausible
+3,exp3_30,5.19,male,Plausible,Noisy,Test,carrots_bees,Plausible
+3,exp3_30,5.19,male,Plausible,Noisy,Test,marker_cup,Implausible
+3,exp3_30,5.19,male,Plausible,Noisy,Test,worms_bags,Implausible
+3,exp3_30,5.19,male,Plausible,Noisy,Test,coats_horses,Implausible
+3,exp3_31,4.85,male,Implausible,Noisy,Exposure,wooden_apples,Implausible
+3,exp3_31,4.85,male,Implausible,Noisy,Exposure,shark_racecar,Implausible
+3,exp3_31,4.85,male,Implausible,Noisy,Exposure,house_nose,Implausible
+3,exp3_31,4.85,male,Implausible,Noisy,Exposure,flowers_donut,Implausible
+3,exp3_31,4.85,male,Implausible,Noisy,Exposure,cat_hammers,Implausible
+3,exp3_31,4.85,male,Implausible,Noisy,Exposure,book_plane,Implausible
+3,exp3_31,4.85,male,Implausible,Noisy,Exposure,bread_ketchup,Implausible
+3,exp3_31,4.85,male,Implausible,Noisy,Exposure,knife_camel,Implausible
+3,exp3_31,4.85,male,Implausible,Noisy,Test,fan_airport,Plausible
+3,exp3_31,4.85,male,Implausible,Noisy,Test,coats_horses,Implausible
+3,exp3_31,4.85,male,Implausible,Noisy,Test,beach_bowl,Plausible
+3,exp3_31,4.85,male,Implausible,Noisy,Test,shirt_die,Implausible
+3,exp3_31,4.85,male,Implausible,Noisy,Test,paper_pan,Implausible
+3,exp3_31,4.85,male,Implausible,Noisy,Test,marker_cup,Implausible
+3,exp3_31,4.85,male,Implausible,Noisy,Test,worms_bags,Implausible
+3,exp3_31,4.85,male,Implausible,Noisy,Test,carrots_bees,Implausible
+3,exp3_32,5.8,female,Plausible,Noisy,Exposure,book_table,Plausible
+3,exp3_32,5.8,female,Plausible,Noisy,Exposure,wooden_blocks,Plausible
+3,exp3_32,5.8,female,Plausible,Noisy,Exposure,knife_fork,Plausible
+3,exp3_32,5.8,female,Plausible,Noisy,Exposure,house_door,Plausible
+3,exp3_32,5.8,female,Plausible,Noisy,Exposure,flowers_basket,Plausible
+3,exp3_32,5.8,female,Plausible,Noisy,Exposure,cat_kittens,Plausible
+3,exp3_32,5.8,female,Plausible,Noisy,Exposure,shark_fish,Plausible
+3,exp3_32,5.8,female,Plausible,Noisy,Exposure,bread_peanutbutter,Plausible
+3,exp3_32,5.8,female,Plausible,Noisy,Test,shirt_die,Plausible
+3,exp3_32,5.8,female,Plausible,Noisy,Test,carrots_bees,Plausible
+3,exp3_32,5.8,female,Plausible,Noisy,Test,fan_airport,Plausible
+3,exp3_32,5.8,female,Plausible,Noisy,Test,coats_horses,Plausible
+3,exp3_32,5.8,female,Plausible,Noisy,Test,worms_bags,Plausible
+3,exp3_32,5.8,female,Plausible,Noisy,Test,beach_bowl,Plausible
+3,exp3_32,5.8,female,Plausible,Noisy,Test,paper_pan,Plausible
+3,exp3_32,5.8,female,Plausible,Noisy,Test,marker_cup,Plausible
+3,exp3_33,4.01,female,Implausible,Noisy,Exposure,flowers_donut,Implausible
+3,exp3_33,4.01,female,Implausible,Noisy,Exposure,shark_racecar,Implausible
+3,exp3_33,4.01,female,Implausible,Noisy,Exposure,book_plane,Implausible
+3,exp3_33,4.01,female,Implausible,Noisy,Exposure,cat_hammers,Implausible
+3,exp3_33,4.01,female,Implausible,Noisy,Exposure,knife_camel,Implausible
+3,exp3_33,4.01,female,Implausible,Noisy,Exposure,house_nose,Implausible
+3,exp3_33,4.01,female,Implausible,Noisy,Exposure,bread_ketchup,Implausible
+3,exp3_33,4.01,female,Implausible,Noisy,Exposure,wooden_apples,Implausible
+3,exp3_33,4.01,female,Implausible,Noisy,Test,beach_bowl,Implausible
+3,exp3_33,4.01,female,Implausible,Noisy,Test,paper_pan,Plausible
+3,exp3_33,4.01,female,Implausible,Noisy,Test,marker_cup,Plausible
+3,exp3_33,4.01,female,Implausible,Noisy,Test,coats_horses,Implausible
+3,exp3_33,4.01,female,Implausible,Noisy,Test,shirt_die,Implausible
+3,exp3_33,4.01,female,Implausible,Noisy,Test,worms_bags,Plausible
+3,exp3_33,4.01,female,Implausible,Noisy,Test,fan_airport,Implausible
+3,exp3_33,4.01,female,Implausible,Noisy,Test,carrots_bees,Plausible
+3,exp3_34,4.22,male,Plausible,Noisy,Exposure,wooden_blocks,Implausible
+3,exp3_34,4.22,male,Plausible,Noisy,Exposure,shark_fish,Plausible
+3,exp3_34,4.22,male,Plausible,Noisy,Exposure,house_door,Plausible
+3,exp3_34,4.22,male,Plausible,Noisy,Exposure,flowers_basket,Plausible
+3,exp3_34,4.22,male,Plausible,Noisy,Exposure,bread_peanutbutter,Plausible
+3,exp3_34,4.22,male,Plausible,Noisy,Exposure,book_table,Plausible
+3,exp3_34,4.22,male,Plausible,Noisy,Exposure,knife_fork,Plausible
+3,exp3_34,4.22,male,Plausible,Noisy,Exposure,cat_kittens,Plausible
+3,exp3_34,4.22,male,Plausible,Noisy,Test,paper_pan,Plausible
+3,exp3_34,4.22,male,Plausible,Noisy,Test,coats_horses,Implausible
+3,exp3_34,4.22,male,Plausible,Noisy,Test,carrots_bees,Implausible
+3,exp3_34,4.22,male,Plausible,Noisy,Test,shirt_die,Implausible
+3,exp3_34,4.22,male,Plausible,Noisy,Test,worms_bags,Plausible
+3,exp3_34,4.22,male,Plausible,Noisy,Test,fan_airport,Implausible
+3,exp3_34,4.22,male,Plausible,Noisy,Test,beach_bowl,Plausible
+3,exp3_34,4.22,male,Plausible,Noisy,Test,marker_cup,Implausible
+3,exp3_35,4.78,female,Plausible,Noisy,Exposure,bread_peanutbutter,Plausible
+3,exp3_35,4.78,female,Plausible,Noisy,Exposure,flowers_basket,Plausible
+3,exp3_35,4.78,female,Plausible,Noisy,Exposure,cat_kittens,Plausible
+3,exp3_35,4.78,female,Plausible,Noisy,Exposure,book_table,Plausible
+3,exp3_35,4.78,female,Plausible,Noisy,Exposure,knife_fork,Plausible
+3,exp3_35,4.78,female,Plausible,Noisy,Exposure,wooden_blocks,Plausible
+3,exp3_35,4.78,female,Plausible,Noisy,Exposure,house_door,Plausible
+3,exp3_35,4.78,female,Plausible,Noisy,Exposure,shark_fish,Plausible
+3,exp3_35,4.78,female,Plausible,Noisy,Test,paper_pan,Plausible
+3,exp3_35,4.78,female,Plausible,Noisy,Test,beach_bowl,Implausible
+3,exp3_35,4.78,female,Plausible,Noisy,Test,coats_horses,Implausible
+3,exp3_35,4.78,female,Plausible,Noisy,Test,shirt_die,Implausible
+3,exp3_35,4.78,female,Plausible,Noisy,Test,fan_airport,Plausible
+3,exp3_35,4.78,female,Plausible,Noisy,Test,marker_cup,Implausible
+3,exp3_35,4.78,female,Plausible,Noisy,Test,worms_bags,Implausible
+3,exp3_35,4.78,female,Plausible,Noisy,Test,carrots_bees,Plausible
+3,exp3_36,5.39,female,Implausible,Noisy,Exposure,wooden_apples,Plausible
+3,exp3_36,5.39,female,Implausible,Noisy,Exposure,flowers_donut,Implausible
+3,exp3_36,5.39,female,Implausible,Noisy,Exposure,bread_ketchup,Implausible
+3,exp3_36,5.39,female,Implausible,Noisy,Exposure,knife_camel,Implausible
+3,exp3_36,5.39,female,Implausible,Noisy,Exposure,shark_racecar,Implausible
+3,exp3_36,5.39,female,Implausible,Noisy,Exposure,book_plane,Implausible
+3,exp3_36,5.39,female,Implausible,Noisy,Exposure,cat_hammers,Implausible
+3,exp3_36,5.39,female,Implausible,Noisy,Exposure,house_nose,Implausible
+3,exp3_36,5.39,female,Implausible,Noisy,Test,fan_airport,Implausible
+3,exp3_36,5.39,female,Implausible,Noisy,Test,shirt_die,Implausible
+3,exp3_36,5.39,female,Implausible,Noisy,Test,beach_bowl,Implausible
+3,exp3_36,5.39,female,Implausible,Noisy,Test,coats_horses,Implausible
+3,exp3_36,5.39,female,Implausible,Noisy,Test,worms_bags,Implausible
+3,exp3_36,5.39,female,Implausible,Noisy,Test,paper_pan,Implausible
+3,exp3_36,5.39,female,Implausible,Noisy,Test,carrots_bees,Implausible
+3,exp3_36,5.39,female,Implausible,Noisy,Test,marker_cup,Implausible
+3,exp3_37,4.08,male,Plausible,Noisy,Exposure,cat_kittens,Implausible
+3,exp3_37,4.08,male,Plausible,Noisy,Exposure,knife_fork,Plausible
+3,exp3_37,4.08,male,Plausible,Noisy,Exposure,house_door,Plausible
+3,exp3_37,4.08,male,Plausible,Noisy,Exposure,wooden_blocks,Plausible
+3,exp3_37,4.08,male,Plausible,Noisy,Exposure,shark_fish,Plausible
+3,exp3_37,4.08,male,Plausible,Noisy,Exposure,flowers_basket,Plausible
+3,exp3_37,4.08,male,Plausible,Noisy,Exposure,bread_peanutbutter,Implausible
+3,exp3_37,4.08,male,Plausible,Noisy,Exposure,book_table,Plausible
+3,exp3_37,4.08,male,Plausible,Noisy,Test,carrots_bees,Plausible
+3,exp3_37,4.08,male,Plausible,Noisy,Test,marker_cup,Implausible
+3,exp3_37,4.08,male,Plausible,Noisy,Test,beach_bowl,Plausible
+3,exp3_37,4.08,male,Plausible,Noisy,Test,coats_horses,Plausible
+3,exp3_37,4.08,male,Plausible,Noisy,Test,fan_airport,Plausible
+3,exp3_37,4.08,male,Plausible,Noisy,Test,shirt_die,Plausible
+3,exp3_37,4.08,male,Plausible,Noisy,Test,paper_pan,Plausible
+3,exp3_37,4.08,male,Plausible,Noisy,Test,worms_bags,Plausible
+3,exp3_38,5.92,female,Implausible,Noisy,Exposure,house_nose,Implausible
+3,exp3_38,5.92,female,Implausible,Noisy,Exposure,book_plane,Implausible
+3,exp3_38,5.92,female,Implausible,Noisy,Exposure,flowers_donut,Implausible
+3,exp3_38,5.92,female,Implausible,Noisy,Exposure,shark_racecar,Implausible
+3,exp3_38,5.92,female,Implausible,Noisy,Exposure,cat_hammers,Plausible
+3,exp3_38,5.92,female,Implausible,Noisy,Exposure,wooden_apples,Implausible
+3,exp3_38,5.92,female,Implausible,Noisy,Exposure,knife_camel,Implausible
+3,exp3_38,5.92,female,Implausible,Noisy,Exposure,bread_ketchup,Implausible
+3,exp3_38,5.92,female,Implausible,Noisy,Test,fan_airport,Plausible
+3,exp3_38,5.92,female,Implausible,Noisy,Test,worms_bags,Implausible
+3,exp3_38,5.92,female,Implausible,Noisy,Test,beach_bowl,Plausible
+3,exp3_38,5.92,female,Implausible,Noisy,Test,coats_horses,Plausible
+3,exp3_38,5.92,female,Implausible,Noisy,Test,marker_cup,Plausible
+3,exp3_38,5.92,female,Implausible,Noisy,Test,paper_pan,Plausible
+3,exp3_38,5.92,female,Implausible,Noisy,Test,shirt_die,Implausible
+3,exp3_38,5.92,female,Implausible,Noisy,Test,carrots_bees,Plausible
+3,exp3_39,4.88,female,Implausible,Noisy,Exposure,book_plane,Implausible
+3,exp3_39,4.88,female,Implausible,Noisy,Exposure,house_nose,Implausible
+3,exp3_39,4.88,female,Implausible,Noisy,Exposure,cat_hammers,Implausible
+3,exp3_39,4.88,female,Implausible,Noisy,Exposure,bread_ketchup,Plausible
+3,exp3_39,4.88,female,Implausible,Noisy,Exposure,shark_racecar,Implausible
+3,exp3_39,4.88,female,Implausible,Noisy,Exposure,wooden_apples,Implausible
+3,exp3_39,4.88,female,Implausible,Noisy,Exposure,flowers_donut,Implausible
+3,exp3_39,4.88,female,Implausible,Noisy,Exposure,knife_camel,Implausible
+3,exp3_39,4.88,female,Implausible,Noisy,Test,worms_bags,Plausible
+3,exp3_39,4.88,female,Implausible,Noisy,Test,shirt_die,Plausible
+3,exp3_39,4.88,female,Implausible,Noisy,Test,paper_pan,Plausible
+3,exp3_39,4.88,female,Implausible,Noisy,Test,fan_airport,Plausible
+3,exp3_39,4.88,female,Implausible,Noisy,Test,coats_horses,Implausible
+3,exp3_39,4.88,female,Implausible,Noisy,Test,carrots_bees,Plausible
+3,exp3_39,4.88,female,Implausible,Noisy,Test,marker_cup,Implausible
+3,exp3_39,4.88,female,Implausible,Noisy,Test,beach_bowl,Plausible
+3,exp3_40,4.55,female,Implausible,Noisy,Exposure,cat_hammers,Plausible
+3,exp3_40,4.55,female,Implausible,Noisy,Exposure,knife_camel,Implausible
+3,exp3_40,4.55,female,Implausible,Noisy,Exposure,shark_racecar,Implausible
+3,exp3_40,4.55,female,Implausible,Noisy,Exposure,wooden_apples,Plausible
+3,exp3_40,4.55,female,Implausible,Noisy,Exposure,book_plane,Implausible
+3,exp3_40,4.55,female,Implausible,Noisy,Exposure,bread_ketchup,Implausible
+3,exp3_40,4.55,female,Implausible,Noisy,Exposure,house_nose,Implausible
+3,exp3_40,4.55,female,Implausible,Noisy,Exposure,flowers_donut,Implausible
+3,exp3_40,4.55,female,Implausible,Noisy,Test,fan_airport,Plausible
+3,exp3_40,4.55,female,Implausible,Noisy,Test,worms_bags,Implausible
+3,exp3_40,4.55,female,Implausible,Noisy,Test,coats_horses,Implausible
+3,exp3_40,4.55,female,Implausible,Noisy,Test,carrots_bees,Plausible
+3,exp3_40,4.55,female,Implausible,Noisy,Test,marker_cup,Implausible
+3,exp3_40,4.55,female,Implausible,Noisy,Test,paper_pan,Implausible
+3,exp3_40,4.55,female,Implausible,Noisy,Test,shirt_die,Plausible
+3,exp3_40,4.55,female,Implausible,Noisy,Test,beach_bowl,Implausible
+3,exp3_41,4.62,male,Implausible,Noisy,Exposure,wooden_apples,Plausible
+3,exp3_41,4.62,male,Implausible,Noisy,Exposure,knife_camel,Implausible
+3,exp3_41,4.62,male,Implausible,Noisy,Exposure,bread_ketchup,Implausible
+3,exp3_41,4.62,male,Implausible,Noisy,Exposure,cat_hammers,Implausible
+3,exp3_41,4.62,male,Implausible,Noisy,Exposure,flowers_donut,Implausible
+3,exp3_41,4.62,male,Implausible,Noisy,Exposure,shark_racecar,Implausible
+3,exp3_41,4.62,male,Implausible,Noisy,Exposure,house_nose,Implausible
+3,exp3_41,4.62,male,Implausible,Noisy,Exposure,book_plane,Implausible
+3,exp3_41,4.62,male,Implausible,Noisy,Test,beach_bowl,Implausible
+3,exp3_41,4.62,male,Implausible,Noisy,Test,worms_bags,Plausible
+3,exp3_41,4.62,male,Implausible,Noisy,Test,paper_pan,Implausible
+3,exp3_41,4.62,male,Implausible,Noisy,Test,coats_horses,Plausible
+3,exp3_41,4.62,male,Implausible,Noisy,Test,shirt_die,Implausible
+3,exp3_41,4.62,male,Implausible,Noisy,Test,carrots_bees,Implausible
+3,exp3_41,4.62,male,Implausible,Noisy,Test,marker_cup,Implausible
+3,exp3_41,4.62,male,Implausible,Noisy,Test,fan_airport,Implausible
+3,exp3_42,4.07,male,Implausible,Noisy,Exposure,flowers_donut,Plausible
+3,exp3_42,4.07,male,Implausible,Noisy,Exposure,knife_camel,Implausible
+3,exp3_42,4.07,male,Implausible,Noisy,Exposure,book_plane,Implausible
+3,exp3_42,4.07,male,Implausible,Noisy,Exposure,cat_hammers,Implausible
+3,exp3_42,4.07,male,Implausible,Noisy,Exposure,wooden_apples,Implausible
+3,exp3_42,4.07,male,Implausible,Noisy,Exposure,bread_ketchup,Plausible
+3,exp3_42,4.07,male,Implausible,Noisy,Exposure,house_nose,Implausible
+3,exp3_42,4.07,male,Implausible,Noisy,Exposure,shark_racecar,Implausible
+3,exp3_42,4.07,male,Implausible,Noisy,Test,shirt_die,Plausible
+3,exp3_42,4.07,male,Implausible,Noisy,Test,worms_bags,Implausible
+3,exp3_42,4.07,male,Implausible,Noisy,Test,carrots_bees,Implausible
+3,exp3_42,4.07,male,Implausible,Noisy,Test,beach_bowl,Plausible
+3,exp3_42,4.07,male,Implausible,Noisy,Test,coats_horses,Implausible
+3,exp3_42,4.07,male,Implausible,Noisy,Test,paper_pan,Plausible
+3,exp3_42,4.07,male,Implausible,Noisy,Test,fan_airport,Plausible
+3,exp3_42,4.07,male,Implausible,Noisy,Test,marker_cup,Plausible
+3,exp3_43,5.84,male,Implausible,Noisy,Exposure,knife_camel,Plausible
+3,exp3_43,5.84,male,Implausible,Noisy,Exposure,wooden_apples,Implausible
+3,exp3_43,5.84,male,Implausible,Noisy,Exposure,bread_ketchup,Implausible
+3,exp3_43,5.84,male,Implausible,Noisy,Exposure,house_nose,Implausible
+3,exp3_43,5.84,male,Implausible,Noisy,Exposure,shark_racecar,Implausible
+3,exp3_43,5.84,male,Implausible,Noisy,Exposure,flowers_donut,Implausible
+3,exp3_43,5.84,male,Implausible,Noisy,Exposure,cat_hammers,Implausible
+3,exp3_43,5.84,male,Implausible,Noisy,Exposure,book_plane,Implausible
+3,exp3_43,5.84,male,Implausible,Noisy,Test,paper_pan,Plausible
+3,exp3_43,5.84,male,Implausible,Noisy,Test,shirt_die,Plausible
+3,exp3_43,5.84,male,Implausible,Noisy,Test,coats_horses,Implausible
+3,exp3_43,5.84,male,Implausible,Noisy,Test,worms_bags,Plausible
+3,exp3_43,5.84,male,Implausible,Noisy,Test,beach_bowl,Plausible
+3,exp3_43,5.84,male,Implausible,Noisy,Test,carrots_bees,Plausible
+3,exp3_43,5.84,male,Implausible,Noisy,Test,marker_cup,Plausible
+3,exp3_43,5.84,male,Implausible,Noisy,Test,fan_airport,Plausible
+3,exp3_44,4.8,female,Implausible,Noisy,Exposure,shark_racecar,Implausible
+3,exp3_44,4.8,female,Implausible,Noisy,Exposure,wooden_apples,Plausible
+3,exp3_44,4.8,female,Implausible,Noisy,Exposure,bread_ketchup,Plausible
+3,exp3_44,4.8,female,Implausible,Noisy,Exposure,knife_camel,Plausible
+3,exp3_44,4.8,female,Implausible,Noisy,Exposure,flowers_donut,Plausible
+3,exp3_44,4.8,female,Implausible,Noisy,Exposure,house_nose,Implausible
+3,exp3_44,4.8,female,Implausible,Noisy,Exposure,cat_hammers,Implausible
+3,exp3_44,4.8,female,Implausible,Noisy,Exposure,book_plane,Implausible
+3,exp3_44,4.8,female,Implausible,Noisy,Test,fan_airport,Implausible
+3,exp3_44,4.8,female,Implausible,Noisy,Test,coats_horses,Plausible
+3,exp3_44,4.8,female,Implausible,Noisy,Test,shirt_die,Implausible
+3,exp3_44,4.8,female,Implausible,Noisy,Test,beach_bowl,Plausible
+3,exp3_44,4.8,female,Implausible,Noisy,Test,paper_pan,Plausible
+3,exp3_44,4.8,female,Implausible,Noisy,Test,carrots_bees,Implausible
+3,exp3_44,4.8,female,Implausible,Noisy,Test,worms_bags,Implausible
+3,exp3_44,4.8,female,Implausible,Noisy,Test,marker_cup,Plausible
+3,exp3_45,5.25,female,Implausible,Noisy,Exposure,book_plane,Implausible
+3,exp3_45,5.25,female,Implausible,Noisy,Exposure,house_nose,Implausible
+3,exp3_45,5.25,female,Implausible,Noisy,Exposure,cat_hammers,Plausible
+3,exp3_45,5.25,female,Implausible,Noisy,Exposure,bread_ketchup,Implausible
+3,exp3_45,5.25,female,Implausible,Noisy,Exposure,knife_camel,Implausible
+3,exp3_45,5.25,female,Implausible,Noisy,Exposure,shark_racecar,Implausible
+3,exp3_45,5.25,female,Implausible,Noisy,Exposure,flowers_donut,Implausible
+3,exp3_45,5.25,female,Implausible,Noisy,Exposure,wooden_apples,Implausible
+3,exp3_45,5.25,female,Implausible,Noisy,Test,marker_cup,Implausible
+3,exp3_45,5.25,female,Implausible,Noisy,Test,paper_pan,Implausible
+3,exp3_45,5.25,female,Implausible,Noisy,Test,beach_bowl,Implausible
+3,exp3_45,5.25,female,Implausible,Noisy,Test,carrots_bees,Implausible
+3,exp3_45,5.25,female,Implausible,Noisy,Test,shirt_die,Implausible
+3,exp3_45,5.25,female,Implausible,Noisy,Test,fan_airport,Implausible
+3,exp3_45,5.25,female,Implausible,Noisy,Test,worms_bags,Implausible
+3,exp3_45,5.25,female,Implausible,Noisy,Test,coats_horses,Plausible
+3,exp3_46,5.83,female,Implausible,Noisy,Exposure,cat_hammers,Plausible
+3,exp3_46,5.83,female,Implausible,Noisy,Exposure,wooden_apples,Implausible
+3,exp3_46,5.83,female,Implausible,Noisy,Exposure,knife_camel,Plausible
+3,exp3_46,5.83,female,Implausible,Noisy,Exposure,shark_racecar,Implausible
+3,exp3_46,5.83,female,Implausible,Noisy,Exposure,house_nose,Implausible
+3,exp3_46,5.83,female,Implausible,Noisy,Exposure,bread_ketchup,Implausible
+3,exp3_46,5.83,female,Implausible,Noisy,Exposure,book_plane,Implausible
+3,exp3_46,5.83,female,Implausible,Noisy,Exposure,flowers_donut,Implausible
+3,exp3_46,5.83,female,Implausible,Noisy,Test,shirt_die,Implausible
+3,exp3_46,5.83,female,Implausible,Noisy,Test,marker_cup,Implausible
+3,exp3_46,5.83,female,Implausible,Noisy,Test,beach_bowl,Plausible
+3,exp3_46,5.83,female,Implausible,Noisy,Test,carrots_bees,Implausible
+3,exp3_46,5.83,female,Implausible,Noisy,Test,coats_horses,Implausible
+3,exp3_46,5.83,female,Implausible,Noisy,Test,worms_bags,Implausible
+3,exp3_46,5.83,female,Implausible,Noisy,Test,paper_pan,Plausible
+3,exp3_46,5.83,female,Implausible,Noisy,Test,fan_airport,Implausible
+3,exp3_47,4.91,male,Implausible,Noisy,Exposure,flowers_donut,Implausible
+3,exp3_47,4.91,male,Implausible,Noisy,Exposure,wooden_apples,Implausible
+3,exp3_47,4.91,male,Implausible,Noisy,Exposure,house_nose,Implausible
+3,exp3_47,4.91,male,Implausible,Noisy,Exposure,book_plane,Implausible
+3,exp3_47,4.91,male,Implausible,Noisy,Exposure,shark_racecar,Implausible
+3,exp3_47,4.91,male,Implausible,Noisy,Exposure,knife_camel,Implausible
+3,exp3_47,4.91,male,Implausible,Noisy,Exposure,bread_ketchup,Implausible
+3,exp3_47,4.91,male,Implausible,Noisy,Exposure,cat_hammers,Plausible
+3,exp3_47,4.91,male,Implausible,Noisy,Test,shirt_die,Implausible
+3,exp3_47,4.91,male,Implausible,Noisy,Test,carrots_bees,Implausible
+3,exp3_47,4.91,male,Implausible,Noisy,Test,beach_bowl,Plausible
+3,exp3_47,4.91,male,Implausible,Noisy,Test,worms_bags,Implausible
+3,exp3_47,4.91,male,Implausible,Noisy,Test,fan_airport,Implausible
+3,exp3_47,4.91,male,Implausible,Noisy,Test,coats_horses,Implausible
+3,exp3_47,4.91,male,Implausible,Noisy,Test,paper_pan,Implausible
+3,exp3_47,4.91,male,Implausible,Noisy,Test,marker_cup,Implausible
+3,exp3_48,4.64,NaN,Implausible,Noisy,Exposure,cat_hammers,Implausible
+3,exp3_48,4.64,NaN,Implausible,Noisy,Exposure,bread_ketchup,Implausible
+3,exp3_48,4.64,NaN,Implausible,Noisy,Exposure,house_nose,Implausible
+3,exp3_48,4.64,NaN,Implausible,Noisy,Exposure,flowers_donut,Implausible
+3,exp3_48,4.64,NaN,Implausible,Noisy,Exposure,shark_racecar,Implausible
+3,exp3_48,4.64,NaN,Implausible,Noisy,Exposure,book_plane,Implausible
+3,exp3_48,4.64,NaN,Implausible,Noisy,Exposure,wooden_apples,Implausible
+3,exp3_48,4.64,NaN,Implausible,Noisy,Exposure,knife_camel,Implausible
+3,exp3_48,4.64,NaN,Implausible,Noisy,Test,carrots_bees,Implausible
+3,exp3_48,4.64,NaN,Implausible,Noisy,Test,beach_bowl,Implausible
+3,exp3_48,4.64,NaN,Implausible,Noisy,Test,marker_cup,Implausible
+3,exp3_48,4.64,NaN,Implausible,Noisy,Test,fan_airport,Implausible
+3,exp3_48,4.64,NaN,Implausible,Noisy,Test,paper_pan,Implausible
+3,exp3_48,4.64,NaN,Implausible,Noisy,Test,coats_horses,Implausible
+3,exp3_48,4.64,NaN,Implausible,Noisy,Test,shirt_die,Implausible
+3,exp3_48,4.64,NaN,Implausible,Noisy,Test,worms_bags,Plausible
+3,exp3_49,5.49,female,Implausible,Noisy,Exposure,knife_camel,Plausible
+3,exp3_49,5.49,female,Implausible,Noisy,Exposure,flowers_donut,Plausible
+3,exp3_49,5.49,female,Implausible,Noisy,Exposure,house_nose,Implausible
+3,exp3_49,5.49,female,Implausible,Noisy,Exposure,bread_ketchup,Implausible
+3,exp3_49,5.49,female,Implausible,Noisy,Exposure,book_plane,Plausible
+3,exp3_49,5.49,female,Implausible,Noisy,Exposure,wooden_apples,Implausible
+3,exp3_49,5.49,female,Implausible,Noisy,Exposure,shark_racecar,Implausible
+3,exp3_49,5.49,female,Implausible,Noisy,Exposure,cat_hammers,Implausible
+3,exp3_49,5.49,female,Implausible,Noisy,Test,worms_bags,Implausible
+3,exp3_49,5.49,female,Implausible,Noisy,Test,coats_horses,Implausible
+3,exp3_49,5.49,female,Implausible,Noisy,Test,carrots_bees,Implausible
+3,exp3_49,5.49,female,Implausible,Noisy,Test,shirt_die,Plausible
+3,exp3_49,5.49,female,Implausible,Noisy,Test,beach_bowl,Implausible
+3,exp3_49,5.49,female,Implausible,Noisy,Test,paper_pan,Plausible
+3,exp3_49,5.49,female,Implausible,Noisy,Test,fan_airport,Plausible
+3,exp3_49,5.49,female,Implausible,Noisy,Test,marker_cup,Implausible
+3,exp3_50,5.27,male,Implausible,Noisy,Exposure,book_plane,Implausible
+3,exp3_50,5.27,male,Implausible,Noisy,Exposure,shark_racecar,Plausible
+3,exp3_50,5.27,male,Implausible,Noisy,Exposure,house_nose,Plausible
+3,exp3_50,5.27,male,Implausible,Noisy,Exposure,flowers_donut,Plausible
+3,exp3_50,5.27,male,Implausible,Noisy,Exposure,knife_camel,Plausible
+3,exp3_50,5.27,male,Implausible,Noisy,Exposure,cat_hammers,Plausible
+3,exp3_50,5.27,male,Implausible,Noisy,Exposure,wooden_apples,Plausible
+3,exp3_50,5.27,male,Implausible,Noisy,Exposure,bread_ketchup,Plausible
+3,exp3_50,5.27,male,Implausible,Noisy,Test,worms_bags,Plausible
+3,exp3_50,5.27,male,Implausible,Noisy,Test,beach_bowl,Plausible
+3,exp3_50,5.27,male,Implausible,Noisy,Test,carrots_bees,Plausible
+3,exp3_50,5.27,male,Implausible,Noisy,Test,marker_cup,Plausible
+3,exp3_50,5.27,male,Implausible,Noisy,Test,fan_airport,Plausible
+3,exp3_50,5.27,male,Implausible,Noisy,Test,coats_horses,Plausible
+3,exp3_50,5.27,male,Implausible,Noisy,Test,shirt_die,Plausible
+3,exp3_50,5.27,male,Implausible,Noisy,Test,paper_pan,Plausible
+3,exp3_51,5.37,male,Control,Noisy,Exposure,book_plane,Implausible
+3,exp3_51,5.37,male,Control,Noisy,Exposure,house_nose,Implausible
+3,exp3_51,5.37,male,Control,Noisy,Exposure,bread_ketchup,Implausible
+3,exp3_51,5.37,male,Control,Noisy,Exposure,shark_racecar,Implausible
+3,exp3_51,5.37,male,Control,Noisy,Exposure,flowers_donut,Implausible
+3,exp3_51,5.37,male,Control,Noisy,Exposure,cat_hammers,Implausible
+3,exp3_51,5.37,male,Control,Noisy,Exposure,wooden_apples,Implausible
+3,exp3_51,5.37,male,Control,Noisy,Exposure,knife_camel,Implausible
+3,exp3_51,5.37,male,Control,Noisy,Test,marker_cap,Plausible
+3,exp3_51,5.37,male,Control,Noisy,Test,beach_ball,Plausible
+3,exp3_51,5.37,male,Control,Noisy,Test,carrots_peas,Implausible
+3,exp3_51,5.37,male,Control,Noisy,Test,van_airport,Implausible
+3,exp3_51,5.37,male,Control,Noisy,Test,worms_bugs,Plausible
+3,exp3_51,5.37,male,Control,Noisy,Test,goats_horses,Plausible
+3,exp3_51,5.37,male,Control,Noisy,Test,paper_pen,Plausible
+3,exp3_51,5.37,male,Control,Noisy,Test,shirt_tie,Plausible
+3,exp3_52,4.63,NaN,Control,Noisy,Exposure,book_plane,Implausible
+3,exp3_52,4.63,NaN,Control,Noisy,Exposure,bread_ketchup,Implausible
+3,exp3_52,4.63,NaN,Control,Noisy,Exposure,house_nose,Plausible
+3,exp3_52,4.63,NaN,Control,Noisy,Exposure,flowers_donut,Implausible
+3,exp3_52,4.63,NaN,Control,Noisy,Exposure,shark_racecar,Implausible
+3,exp3_52,4.63,NaN,Control,Noisy,Exposure,cat_hammers,Implausible
+3,exp3_52,4.63,NaN,Control,Noisy,Exposure,knife_camel,Plausible
+3,exp3_52,4.63,NaN,Control,Noisy,Exposure,wooden_apples,Implausible
+3,exp3_52,4.63,NaN,Control,Noisy,Test,paper_pen,Plausible
+3,exp3_52,4.63,NaN,Control,Noisy,Test,worms_bugs,Plausible
+3,exp3_52,4.63,NaN,Control,Noisy,Test,beach_ball,Plausible
+3,exp3_52,4.63,NaN,Control,Noisy,Test,marker_cap,Implausible
+3,exp3_52,4.63,NaN,Control,Noisy,Test,shirt_tie,Plausible
+3,exp3_52,4.63,NaN,Control,Noisy,Test,goats_horses,Plausible
+3,exp3_52,4.63,NaN,Control,Noisy,Test,carrots_peas,Implausible
+3,exp3_52,4.63,NaN,Control,Noisy,Test,van_airport,Plausible
+3,exp3_53,5.06,male,Control,Noisy,Exposure,flowers_donut,Implausible
+3,exp3_53,5.06,male,Control,Noisy,Exposure,shark_racecar,Implausible
+3,exp3_53,5.06,male,Control,Noisy,Exposure,house_nose,Implausible
+3,exp3_53,5.06,male,Control,Noisy,Exposure,bread_ketchup,Plausible
+3,exp3_53,5.06,male,Control,Noisy,Exposure,cat_hammers,Plausible
+3,exp3_53,5.06,male,Control,Noisy,Exposure,wooden_apples,Implausible
+3,exp3_53,5.06,male,Control,Noisy,Exposure,knife_camel,Implausible
+3,exp3_53,5.06,male,Control,Noisy,Exposure,book_plane,Implausible
+3,exp3_53,5.06,male,Control,Noisy,Test,shirt_tie,Plausible
+3,exp3_53,5.06,male,Control,Noisy,Test,van_airport,Plausible
+3,exp3_53,5.06,male,Control,Noisy,Test,marker_cap,Plausible
+3,exp3_53,5.06,male,Control,Noisy,Test,paper_pen,Plausible
+3,exp3_53,5.06,male,Control,Noisy,Test,carrots_peas,Plausible
+3,exp3_53,5.06,male,Control,Noisy,Test,beach_ball,Plausible
+3,exp3_53,5.06,male,Control,Noisy,Test,goats_horses,Plausible
+3,exp3_53,5.06,male,Control,Noisy,Test,worms_bugs,Plausible
+3,exp3_54,4.36,female,Control,Noisy,Exposure,flowers_donut,Plausible
+3,exp3_54,4.36,female,Control,Noisy,Exposure,knife_camel,Plausible
+3,exp3_54,4.36,female,Control,Noisy,Exposure,book_plane,Plausible
+3,exp3_54,4.36,female,Control,Noisy,Exposure,house_nose,Plausible
+3,exp3_54,4.36,female,Control,Noisy,Exposure,wooden_apples,Implausible
+3,exp3_54,4.36,female,Control,Noisy,Exposure,shark_racecar,Plausible
+3,exp3_54,4.36,female,Control,Noisy,Exposure,cat_hammers,Plausible
+3,exp3_54,4.36,female,Control,Noisy,Exposure,bread_ketchup,Plausible
+3,exp3_54,4.36,female,Control,Noisy,Test,paper_pen,Plausible
+3,exp3_54,4.36,female,Control,Noisy,Test,beach_ball,Plausible
+3,exp3_54,4.36,female,Control,Noisy,Test,van_airport,Implausible
+3,exp3_54,4.36,female,Control,Noisy,Test,worms_bugs,Plausible
+3,exp3_54,4.36,female,Control,Noisy,Test,shirt_tie,Plausible
+3,exp3_54,4.36,female,Control,Noisy,Test,marker_cap,Plausible
+3,exp3_54,4.36,female,Control,Noisy,Test,carrots_peas,Plausible
+3,exp3_54,4.36,female,Control,Noisy,Test,goats_horses,Plausible
+3,exp3_55,4.15,female,Control,Noisy,Exposure,cat_hammers,Implausible
+3,exp3_55,4.15,female,Control,Noisy,Exposure,flowers_donut,Implausible
+3,exp3_55,4.15,female,Control,Noisy,Exposure,bread_ketchup,Implausible
+3,exp3_55,4.15,female,Control,Noisy,Exposure,knife_camel,Plausible
+3,exp3_55,4.15,female,Control,Noisy,Exposure,wooden_apples,Implausible
+3,exp3_55,4.15,female,Control,Noisy,Exposure,shark_racecar,Implausible
+3,exp3_55,4.15,female,Control,Noisy,Exposure,book_plane,Implausible
+3,exp3_55,4.15,female,Control,Noisy,Exposure,house_nose,Implausible
+3,exp3_55,4.15,female,Control,Noisy,Test,shirt_tie,Plausible
+3,exp3_55,4.15,female,Control,Noisy,Test,marker_cap,Plausible
+3,exp3_55,4.15,female,Control,Noisy,Test,van_airport,Implausible
+3,exp3_55,4.15,female,Control,Noisy,Test,worms_bugs,Plausible
+3,exp3_55,4.15,female,Control,Noisy,Test,paper_pen,Plausible
+3,exp3_55,4.15,female,Control,Noisy,Test,carrots_peas,Plausible
+3,exp3_55,4.15,female,Control,Noisy,Test,goats_horses,Plausible
+3,exp3_55,4.15,female,Control,Noisy,Test,beach_ball,Plausible
+3,exp3_56,4.31,male,Control,Noisy,Exposure,knife_camel,Implausible
+3,exp3_56,4.31,male,Control,Noisy,Exposure,wooden_apples,Implausible
+3,exp3_56,4.31,male,Control,Noisy,Exposure,shark_racecar,Implausible
+3,exp3_56,4.31,male,Control,Noisy,Exposure,bread_ketchup,Plausible
+3,exp3_56,4.31,male,Control,Noisy,Exposure,cat_hammers,Plausible
+3,exp3_56,4.31,male,Control,Noisy,Exposure,house_nose,Implausible
+3,exp3_56,4.31,male,Control,Noisy,Exposure,flowers_donut,Implausible
+3,exp3_56,4.31,male,Control,Noisy,Exposure,book_plane,Implausible
+3,exp3_56,4.31,male,Control,Noisy,Test,van_airport,Implausible
+3,exp3_56,4.31,male,Control,Noisy,Test,beach_ball,Plausible
+3,exp3_56,4.31,male,Control,Noisy,Test,paper_pen,Plausible
+3,exp3_56,4.31,male,Control,Noisy,Test,worms_bugs,Implausible
+3,exp3_56,4.31,male,Control,Noisy,Test,carrots_peas,Plausible
+3,exp3_56,4.31,male,Control,Noisy,Test,shirt_tie,Plausible
+3,exp3_56,4.31,male,Control,Noisy,Test,goats_horses,Implausible
+3,exp3_56,4.31,male,Control,Noisy,Test,marker_cap,Implausible
+3,exp3_57,5.5,female,Control,Noisy,Exposure,book_plane,Plausible
+3,exp3_57,5.5,female,Control,Noisy,Exposure,shark_racecar,Implausible
+3,exp3_57,5.5,female,Control,Noisy,Exposure,house_nose,Implausible
+3,exp3_57,5.5,female,Control,Noisy,Exposure,wooden_apples,Implausible
+3,exp3_57,5.5,female,Control,Noisy,Exposure,knife_camel,Implausible
+3,exp3_57,5.5,female,Control,Noisy,Exposure,bread_ketchup,Implausible
+3,exp3_57,5.5,female,Control,Noisy,Exposure,cat_hammers,Implausible
+3,exp3_57,5.5,female,Control,Noisy,Exposure,flowers_donut,Implausible
+3,exp3_57,5.5,female,Control,Noisy,Test,shirt_tie,Plausible
+3,exp3_57,5.5,female,Control,Noisy,Test,paper_pen,Plausible
+3,exp3_57,5.5,female,Control,Noisy,Test,marker_cap,Plausible
+3,exp3_57,5.5,female,Control,Noisy,Test,van_airport,Implausible
+3,exp3_57,5.5,female,Control,Noisy,Test,worms_bugs,Plausible
+3,exp3_57,5.5,female,Control,Noisy,Test,carrots_peas,Plausible
+3,exp3_57,5.5,female,Control,Noisy,Test,goats_horses,Plausible
+3,exp3_57,5.5,female,Control,Noisy,Test,beach_ball,Plausible
+3,exp3_58,5.66,female,Control,Noisy,Exposure,bread_ketchup,Plausible
+3,exp3_58,5.66,female,Control,Noisy,Exposure,cat_hammers,Implausible
+3,exp3_58,5.66,female,Control,Noisy,Exposure,wooden_apples,Implausible
+3,exp3_58,5.66,female,Control,Noisy,Exposure,book_plane,Plausible
+3,exp3_58,5.66,female,Control,Noisy,Exposure,knife_camel,Implausible
+3,exp3_58,5.66,female,Control,Noisy,Exposure,shark_racecar,Implausible
+3,exp3_58,5.66,female,Control,Noisy,Exposure,flowers_donut,Implausible
+3,exp3_58,5.66,female,Control,Noisy,Exposure,house_nose,Implausible
+3,exp3_58,5.66,female,Control,Noisy,Test,worms_bugs,Plausible
+3,exp3_58,5.66,female,Control,Noisy,Test,van_airport,Plausible
+3,exp3_58,5.66,female,Control,Noisy,Test,goats_horses,Plausible
+3,exp3_58,5.66,female,Control,Noisy,Test,beach_ball,Implausible
+3,exp3_58,5.66,female,Control,Noisy,Test,shirt_tie,Plausible
+3,exp3_58,5.66,female,Control,Noisy,Test,paper_pen,Plausible
+3,exp3_58,5.66,female,Control,Noisy,Test,carrots_peas,Plausible
+3,exp3_58,5.66,female,Control,Noisy,Test,marker_cap,Plausible
+3,exp3_59,5.81,NaN,Control,Noisy,Exposure,bread_ketchup,Implausible
+3,exp3_59,5.81,NaN,Control,Noisy,Exposure,flowers_donut,Implausible
+3,exp3_59,5.81,NaN,Control,Noisy,Exposure,shark_racecar,Implausible
+3,exp3_59,5.81,NaN,Control,Noisy,Exposure,knife_camel,Plausible
+3,exp3_59,5.81,NaN,Control,Noisy,Exposure,wooden_apples,Implausible
+3,exp3_59,5.81,NaN,Control,Noisy,Exposure,house_nose,Implausible
+3,exp3_59,5.81,NaN,Control,Noisy,Exposure,book_plane,Plausible
+3,exp3_59,5.81,NaN,Control,Noisy,Exposure,cat_hammers,Implausible
+3,exp3_59,5.81,NaN,Control,Noisy,Test,van_airport,Plausible
+3,exp3_59,5.81,NaN,Control,Noisy,Test,carrots_peas,Plausible
+3,exp3_59,5.81,NaN,Control,Noisy,Test,marker_cap,Plausible
+3,exp3_59,5.81,NaN,Control,Noisy,Test,shirt_tie,Plausible
+3,exp3_59,5.81,NaN,Control,Noisy,Test,beach_ball,Implausible
+3,exp3_59,5.81,NaN,Control,Noisy,Test,goats_horses,Plausible
+3,exp3_59,5.81,NaN,Control,Noisy,Test,worms_bugs,Plausible
+3,exp3_59,5.81,NaN,Control,Noisy,Test,paper_pen,Plausible
+3,exp3_60,4.62,female,Control,Noisy,Exposure,shark_racecar,Plausible
+3,exp3_60,4.62,female,Control,Noisy,Exposure,book_plane,Implausible
+3,exp3_60,4.62,female,Control,Noisy,Exposure,flowers_donut,Implausible
+3,exp3_60,4.62,female,Control,Noisy,Exposure,knife_camel,Implausible
+3,exp3_60,4.62,female,Control,Noisy,Exposure,wooden_apples,Implausible
+3,exp3_60,4.62,female,Control,Noisy,Exposure,house_nose,Plausible
+3,exp3_60,4.62,female,Control,Noisy,Exposure,bread_ketchup,Implausible
+3,exp3_60,4.62,female,Control,Noisy,Exposure,cat_hammers,Plausible
+3,exp3_60,4.62,female,Control,Noisy,Test,shirt_tie,Plausible
+3,exp3_60,4.62,female,Control,Noisy,Test,van_airport,Plausible
+3,exp3_60,4.62,female,Control,Noisy,Test,paper_pen,Plausible
+3,exp3_60,4.62,female,Control,Noisy,Test,marker_cap,Plausible
+3,exp3_60,4.62,female,Control,Noisy,Test,worms_bugs,Implausible
+3,exp3_60,4.62,female,Control,Noisy,Test,carrots_peas,Plausible
+3,exp3_60,4.62,female,Control,Noisy,Test,beach_ball,Plausible
+3,exp3_60,4.62,female,Control,Noisy,Test,goats_horses,Plausible
+3,exp3_61,5.1,female,Control,Noisy,Exposure,shark_racecar,Implausible
+3,exp3_61,5.1,female,Control,Noisy,Exposure,wooden_apples,Implausible
+3,exp3_61,5.1,female,Control,Noisy,Exposure,cat_hammers,Implausible
+3,exp3_61,5.1,female,Control,Noisy,Exposure,flowers_donut,Implausible
+3,exp3_61,5.1,female,Control,Noisy,Exposure,bread_ketchup,Implausible
+3,exp3_61,5.1,female,Control,Noisy,Exposure,house_nose,Implausible
+3,exp3_61,5.1,female,Control,Noisy,Exposure,book_plane,Implausible
+3,exp3_61,5.1,female,Control,Noisy,Exposure,knife_camel,Implausible
+3,exp3_61,5.1,female,Control,Noisy,Test,carrots_peas,Plausible
+3,exp3_61,5.1,female,Control,Noisy,Test,van_airport,Plausible
+3,exp3_61,5.1,female,Control,Noisy,Test,goats_horses,Plausible
+3,exp3_61,5.1,female,Control,Noisy,Test,paper_pen,Plausible
+3,exp3_61,5.1,female,Control,Noisy,Test,shirt_tie,Plausible
+3,exp3_61,5.1,female,Control,Noisy,Test,worms_bugs,Plausible
+3,exp3_61,5.1,female,Control,Noisy,Test,beach_ball,Plausible
+3,exp3_61,5.1,female,Control,Noisy,Test,marker_cap,Plausible
+3,exp3_62,4.62,female,Control,Noisy,Exposure,shark_racecar,Plausible
+3,exp3_62,4.62,female,Control,Noisy,Exposure,flowers_donut,Implausible
+3,exp3_62,4.62,female,Control,Noisy,Exposure,bread_ketchup,Plausible
+3,exp3_62,4.62,female,Control,Noisy,Exposure,house_nose,Implausible
+3,exp3_62,4.62,female,Control,Noisy,Exposure,wooden_apples,Implausible
+3,exp3_62,4.62,female,Control,Noisy,Exposure,cat_hammers,Implausible
+3,exp3_62,4.62,female,Control,Noisy,Exposure,book_plane,Implausible
+3,exp3_62,4.62,female,Control,Noisy,Exposure,knife_camel,Implausible
+3,exp3_62,4.62,female,Control,Noisy,Test,marker_cap,Plausible
+3,exp3_62,4.62,female,Control,Noisy,Test,worms_bugs,Plausible
+3,exp3_62,4.62,female,Control,Noisy,Test,goats_horses,Plausible
+3,exp3_62,4.62,female,Control,Noisy,Test,shirt_tie,Plausible
+3,exp3_62,4.62,female,Control,Noisy,Test,beach_ball,Plausible
+3,exp3_62,4.62,female,Control,Noisy,Test,paper_pen,Plausible
+3,exp3_62,4.62,female,Control,Noisy,Test,carrots_peas,Plausible
+3,exp3_62,4.62,female,Control,Noisy,Test,van_airport,Plausible
+3,exp3_63,5.37,NaN,Control,Noisy,Exposure,bread_ketchup,Implausible
+3,exp3_63,5.37,NaN,Control,Noisy,Exposure,book_plane,Implausible
+3,exp3_63,5.37,NaN,Control,Noisy,Exposure,cat_hammers,Implausible
+3,exp3_63,5.37,NaN,Control,Noisy,Exposure,flowers_donut,Implausible
+3,exp3_63,5.37,NaN,Control,Noisy,Exposure,knife_camel,Plausible
+3,exp3_63,5.37,NaN,Control,Noisy,Exposure,wooden_apples,Implausible
+3,exp3_63,5.37,NaN,Control,Noisy,Exposure,house_nose,Implausible
+3,exp3_63,5.37,NaN,Control,Noisy,Exposure,shark_racecar,Implausible
+3,exp3_63,5.37,NaN,Control,Noisy,Test,van_airport,Plausible
+3,exp3_63,5.37,NaN,Control,Noisy,Test,carrots_peas,Plausible
+3,exp3_63,5.37,NaN,Control,Noisy,Test,marker_cap,Implausible
+3,exp3_63,5.37,NaN,Control,Noisy,Test,paper_pen,Plausible
+3,exp3_63,5.37,NaN,Control,Noisy,Test,goats_horses,Plausible
+3,exp3_63,5.37,NaN,Control,Noisy,Test,worms_bugs,Plausible
+3,exp3_63,5.37,NaN,Control,Noisy,Test,shirt_tie,Plausible
+3,exp3_63,5.37,NaN,Control,Noisy,Test,beach_ball,Plausible
+3,exp3_64,4.61,male,Control,Noisy,Exposure,house_nose,Implausible
+3,exp3_64,4.61,male,Control,Noisy,Exposure,book_plane,Implausible
+3,exp3_64,4.61,male,Control,Noisy,Exposure,cat_hammers,Implausible
+3,exp3_64,4.61,male,Control,Noisy,Exposure,wooden_apples,Plausible
+3,exp3_64,4.61,male,Control,Noisy,Exposure,flowers_donut,Implausible
+3,exp3_64,4.61,male,Control,Noisy,Exposure,bread_ketchup,Implausible
+3,exp3_64,4.61,male,Control,Noisy,Exposure,knife_camel,Implausible
+3,exp3_64,4.61,male,Control,Noisy,Exposure,shark_racecar,Implausible
+3,exp3_64,4.61,male,Control,Noisy,Test,van_airport,Plausible
+3,exp3_64,4.61,male,Control,Noisy,Test,shirt_tie,Implausible
+3,exp3_64,4.61,male,Control,Noisy,Test,worms_bugs,Plausible
+3,exp3_64,4.61,male,Control,Noisy,Test,carrots_peas,Implausible
+3,exp3_64,4.61,male,Control,Noisy,Test,marker_cap,Implausible
+3,exp3_64,4.61,male,Control,Noisy,Test,paper_pen,Implausible
+3,exp3_64,4.61,male,Control,Noisy,Test,goats_horses,Plausible
+3,exp3_64,4.61,male,Control,Noisy,Test,beach_ball,Plausible
+3,exp3_65,4.24,female,Control,Noisy,Exposure,wooden_apples,Implausible
+3,exp3_65,4.24,female,Control,Noisy,Exposure,house_nose,Implausible
+3,exp3_65,4.24,female,Control,Noisy,Exposure,shark_racecar,Implausible
+3,exp3_65,4.24,female,Control,Noisy,Exposure,bread_ketchup,Implausible
+3,exp3_65,4.24,female,Control,Noisy,Exposure,cat_hammers,Plausible
+3,exp3_65,4.24,female,Control,Noisy,Exposure,knife_camel,Implausible
+3,exp3_65,4.24,female,Control,Noisy,Exposure,flowers_donut,Implausible
+3,exp3_65,4.24,female,Control,Noisy,Exposure,book_plane,Implausible
+3,exp3_65,4.24,female,Control,Noisy,Test,goats_horses,Plausible
+3,exp3_65,4.24,female,Control,Noisy,Test,worms_bugs,Implausible
+3,exp3_65,4.24,female,Control,Noisy,Test,beach_ball,Plausible
+3,exp3_65,4.24,female,Control,Noisy,Test,paper_pen,Plausible
+3,exp3_65,4.24,female,Control,Noisy,Test,van_airport,Implausible
+3,exp3_65,4.24,female,Control,Noisy,Test,shirt_tie,Plausible
+3,exp3_65,4.24,female,Control,Noisy,Test,carrots_peas,Plausible
+3,exp3_65,4.24,female,Control,Noisy,Test,marker_cap,Plausible
+3,exp3_66,5.7,female,Control,Noisy,Exposure,shark_racecar,Implausible
+3,exp3_66,5.7,female,Control,Noisy,Exposure,bread_ketchup,Implausible
+3,exp3_66,5.7,female,Control,Noisy,Exposure,book_plane,Implausible
+3,exp3_66,5.7,female,Control,Noisy,Exposure,wooden_apples,Implausible
+3,exp3_66,5.7,female,Control,Noisy,Exposure,flowers_donut,Implausible
+3,exp3_66,5.7,female,Control,Noisy,Exposure,knife_camel,Implausible
+3,exp3_66,5.7,female,Control,Noisy,Exposure,cat_hammers,Implausible
+3,exp3_66,5.7,female,Control,Noisy,Exposure,house_nose,Implausible
+3,exp3_66,5.7,female,Control,Noisy,Test,beach_ball,Plausible
+3,exp3_66,5.7,female,Control,Noisy,Test,marker_cap,Plausible
+3,exp3_66,5.7,female,Control,Noisy,Test,paper_pen,Plausible
+3,exp3_66,5.7,female,Control,Noisy,Test,carrots_peas,Plausible
+3,exp3_66,5.7,female,Control,Noisy,Test,shirt_tie,Plausible
+3,exp3_66,5.7,female,Control,Noisy,Test,worms_bugs,Plausible
+3,exp3_66,5.7,female,Control,Noisy,Test,goats_horses,Plausible
+3,exp3_66,5.7,female,Control,Noisy,Test,van_airport,Plausible
+3,exp3_67,4.3,male,Control,Noisy,Exposure,bread_ketchup,Plausible
+3,exp3_67,4.3,male,Control,Noisy,Exposure,house_nose,Implausible
+3,exp3_67,4.3,male,Control,Noisy,Exposure,knife_camel,Implausible
+3,exp3_67,4.3,male,Control,Noisy,Exposure,wooden_apples,Implausible
+3,exp3_67,4.3,male,Control,Noisy,Exposure,book_plane,Plausible
+3,exp3_67,4.3,male,Control,Noisy,Exposure,cat_hammers,Implausible
+3,exp3_67,4.3,male,Control,Noisy,Exposure,shark_racecar,Implausible
+3,exp3_67,4.3,male,Control,Noisy,Exposure,flowers_donut,Plausible
+3,exp3_67,4.3,male,Control,Noisy,Test,marker_cap,Plausible
+3,exp3_67,4.3,male,Control,Noisy,Test,van_airport,Plausible
+3,exp3_67,4.3,male,Control,Noisy,Test,goats_horses,Plausible
+3,exp3_67,4.3,male,Control,Noisy,Test,shirt_tie,Plausible
+3,exp3_67,4.3,male,Control,Noisy,Test,carrots_peas,Plausible
+3,exp3_67,4.3,male,Control,Noisy,Test,worms_bugs,Implausible
+3,exp3_67,4.3,male,Control,Noisy,Test,paper_pen,Plausible
+3,exp3_67,4.3,male,Control,Noisy,Test,beach_ball,Plausible
+3,exp3_68,4.34,female,Control,Noisy,Exposure,book_plane,Implausible
+3,exp3_68,4.34,female,Control,Noisy,Exposure,knife_camel,Plausible
+3,exp3_68,4.34,female,Control,Noisy,Exposure,house_nose,Implausible
+3,exp3_68,4.34,female,Control,Noisy,Exposure,bread_ketchup,Plausible
+3,exp3_68,4.34,female,Control,Noisy,Exposure,cat_hammers,Implausible
+3,exp3_68,4.34,female,Control,Noisy,Exposure,flowers_donut,Implausible
+3,exp3_68,4.34,female,Control,Noisy,Exposure,wooden_apples,Implausible
+3,exp3_68,4.34,female,Control,Noisy,Exposure,shark_racecar,Implausible
+3,exp3_68,4.34,female,Control,Noisy,Test,beach_ball,Plausible
+3,exp3_68,4.34,female,Control,Noisy,Test,worms_bugs,Plausible
+3,exp3_68,4.34,female,Control,Noisy,Test,goats_horses,Plausible
+3,exp3_68,4.34,female,Control,Noisy,Test,van_airport,Implausible
+3,exp3_68,4.34,female,Control,Noisy,Test,carrots_peas,Plausible
+3,exp3_68,4.34,female,Control,Noisy,Test,shirt_tie,Plausible
+3,exp3_68,4.34,female,Control,Noisy,Test,marker_cap,Plausible
+3,exp3_68,4.34,female,Control,Noisy,Test,paper_pen,Plausible
+3,exp3_69,5.91,female,Control,Noisy,Exposure,cat_hammers,Plausible
+3,exp3_69,5.91,female,Control,Noisy,Exposure,wooden_apples,Implausible
+3,exp3_69,5.91,female,Control,Noisy,Exposure,shark_racecar,Implausible
+3,exp3_69,5.91,female,Control,Noisy,Exposure,house_nose,Implausible
+3,exp3_69,5.91,female,Control,Noisy,Exposure,book_plane,Implausible
+3,exp3_69,5.91,female,Control,Noisy,Exposure,flowers_donut,Implausible
+3,exp3_69,5.91,female,Control,Noisy,Exposure,bread_ketchup,Implausible
+3,exp3_69,5.91,female,Control,Noisy,Exposure,knife_camel,Implausible
+3,exp3_69,5.91,female,Control,Noisy,Test,paper_pen,Plausible
+3,exp3_69,5.91,female,Control,Noisy,Test,van_airport,Plausible
+3,exp3_69,5.91,female,Control,Noisy,Test,worms_bugs,Plausible
+3,exp3_69,5.91,female,Control,Noisy,Test,marker_cap,Plausible
+3,exp3_69,5.91,female,Control,Noisy,Test,beach_ball,Implausible
+3,exp3_69,5.91,female,Control,Noisy,Test,goats_horses,Plausible
+3,exp3_69,5.91,female,Control,Noisy,Test,carrots_peas,Plausible
+3,exp3_69,5.91,female,Control,Noisy,Test,shirt_tie,Plausible
+3,exp3_70,5.47,male,Control,Noisy,Exposure,knife_camel,Plausible
+3,exp3_70,5.47,male,Control,Noisy,Exposure,shark_racecar,Implausible
+3,exp3_70,5.47,male,Control,Noisy,Exposure,flowers_donut,Implausible
+3,exp3_70,5.47,male,Control,Noisy,Exposure,cat_hammers,Implausible
+3,exp3_70,5.47,male,Control,Noisy,Exposure,wooden_apples,Implausible
+3,exp3_70,5.47,male,Control,Noisy,Exposure,bread_ketchup,Plausible
+3,exp3_70,5.47,male,Control,Noisy,Exposure,house_nose,Implausible
+3,exp3_70,5.47,male,Control,Noisy,Exposure,book_plane,Implausible
+3,exp3_70,5.47,male,Control,Noisy,Test,beach_ball,Plausible
+3,exp3_70,5.47,male,Control,Noisy,Test,worms_bugs,Plausible
+3,exp3_70,5.47,male,Control,Noisy,Test,goats_horses,Plausible
+3,exp3_70,5.47,male,Control,Noisy,Test,carrots_peas,Plausible
+3,exp3_70,5.47,male,Control,Noisy,Test,paper_pen,Plausible
+3,exp3_70,5.47,male,Control,Noisy,Test,shirt_tie,Plausible
+3,exp3_70,5.47,male,Control,Noisy,Test,marker_cap,Plausible
+3,exp3_70,5.47,male,Control,Noisy,Test,van_airport,Plausible
+3,exp3_71,5.01,male,Implausible,No Noise,Exposure,shark_racecar,Implausible
+3,exp3_71,5.01,male,Implausible,No Noise,Exposure,house_nose,Implausible
+3,exp3_71,5.01,male,Implausible,No Noise,Exposure,cat_hammers,Implausible
+3,exp3_71,5.01,male,Implausible,No Noise,Exposure,knife_camel,Implausible
+3,exp3_71,5.01,male,Implausible,No Noise,Exposure,flowers_donut,Implausible
+3,exp3_71,5.01,male,Implausible,No Noise,Exposure,wooden_apples,Implausible
+3,exp3_71,5.01,male,Implausible,No Noise,Exposure,book_plane,Implausible
+3,exp3_71,5.01,male,Implausible,No Noise,Exposure,bread_ketchup,Implausible
+3,exp3_71,5.01,male,Implausible,No Noise,Test,paper_pan,Implausible
+3,exp3_71,5.01,male,Implausible,No Noise,Test,coats_horses,Plausible
+3,exp3_71,5.01,male,Implausible,No Noise,Test,fan_airport,Implausible
+3,exp3_71,5.01,male,Implausible,No Noise,Test,shirt_die,Implausible
+3,exp3_71,5.01,male,Implausible,No Noise,Test,worms_bags,Implausible
+3,exp3_71,5.01,male,Implausible,No Noise,Test,carrots_bees,Implausible
+3,exp3_71,5.01,male,Implausible,No Noise,Test,marker_cup,Implausible
+3,exp3_71,5.01,male,Implausible,No Noise,Test,beach_bowl,Implausible
+3,exp3_72,5.72,female,Implausible,No Noise,Exposure,bread_ketchup,Implausible
+3,exp3_72,5.72,female,Implausible,No Noise,Exposure,shark_racecar,Implausible
+3,exp3_72,5.72,female,Implausible,No Noise,Exposure,wooden_apples,Implausible
+3,exp3_72,5.72,female,Implausible,No Noise,Exposure,cat_hammers,Implausible
+3,exp3_72,5.72,female,Implausible,No Noise,Exposure,knife_camel,Implausible
+3,exp3_72,5.72,female,Implausible,No Noise,Exposure,house_nose,Implausible
+3,exp3_72,5.72,female,Implausible,No Noise,Exposure,book_plane,Implausible
+3,exp3_72,5.72,female,Implausible,No Noise,Exposure,flowers_donut,Implausible
+3,exp3_72,5.72,female,Implausible,No Noise,Test,carrots_bees,Implausible
+3,exp3_72,5.72,female,Implausible,No Noise,Test,fan_airport,Implausible
+3,exp3_72,5.72,female,Implausible,No Noise,Test,coats_horses,Plausible
+3,exp3_72,5.72,female,Implausible,No Noise,Test,marker_cup,Implausible
+3,exp3_72,5.72,female,Implausible,No Noise,Test,paper_pan,Implausible
+3,exp3_72,5.72,female,Implausible,No Noise,Test,shirt_die,Implausible
+3,exp3_72,5.72,female,Implausible,No Noise,Test,beach_bowl,Implausible
+3,exp3_72,5.72,female,Implausible,No Noise,Test,worms_bags,Implausible
+3,exp3_73,4.75,female,Implausible,No Noise,Exposure,book_plane,Implausible
+3,exp3_73,4.75,female,Implausible,No Noise,Exposure,wooden_apples,Implausible
+3,exp3_73,4.75,female,Implausible,No Noise,Exposure,cat_hammers,Implausible
+3,exp3_73,4.75,female,Implausible,No Noise,Exposure,shark_racecar,Implausible
+3,exp3_73,4.75,female,Implausible,No Noise,Exposure,house_nose,Implausible
+3,exp3_73,4.75,female,Implausible,No Noise,Exposure,flowers_donut,Implausible
+3,exp3_73,4.75,female,Implausible,No Noise,Exposure,knife_camel,Implausible
+3,exp3_73,4.75,female,Implausible,No Noise,Exposure,bread_ketchup,Plausible
+3,exp3_73,4.75,female,Implausible,No Noise,Test,paper_pan,Implausible
+3,exp3_73,4.75,female,Implausible,No Noise,Test,coats_horses,Implausible
+3,exp3_73,4.75,female,Implausible,No Noise,Test,beach_bowl,Plausible
+3,exp3_73,4.75,female,Implausible,No Noise,Test,marker_cup,Implausible
+3,exp3_73,4.75,female,Implausible,No Noise,Test,shirt_die,Implausible
+3,exp3_73,4.75,female,Implausible,No Noise,Test,worms_bags,Implausible
+3,exp3_73,4.75,female,Implausible,No Noise,Test,fan_airport,Implausible
+3,exp3_73,4.75,female,Implausible,No Noise,Test,carrots_bees,Implausible
+3,exp3_74,5.03,female,Implausible,No Noise,Exposure,book_plane,Implausible
+3,exp3_74,5.03,female,Implausible,No Noise,Exposure,wooden_apples,Implausible
+3,exp3_74,5.03,female,Implausible,No Noise,Exposure,flowers_donut,Implausible
+3,exp3_74,5.03,female,Implausible,No Noise,Exposure,bread_ketchup,Implausible
+3,exp3_74,5.03,female,Implausible,No Noise,Exposure,house_nose,Implausible
+3,exp3_74,5.03,female,Implausible,No Noise,Exposure,knife_camel,Implausible
+3,exp3_74,5.03,female,Implausible,No Noise,Exposure,shark_racecar,Plausible
+3,exp3_74,5.03,female,Implausible,No Noise,Exposure,cat_hammers,Implausible
+3,exp3_74,5.03,female,Implausible,No Noise,Test,fan_airport,Plausible
+3,exp3_74,5.03,female,Implausible,No Noise,Test,paper_pan,Implausible
+3,exp3_74,5.03,female,Implausible,No Noise,Test,worms_bags,Implausible
+3,exp3_74,5.03,female,Implausible,No Noise,Test,coats_horses,Implausible
+3,exp3_74,5.03,female,Implausible,No Noise,Test,carrots_bees,Implausible
+3,exp3_74,5.03,female,Implausible,No Noise,Test,shirt_die,Plausible
+3,exp3_74,5.03,female,Implausible,No Noise,Test,marker_cup,Implausible
+3,exp3_74,5.03,female,Implausible,No Noise,Test,beach_bowl,Implausible
+3,exp3_75,5.83,male,Implausible,No Noise,Exposure,knife_camel,Implausible
+3,exp3_75,5.83,male,Implausible,No Noise,Exposure,bread_ketchup,Implausible
+3,exp3_75,5.83,male,Implausible,No Noise,Exposure,house_nose,Implausible
+3,exp3_75,5.83,male,Implausible,No Noise,Exposure,flowers_donut,Implausible
+3,exp3_75,5.83,male,Implausible,No Noise,Exposure,wooden_apples,Implausible
+3,exp3_75,5.83,male,Implausible,No Noise,Exposure,book_plane,Implausible
+3,exp3_75,5.83,male,Implausible,No Noise,Exposure,shark_racecar,Plausible
+3,exp3_75,5.83,male,Implausible,No Noise,Exposure,cat_hammers,Implausible
+3,exp3_75,5.83,male,Implausible,No Noise,Test,carrots_bees,Implausible
+3,exp3_75,5.83,male,Implausible,No Noise,Test,coats_horses,Implausible
+3,exp3_75,5.83,male,Implausible,No Noise,Test,marker_cup,Implausible
+3,exp3_75,5.83,male,Implausible,No Noise,Test,shirt_die,Implausible
+3,exp3_75,5.83,male,Implausible,No Noise,Test,paper_pan,Plausible
+3,exp3_75,5.83,male,Implausible,No Noise,Test,worms_bags,Implausible
+3,exp3_75,5.83,male,Implausible,No Noise,Test,fan_airport,Implausible
+3,exp3_75,5.83,male,Implausible,No Noise,Test,beach_bowl,Implausible
+3,exp3_76,4.1,male,Plausible,No Noise,Exposure,flowers_basket,Plausible
+3,exp3_76,4.1,male,Plausible,No Noise,Exposure,book_table,Plausible
+3,exp3_76,4.1,male,Plausible,No Noise,Exposure,house_door,Plausible
+3,exp3_76,4.1,male,Plausible,No Noise,Exposure,wooden_blocks,Plausible
+3,exp3_76,4.1,male,Plausible,No Noise,Exposure,shark_fish,Plausible
+3,exp3_76,4.1,male,Plausible,No Noise,Exposure,knife_fork,Plausible
+3,exp3_76,4.1,male,Plausible,No Noise,Exposure,cat_kittens,Plausible
+3,exp3_76,4.1,male,Plausible,No Noise,Exposure,bread_peanutbutter,Plausible
+3,exp3_76,4.1,male,Plausible,No Noise,Test,paper_pan,Plausible
+3,exp3_76,4.1,male,Plausible,No Noise,Test,coats_horses,Implausible
+3,exp3_76,4.1,male,Plausible,No Noise,Test,beach_bowl,Plausible
+3,exp3_76,4.1,male,Plausible,No Noise,Test,worms_bags,Plausible
+3,exp3_76,4.1,male,Plausible,No Noise,Test,shirt_die,Plausible
+3,exp3_76,4.1,male,Plausible,No Noise,Test,marker_cup,Plausible
+3,exp3_76,4.1,male,Plausible,No Noise,Test,carrots_bees,Implausible
+3,exp3_76,4.1,male,Plausible,No Noise,Test,fan_airport,Implausible
+3,exp3_77,4.5,male,Plausible,No Noise,Exposure,shark_fish,Plausible
+3,exp3_77,4.5,male,Plausible,No Noise,Exposure,house_door,Plausible
+3,exp3_77,4.5,male,Plausible,No Noise,Exposure,flowers_basket,Plausible
+3,exp3_77,4.5,male,Plausible,No Noise,Exposure,bread_peanutbutter,Plausible
+3,exp3_77,4.5,male,Plausible,No Noise,Exposure,cat_kittens,Plausible
+3,exp3_77,4.5,male,Plausible,No Noise,Exposure,book_table,Plausible
+3,exp3_77,4.5,male,Plausible,No Noise,Exposure,wooden_blocks,Plausible
+3,exp3_77,4.5,male,Plausible,No Noise,Exposure,knife_fork,Plausible
+3,exp3_77,4.5,male,Plausible,No Noise,Test,shirt_die,Plausible
+3,exp3_77,4.5,male,Plausible,No Noise,Test,paper_pan,Plausible
+3,exp3_77,4.5,male,Plausible,No Noise,Test,coats_horses,Plausible
+3,exp3_77,4.5,male,Plausible,No Noise,Test,worms_bags,Implausible
+3,exp3_77,4.5,male,Plausible,No Noise,Test,beach_bowl,Plausible
+3,exp3_77,4.5,male,Plausible,No Noise,Test,fan_airport,Implausible
+3,exp3_77,4.5,male,Plausible,No Noise,Test,marker_cup,Implausible
+3,exp3_77,4.5,male,Plausible,No Noise,Test,carrots_bees,Implausible
+3,exp3_78,4.5,male,Plausible,No Noise,Exposure,wooden_blocks,Plausible
+3,exp3_78,4.5,male,Plausible,No Noise,Exposure,cat_kittens,Plausible
+3,exp3_78,4.5,male,Plausible,No Noise,Exposure,house_door,Plausible
+3,exp3_78,4.5,male,Plausible,No Noise,Exposure,bread_peanutbutter,Plausible
+3,exp3_78,4.5,male,Plausible,No Noise,Exposure,knife_fork,Plausible
+3,exp3_78,4.5,male,Plausible,No Noise,Exposure,shark_fish,Plausible
+3,exp3_78,4.5,male,Plausible,No Noise,Exposure,book_table,Plausible
+3,exp3_78,4.5,male,Plausible,No Noise,Exposure,flowers_basket,Plausible
+3,exp3_78,4.5,male,Plausible,No Noise,Test,carrots_bees,Implausible
+3,exp3_78,4.5,male,Plausible,No Noise,Test,paper_pan,Implausible
+3,exp3_78,4.5,male,Plausible,No Noise,Test,fan_airport,Implausible
+3,exp3_78,4.5,male,Plausible,No Noise,Test,worms_bags,Implausible
+3,exp3_78,4.5,male,Plausible,No Noise,Test,shirt_die,Plausible
+3,exp3_78,4.5,male,Plausible,No Noise,Test,coats_horses,Plausible
+3,exp3_78,4.5,male,Plausible,No Noise,Test,beach_bowl,Plausible
+3,exp3_78,4.5,male,Plausible,No Noise,Test,marker_cup,Implausible
+3,exp3_79,4.23,female,Plausible,No Noise,Exposure,wooden_blocks,Plausible
+3,exp3_79,4.23,female,Plausible,No Noise,Exposure,cat_kittens,Plausible
+3,exp3_79,4.23,female,Plausible,No Noise,Exposure,book_table,Plausible
+3,exp3_79,4.23,female,Plausible,No Noise,Exposure,bread_peanutbutter,Plausible
+3,exp3_79,4.23,female,Plausible,No Noise,Exposure,shark_fish,Plausible
+3,exp3_79,4.23,female,Plausible,No Noise,Exposure,knife_fork,Plausible
+3,exp3_79,4.23,female,Plausible,No Noise,Exposure,house_door,Plausible
+3,exp3_79,4.23,female,Plausible,No Noise,Exposure,flowers_basket,Plausible
+3,exp3_79,4.23,female,Plausible,No Noise,Test,paper_pan,Implausible
+3,exp3_79,4.23,female,Plausible,No Noise,Test,coats_horses,Plausible
+3,exp3_79,4.23,female,Plausible,No Noise,Test,worms_bags,Implausible
+3,exp3_79,4.23,female,Plausible,No Noise,Test,shirt_die,Plausible
+3,exp3_79,4.23,female,Plausible,No Noise,Test,beach_bowl,Implausible
+3,exp3_79,4.23,female,Plausible,No Noise,Test,fan_airport,Implausible
+3,exp3_79,4.23,female,Plausible,No Noise,Test,marker_cup,Implausible
+3,exp3_79,4.23,female,Plausible,No Noise,Test,carrots_bees,Implausible
+3,exp3_80,5.34,male,Plausible,No Noise,Exposure,flowers_basket,Plausible
+3,exp3_80,5.34,male,Plausible,No Noise,Exposure,book_table,Plausible
+3,exp3_80,5.34,male,Plausible,No Noise,Exposure,shark_fish,Plausible
+3,exp3_80,5.34,male,Plausible,No Noise,Exposure,cat_kittens,Plausible
+3,exp3_80,5.34,male,Plausible,No Noise,Exposure,house_door,Plausible
+3,exp3_80,5.34,male,Plausible,No Noise,Exposure,wooden_blocks,Plausible
+3,exp3_80,5.34,male,Plausible,No Noise,Exposure,bread_peanutbutter,Plausible
+3,exp3_80,5.34,male,Plausible,No Noise,Exposure,knife_fork,Plausible
+3,exp3_80,5.34,male,Plausible,No Noise,Test,fan_airport,Plausible
+3,exp3_80,5.34,male,Plausible,No Noise,Test,paper_pan,Plausible
+3,exp3_80,5.34,male,Plausible,No Noise,Test,coats_horses,Plausible
+3,exp3_80,5.34,male,Plausible,No Noise,Test,marker_cup,Plausible
+3,exp3_80,5.34,male,Plausible,No Noise,Test,carrots_bees,Plausible
+3,exp3_80,5.34,male,Plausible,No Noise,Test,beach_bowl,Plausible
+3,exp3_80,5.34,male,Plausible,No Noise,Test,worms_bags,Implausible
+3,exp3_80,5.34,male,Plausible,No Noise,Test,shirt_die,Plausible
+3,exp3_81,5.93,female,Plausible,No Noise,Exposure,cat_kittens,Plausible
+3,exp3_81,5.93,female,Plausible,No Noise,Exposure,flowers_basket,Plausible
+3,exp3_81,5.93,female,Plausible,No Noise,Exposure,knife_fork,Plausible
+3,exp3_81,5.93,female,Plausible,No Noise,Exposure,bread_peanutbutter,Plausible
+3,exp3_81,5.93,female,Plausible,No Noise,Exposure,book_table,Plausible
+3,exp3_81,5.93,female,Plausible,No Noise,Exposure,wooden_blocks,Plausible
+3,exp3_81,5.93,female,Plausible,No Noise,Exposure,house_door,Plausible
+3,exp3_81,5.93,female,Plausible,No Noise,Exposure,shark_fish,Plausible
+3,exp3_81,5.93,female,Plausible,No Noise,Test,shirt_die,Implausible
+3,exp3_81,5.93,female,Plausible,No Noise,Test,carrots_bees,Plausible
+3,exp3_81,5.93,female,Plausible,No Noise,Test,coats_horses,Implausible
+3,exp3_81,5.93,female,Plausible,No Noise,Test,fan_airport,Plausible
+3,exp3_81,5.93,female,Plausible,No Noise,Test,beach_bowl,Implausible
+3,exp3_81,5.93,female,Plausible,No Noise,Test,paper_pan,Implausible
+3,exp3_81,5.93,female,Plausible,No Noise,Test,marker_cup,Plausible
+3,exp3_81,5.93,female,Plausible,No Noise,Test,worms_bags,Implausible
+3,exp3_82,4.87,female,Plausible,No Noise,Exposure,shark_fish,Plausible
+3,exp3_82,4.87,female,Plausible,No Noise,Exposure,wooden_blocks,Plausible
+3,exp3_82,4.87,female,Plausible,No Noise,Exposure,knife_fork,Plausible
+3,exp3_82,4.87,female,Plausible,No Noise,Exposure,book_table,Plausible
+3,exp3_82,4.87,female,Plausible,No Noise,Exposure,flowers_basket,Plausible
+3,exp3_82,4.87,female,Plausible,No Noise,Exposure,house_door,Plausible
+3,exp3_82,4.87,female,Plausible,No Noise,Exposure,cat_kittens,Plausible
+3,exp3_82,4.87,female,Plausible,No Noise,Exposure,bread_peanutbutter,Plausible
+3,exp3_82,4.87,female,Plausible,No Noise,Test,carrots_bees,Plausible
+3,exp3_82,4.87,female,Plausible,No Noise,Test,paper_pan,Plausible
+3,exp3_82,4.87,female,Plausible,No Noise,Test,marker_cup,Implausible
+3,exp3_82,4.87,female,Plausible,No Noise,Test,coats_horses,Implausible
+3,exp3_82,4.87,female,Plausible,No Noise,Test,worms_bags,Implausible
+3,exp3_82,4.87,female,Plausible,No Noise,Test,beach_bowl,Plausible
+3,exp3_82,4.87,female,Plausible,No Noise,Test,fan_airport,Plausible
+3,exp3_82,4.87,female,Plausible,No Noise,Test,shirt_die,Implausible
+3,exp3_83,4.53,male,Plausible,No Noise,Exposure,wooden_blocks,Plausible
+3,exp3_83,4.53,male,Plausible,No Noise,Exposure,bread_peanutbutter,Implausible
+3,exp3_83,4.53,male,Plausible,No Noise,Exposure,knife_fork,Plausible
+3,exp3_83,4.53,male,Plausible,No Noise,Exposure,flowers_basket,Plausible
+3,exp3_83,4.53,male,Plausible,No Noise,Exposure,cat_kittens,Plausible
+3,exp3_83,4.53,male,Plausible,No Noise,Exposure,shark_fish,Plausible
+3,exp3_83,4.53,male,Plausible,No Noise,Exposure,book_table,Plausible
+3,exp3_83,4.53,male,Plausible,No Noise,Exposure,house_door,Plausible
+3,exp3_83,4.53,male,Plausible,No Noise,Test,marker_cup,Implausible
+3,exp3_83,4.53,male,Plausible,No Noise,Test,worms_bags,Implausible
+3,exp3_83,4.53,male,Plausible,No Noise,Test,fan_airport,Implausible
+3,exp3_83,4.53,male,Plausible,No Noise,Test,beach_bowl,Plausible
+3,exp3_83,4.53,male,Plausible,No Noise,Test,paper_pan,Plausible
+3,exp3_83,4.53,male,Plausible,No Noise,Test,carrots_bees,Plausible
+3,exp3_83,4.53,male,Plausible,No Noise,Test,coats_horses,Plausible
+3,exp3_83,4.53,male,Plausible,No Noise,Test,shirt_die,Plausible
+3,exp3_84,4.82,male,Plausible,No Noise,Exposure,cat_kittens,Plausible
+3,exp3_84,4.82,male,Plausible,No Noise,Exposure,shark_fish,Plausible
+3,exp3_84,4.82,male,Plausible,No Noise,Exposure,book_table,Plausible
+3,exp3_84,4.82,male,Plausible,No Noise,Exposure,house_door,Plausible
+3,exp3_84,4.82,male,Plausible,No Noise,Exposure,wooden_blocks,Plausible
+3,exp3_84,4.82,male,Plausible,No Noise,Exposure,flowers_basket,Plausible
+3,exp3_84,4.82,male,Plausible,No Noise,Exposure,bread_peanutbutter,Plausible
+3,exp3_84,4.82,male,Plausible,No Noise,Exposure,knife_fork,Plausible
+3,exp3_84,4.82,male,Plausible,No Noise,Test,fan_airport,Implausible
+3,exp3_84,4.82,male,Plausible,No Noise,Test,coats_horses,Implausible
+3,exp3_84,4.82,male,Plausible,No Noise,Test,marker_cup,Implausible
+3,exp3_84,4.82,male,Plausible,No Noise,Test,beach_bowl,Plausible
+3,exp3_84,4.82,male,Plausible,No Noise,Test,shirt_die,Implausible
+3,exp3_84,4.82,male,Plausible,No Noise,Test,worms_bags,Implausible
+3,exp3_84,4.82,male,Plausible,No Noise,Test,carrots_bees,Implausible
+3,exp3_84,4.82,male,Plausible,No Noise,Test,paper_pan,Implausible
+3,exp3_85,4.82,male,Plausible,No Noise,Exposure,shark_fish,Plausible
+3,exp3_85,4.82,male,Plausible,No Noise,Exposure,book_table,Plausible
+3,exp3_85,4.82,male,Plausible,No Noise,Exposure,wooden_blocks,Plausible
+3,exp3_85,4.82,male,Plausible,No Noise,Exposure,flowers_basket,Plausible
+3,exp3_85,4.82,male,Plausible,No Noise,Exposure,knife_fork,Plausible
+3,exp3_85,4.82,male,Plausible,No Noise,Exposure,cat_kittens,Plausible
+3,exp3_85,4.82,male,Plausible,No Noise,Exposure,bread_peanutbutter,Plausible
+3,exp3_85,4.82,male,Plausible,No Noise,Exposure,house_door,Plausible
+3,exp3_85,4.82,male,Plausible,No Noise,Test,worms_bags,Implausible
+3,exp3_85,4.82,male,Plausible,No Noise,Test,shirt_die,Implausible
+3,exp3_85,4.82,male,Plausible,No Noise,Test,fan_airport,Implausible
+3,exp3_85,4.82,male,Plausible,No Noise,Test,coats_horses,Implausible
+3,exp3_85,4.82,male,Plausible,No Noise,Test,beach_bowl,Implausible
+3,exp3_85,4.82,male,Plausible,No Noise,Test,marker_cup,Implausible
+3,exp3_85,4.82,male,Plausible,No Noise,Test,carrots_bees,Implausible
+3,exp3_85,4.82,male,Plausible,No Noise,Test,paper_pan,Plausible
+3,exp3_86,4.92,male,Plausible,No Noise,Exposure,bread_peanutbutter,Plausible
+3,exp3_86,4.92,male,Plausible,No Noise,Exposure,wooden_blocks,Plausible
+3,exp3_86,4.92,male,Plausible,No Noise,Exposure,shark_fish,Plausible
+3,exp3_86,4.92,male,Plausible,No Noise,Exposure,cat_kittens,Plausible
+3,exp3_86,4.92,male,Plausible,No Noise,Exposure,house_door,Implausible
+3,exp3_86,4.92,male,Plausible,No Noise,Exposure,book_table,Plausible
+3,exp3_86,4.92,male,Plausible,No Noise,Exposure,flowers_basket,Plausible
+3,exp3_86,4.92,male,Plausible,No Noise,Exposure,knife_fork,Plausible
+3,exp3_86,4.92,male,Plausible,No Noise,Test,beach_bowl,Implausible
+3,exp3_86,4.92,male,Plausible,No Noise,Test,carrots_bees,Implausible
+3,exp3_86,4.92,male,Plausible,No Noise,Test,marker_cup,Implausible
+3,exp3_86,4.92,male,Plausible,No Noise,Test,paper_pan,Plausible
+3,exp3_86,4.92,male,Plausible,No Noise,Test,shirt_die,Plausible
+3,exp3_86,4.92,male,Plausible,No Noise,Test,coats_horses,Plausible
+3,exp3_86,4.92,male,Plausible,No Noise,Test,fan_airport,Implausible
+3,exp3_86,4.92,male,Plausible,No Noise,Test,worms_bags,Implausible
+3,exp3_87,4.69,NaN,Plausible,No Noise,Exposure,house_door,Plausible
+3,exp3_87,4.69,NaN,Plausible,No Noise,Exposure,cat_kittens,Plausible
+3,exp3_87,4.69,NaN,Plausible,No Noise,Exposure,shark_fish,Plausible
+3,exp3_87,4.69,NaN,Plausible,No Noise,Exposure,book_table,Plausible
+3,exp3_87,4.69,NaN,Plausible,No Noise,Exposure,wooden_blocks,Plausible
+3,exp3_87,4.69,NaN,Plausible,No Noise,Exposure,flowers_basket,Plausible
+3,exp3_87,4.69,NaN,Plausible,No Noise,Exposure,knife_fork,Plausible
+3,exp3_87,4.69,NaN,Plausible,No Noise,Exposure,bread_peanutbutter,Plausible
+3,exp3_87,4.69,NaN,Plausible,No Noise,Test,coats_horses,Plausible
+3,exp3_87,4.69,NaN,Plausible,No Noise,Test,carrots_bees,Implausible
+3,exp3_87,4.69,NaN,Plausible,No Noise,Test,fan_airport,Implausible
+3,exp3_87,4.69,NaN,Plausible,No Noise,Test,beach_bowl,Plausible
+3,exp3_87,4.69,NaN,Plausible,No Noise,Test,paper_pan,Plausible
+3,exp3_87,4.69,NaN,Plausible,No Noise,Test,shirt_die,Implausible
+3,exp3_87,4.69,NaN,Plausible,No Noise,Test,worms_bags,Implausible
+3,exp3_87,4.69,NaN,Plausible,No Noise,Test,marker_cup,Implausible
+3,exp3_88,4.64,male,Plausible,No Noise,Exposure,bread_peanutbutter,Plausible
+3,exp3_88,4.64,male,Plausible,No Noise,Exposure,cat_kittens,Plausible
+3,exp3_88,4.64,male,Plausible,No Noise,Exposure,wooden_blocks,Plausible
+3,exp3_88,4.64,male,Plausible,No Noise,Exposure,shark_fish,Plausible
+3,exp3_88,4.64,male,Plausible,No Noise,Exposure,house_door,Plausible
+3,exp3_88,4.64,male,Plausible,No Noise,Exposure,book_table,Plausible
+3,exp3_88,4.64,male,Plausible,No Noise,Exposure,flowers_basket,Plausible
+3,exp3_88,4.64,male,Plausible,No Noise,Exposure,knife_fork,Plausible
+3,exp3_88,4.64,male,Plausible,No Noise,Test,coats_horses,Implausible
+3,exp3_88,4.64,male,Plausible,No Noise,Test,marker_cup,Plausible
+3,exp3_88,4.64,male,Plausible,No Noise,Test,fan_airport,Plausible
+3,exp3_88,4.64,male,Plausible,No Noise,Test,paper_pan,Plausible
+3,exp3_88,4.64,male,Plausible,No Noise,Test,worms_bags,Implausible
+3,exp3_88,4.64,male,Plausible,No Noise,Test,carrots_bees,Plausible
+3,exp3_88,4.64,male,Plausible,No Noise,Test,beach_bowl,Implausible
+3,exp3_88,4.64,male,Plausible,No Noise,Test,shirt_die,Plausible
+3,exp3_89,5.82,male,Plausible,No Noise,Exposure,house_door,Plausible
+3,exp3_89,5.82,male,Plausible,No Noise,Exposure,cat_kittens,Plausible
+3,exp3_89,5.82,male,Plausible,No Noise,Exposure,bread_peanutbutter,Plausible
+3,exp3_89,5.82,male,Plausible,No Noise,Exposure,book_table,Plausible
+3,exp3_89,5.82,male,Plausible,No Noise,Exposure,shark_fish,Plausible
+3,exp3_89,5.82,male,Plausible,No Noise,Exposure,flowers_basket,Plausible
+3,exp3_89,5.82,male,Plausible,No Noise,Exposure,knife_fork,Plausible
+3,exp3_89,5.82,male,Plausible,No Noise,Exposure,wooden_blocks,Plausible
+3,exp3_89,5.82,male,Plausible,No Noise,Test,paper_pan,Plausible
+3,exp3_89,5.82,male,Plausible,No Noise,Test,shirt_die,Plausible
+3,exp3_89,5.82,male,Plausible,No Noise,Test,fan_airport,Plausible
+3,exp3_89,5.82,male,Plausible,No Noise,Test,worms_bags,Plausible
+3,exp3_89,5.82,male,Plausible,No Noise,Test,carrots_bees,Plausible
+3,exp3_89,5.82,male,Plausible,No Noise,Test,coats_horses,Plausible
+3,exp3_89,5.82,male,Plausible,No Noise,Test,beach_bowl,Implausible
+3,exp3_89,5.82,male,Plausible,No Noise,Test,marker_cup,Plausible
+3,exp3_90,5.04,female,Plausible,No Noise,Exposure,flowers_basket,Plausible
+3,exp3_90,5.04,female,Plausible,No Noise,Exposure,bread_peanutbutter,Plausible
+3,exp3_90,5.04,female,Plausible,No Noise,Exposure,cat_kittens,Plausible
+3,exp3_90,5.04,female,Plausible,No Noise,Exposure,shark_fish,Plausible
+3,exp3_90,5.04,female,Plausible,No Noise,Exposure,wooden_blocks,Implausible
+3,exp3_90,5.04,female,Plausible,No Noise,Exposure,knife_fork,Plausible
+3,exp3_90,5.04,female,Plausible,No Noise,Exposure,house_door,Implausible
+3,exp3_90,5.04,female,Plausible,No Noise,Exposure,book_table,Plausible
+3,exp3_90,5.04,female,Plausible,No Noise,Test,paper_pan,Implausible
+3,exp3_90,5.04,female,Plausible,No Noise,Test,carrots_bees,Implausible
+3,exp3_90,5.04,female,Plausible,No Noise,Test,worms_bags,Plausible
+3,exp3_90,5.04,female,Plausible,No Noise,Test,shirt_die,Implausible
+3,exp3_90,5.04,female,Plausible,No Noise,Test,fan_airport,Plausible
+3,exp3_90,5.04,female,Plausible,No Noise,Test,coats_horses,Implausible
+3,exp3_90,5.04,female,Plausible,No Noise,Test,beach_bowl,Plausible
+3,exp3_90,5.04,female,Plausible,No Noise,Test,marker_cup,Plausible
+3,exp3_91,4.36,female,Plausible,No Noise,Exposure,house_door,Implausible
+3,exp3_91,4.36,female,Plausible,No Noise,Exposure,wooden_blocks,Plausible
+3,exp3_91,4.36,female,Plausible,No Noise,Exposure,bread_peanutbutter,Plausible
+3,exp3_91,4.36,female,Plausible,No Noise,Exposure,book_table,Plausible
+3,exp3_91,4.36,female,Plausible,No Noise,Exposure,flowers_basket,Implausible
+3,exp3_91,4.36,female,Plausible,No Noise,Exposure,knife_fork,Plausible
+3,exp3_91,4.36,female,Plausible,No Noise,Exposure,shark_fish,Plausible
+3,exp3_91,4.36,female,Plausible,No Noise,Exposure,cat_kittens,Plausible
+3,exp3_91,4.36,female,Plausible,No Noise,Test,shirt_die,Plausible
+3,exp3_91,4.36,female,Plausible,No Noise,Test,beach_bowl,Plausible
+3,exp3_91,4.36,female,Plausible,No Noise,Test,marker_cup,Implausible
+3,exp3_91,4.36,female,Plausible,No Noise,Test,fan_airport,Implausible
+3,exp3_91,4.36,female,Plausible,No Noise,Test,carrots_bees,Implausible
+3,exp3_91,4.36,female,Plausible,No Noise,Test,coats_horses,Implausible
+3,exp3_91,4.36,female,Plausible,No Noise,Test,worms_bags,Implausible
+3,exp3_91,4.36,female,Plausible,No Noise,Test,paper_pan,Plausible
+3,exp3_92,5.78,female,Plausible,No Noise,Exposure,book_table,Plausible
+3,exp3_92,5.78,female,Plausible,No Noise,Exposure,shark_fish,Plausible
+3,exp3_92,5.78,female,Plausible,No Noise,Exposure,knife_fork,Plausible
+3,exp3_92,5.78,female,Plausible,No Noise,Exposure,wooden_blocks,Plausible
+3,exp3_92,5.78,female,Plausible,No Noise,Exposure,house_door,Plausible
+3,exp3_92,5.78,female,Plausible,No Noise,Exposure,flowers_basket,Plausible
+3,exp3_92,5.78,female,Plausible,No Noise,Exposure,cat_kittens,Plausible
+3,exp3_92,5.78,female,Plausible,No Noise,Exposure,bread_peanutbutter,Plausible
+3,exp3_92,5.78,female,Plausible,No Noise,Test,carrots_bees,Implausible
+3,exp3_92,5.78,female,Plausible,No Noise,Test,beach_bowl,Plausible
+3,exp3_92,5.78,female,Plausible,No Noise,Test,fan_airport,Plausible
+3,exp3_92,5.78,female,Plausible,No Noise,Test,shirt_die,Plausible
+3,exp3_92,5.78,female,Plausible,No Noise,Test,worms_bags,Implausible
+3,exp3_92,5.78,female,Plausible,No Noise,Test,paper_pan,Plausible
+3,exp3_92,5.78,female,Plausible,No Noise,Test,coats_horses,Plausible
+3,exp3_92,5.78,female,Plausible,No Noise,Test,marker_cup,Implausible
+3,exp3_93,4.64,female,Plausible,No Noise,Exposure,wooden_blocks,Plausible
+3,exp3_93,4.64,female,Plausible,No Noise,Exposure,cat_kittens,Plausible
+3,exp3_93,4.64,female,Plausible,No Noise,Exposure,bread_peanutbutter,Plausible
+3,exp3_93,4.64,female,Plausible,No Noise,Exposure,book_table,Plausible
+3,exp3_93,4.64,female,Plausible,No Noise,Exposure,shark_fish,Plausible
+3,exp3_93,4.64,female,Plausible,No Noise,Exposure,house_door,Plausible
+3,exp3_93,4.64,female,Plausible,No Noise,Exposure,flowers_basket,Plausible
+3,exp3_93,4.64,female,Plausible,No Noise,Exposure,knife_fork,Plausible
+3,exp3_93,4.64,female,Plausible,No Noise,Test,fan_airport,Implausible
+3,exp3_93,4.64,female,Plausible,No Noise,Test,beach_bowl,Plausible
+3,exp3_93,4.64,female,Plausible,No Noise,Test,worms_bags,Implausible
+3,exp3_93,4.64,female,Plausible,No Noise,Test,coats_horses,Implausible
+3,exp3_93,4.64,female,Plausible,No Noise,Test,carrots_bees,Implausible
+3,exp3_93,4.64,female,Plausible,No Noise,Test,shirt_die,Implausible
+3,exp3_93,4.64,female,Plausible,No Noise,Test,marker_cup,Plausible
+3,exp3_93,4.64,female,Plausible,No Noise,Test,paper_pan,Plausible
+3,exp3_94,4.89,female,Plausible,No Noise,Exposure,flowers_basket,Plausible
+3,exp3_94,4.89,female,Plausible,No Noise,Exposure,house_door,Plausible
+3,exp3_94,4.89,female,Plausible,No Noise,Exposure,knife_fork,Plausible
+3,exp3_94,4.89,female,Plausible,No Noise,Exposure,book_table,Plausible
+3,exp3_94,4.89,female,Plausible,No Noise,Exposure,cat_kittens,Plausible
+3,exp3_94,4.89,female,Plausible,No Noise,Exposure,bread_peanutbutter,Plausible
+3,exp3_94,4.89,female,Plausible,No Noise,Exposure,wooden_blocks,Plausible
+3,exp3_94,4.89,female,Plausible,No Noise,Exposure,shark_fish,Plausible
+3,exp3_94,4.89,female,Plausible,No Noise,Test,fan_airport,Implausible
+3,exp3_94,4.89,female,Plausible,No Noise,Test,marker_cup,Implausible
+3,exp3_94,4.89,female,Plausible,No Noise,Test,beach_bowl,Plausible
+3,exp3_94,4.89,female,Plausible,No Noise,Test,shirt_die,Implausible
+3,exp3_94,4.89,female,Plausible,No Noise,Test,worms_bags,Plausible
+3,exp3_94,4.89,female,Plausible,No Noise,Test,carrots_bees,Plausible
+3,exp3_94,4.89,female,Plausible,No Noise,Test,coats_horses,Implausible
+3,exp3_94,4.89,female,Plausible,No Noise,Test,paper_pan,Implausible
+3,exp3_95,5.27,NaN,Plausible,No Noise,Exposure,house_door,Plausible
+3,exp3_95,5.27,NaN,Plausible,No Noise,Exposure,wooden_blocks,Plausible
+3,exp3_95,5.27,NaN,Plausible,No Noise,Exposure,shark_fish,Plausible
+3,exp3_95,5.27,NaN,Plausible,No Noise,Exposure,bread_peanutbutter,Plausible
+3,exp3_95,5.27,NaN,Plausible,No Noise,Exposure,knife_fork,Plausible
+3,exp3_95,5.27,NaN,Plausible,No Noise,Exposure,flowers_basket,Plausible
+3,exp3_95,5.27,NaN,Plausible,No Noise,Exposure,book_table,Plausible
+3,exp3_95,5.27,NaN,Plausible,No Noise,Exposure,cat_kittens,Plausible
+3,exp3_95,5.27,NaN,Plausible,No Noise,Test,beach_bowl,Plausible
+3,exp3_95,5.27,NaN,Plausible,No Noise,Test,fan_airport,Plausible
+3,exp3_95,5.27,NaN,Plausible,No Noise,Test,carrots_bees,Plausible
+3,exp3_95,5.27,NaN,Plausible,No Noise,Test,worms_bags,Implausible
+3,exp3_95,5.27,NaN,Plausible,No Noise,Test,paper_pan,Plausible
+3,exp3_95,5.27,NaN,Plausible,No Noise,Test,shirt_die,Plausible
+3,exp3_95,5.27,NaN,Plausible,No Noise,Test,coats_horses,Plausible
+3,exp3_95,5.27,NaN,Plausible,No Noise,Test,marker_cup,Plausible
+3,exp3_96,4.92,male,Plausible,No Noise,Exposure,book_table,Plausible
+3,exp3_96,4.92,male,Plausible,No Noise,Exposure,cat_kittens,Plausible
+3,exp3_96,4.92,male,Plausible,No Noise,Exposure,knife_fork,Plausible
+3,exp3_96,4.92,male,Plausible,No Noise,Exposure,shark_fish,Plausible
+3,exp3_96,4.92,male,Plausible,No Noise,Exposure,bread_peanutbutter,Plausible
+3,exp3_96,4.92,male,Plausible,No Noise,Exposure,flowers_basket,Plausible
+3,exp3_96,4.92,male,Plausible,No Noise,Exposure,wooden_blocks,Plausible
+3,exp3_96,4.92,male,Plausible,No Noise,Exposure,house_door,Plausible
+3,exp3_96,4.92,male,Plausible,No Noise,Test,beach_bowl,Implausible
+3,exp3_96,4.92,male,Plausible,No Noise,Test,fan_airport,Plausible
+3,exp3_96,4.92,male,Plausible,No Noise,Test,paper_pan,Implausible
+3,exp3_96,4.92,male,Plausible,No Noise,Test,marker_cup,Implausible
+3,exp3_96,4.92,male,Plausible,No Noise,Test,shirt_die,Plausible
+3,exp3_96,4.92,male,Plausible,No Noise,Test,carrots_bees,Implausible
+3,exp3_96,4.92,male,Plausible,No Noise,Test,worms_bags,Implausible
+3,exp3_96,4.92,male,Plausible,No Noise,Test,coats_horses,Implausible
+3,exp3_97,5.59,female,Implausible,No Noise,Exposure,flowers_donut,Implausible
+3,exp3_97,5.59,female,Implausible,No Noise,Exposure,cat_hammers,Implausible
+3,exp3_97,5.59,female,Implausible,No Noise,Exposure,shark_racecar,Implausible
+3,exp3_97,5.59,female,Implausible,No Noise,Exposure,book_plane,Implausible
+3,exp3_97,5.59,female,Implausible,No Noise,Exposure,house_nose,Implausible
+3,exp3_97,5.59,female,Implausible,No Noise,Exposure,bread_ketchup,Plausible
+3,exp3_97,5.59,female,Implausible,No Noise,Exposure,wooden_apples,Implausible
+3,exp3_97,5.59,female,Implausible,No Noise,Exposure,knife_camel,Plausible
+3,exp3_97,5.59,female,Implausible,No Noise,Test,worms_bags,Plausible
+3,exp3_97,5.59,female,Implausible,No Noise,Test,carrots_bees,Implausible
+3,exp3_97,5.59,female,Implausible,No Noise,Test,coats_horses,Implausible
+3,exp3_97,5.59,female,Implausible,No Noise,Test,marker_cup,Implausible
+3,exp3_97,5.59,female,Implausible,No Noise,Test,paper_pan,Plausible
+3,exp3_97,5.59,female,Implausible,No Noise,Test,beach_bowl,Plausible
+3,exp3_97,5.59,female,Implausible,No Noise,Test,fan_airport,Implausible
+3,exp3_97,5.59,female,Implausible,No Noise,Test,shirt_die,Implausible
+3,exp3_98,4.31,female,Implausible,No Noise,Exposure,wooden_apples,Plausible
+3,exp3_98,4.31,female,Implausible,No Noise,Exposure,cat_hammers,Implausible
+3,exp3_98,4.31,female,Implausible,No Noise,Exposure,house_nose,Implausible
+3,exp3_98,4.31,female,Implausible,No Noise,Exposure,book_plane,Plausible
+3,exp3_98,4.31,female,Implausible,No Noise,Exposure,bread_ketchup,Implausible
+3,exp3_98,4.31,female,Implausible,No Noise,Exposure,shark_racecar,Implausible
+3,exp3_98,4.31,female,Implausible,No Noise,Exposure,flowers_donut,Implausible
+3,exp3_98,4.31,female,Implausible,No Noise,Exposure,knife_camel,Implausible
+3,exp3_98,4.31,female,Implausible,No Noise,Test,fan_airport,Implausible
+3,exp3_98,4.31,female,Implausible,No Noise,Test,coats_horses,Plausible
+3,exp3_98,4.31,female,Implausible,No Noise,Test,worms_bags,Implausible
+3,exp3_98,4.31,female,Implausible,No Noise,Test,paper_pan,Implausible
+3,exp3_98,4.31,female,Implausible,No Noise,Test,carrots_bees,Implausible
+3,exp3_98,4.31,female,Implausible,No Noise,Test,marker_cup,Implausible
+3,exp3_98,4.31,female,Implausible,No Noise,Test,shirt_die,Implausible
+3,exp3_98,4.31,female,Implausible,No Noise,Test,beach_bowl,Implausible
+3,exp3_99,5.14,female,Implausible,No Noise,Exposure,bread_ketchup,Implausible
+3,exp3_99,5.14,female,Implausible,No Noise,Exposure,flowers_donut,Implausible
+3,exp3_99,5.14,female,Implausible,No Noise,Exposure,shark_racecar,Implausible
+3,exp3_99,5.14,female,Implausible,No Noise,Exposure,knife_camel,Implausible
+3,exp3_99,5.14,female,Implausible,No Noise,Exposure,wooden_apples,Implausible
+3,exp3_99,5.14,female,Implausible,No Noise,Exposure,house_nose,Implausible
+3,exp3_99,5.14,female,Implausible,No Noise,Exposure,book_plane,Implausible
+3,exp3_99,5.14,female,Implausible,No Noise,Exposure,cat_hammers,Implausible
+3,exp3_99,5.14,female,Implausible,No Noise,Test,marker_cup,Implausible
+3,exp3_99,5.14,female,Implausible,No Noise,Test,fan_airport,Plausible
+3,exp3_99,5.14,female,Implausible,No Noise,Test,carrots_bees,Implausible
+3,exp3_99,5.14,female,Implausible,No Noise,Test,paper_pan,Implausible
+3,exp3_99,5.14,female,Implausible,No Noise,Test,coats_horses,Implausible
+3,exp3_99,5.14,female,Implausible,No Noise,Test,worms_bags,Implausible
+3,exp3_99,5.14,female,Implausible,No Noise,Test,shirt_die,Implausible
+3,exp3_99,5.14,female,Implausible,No Noise,Test,beach_bowl,Implausible
+3,exp3_100,5.58,male,Implausible,No Noise,Exposure,cat_hammers,Implausible
+3,exp3_100,5.58,male,Implausible,No Noise,Exposure,shark_racecar,Implausible
+3,exp3_100,5.58,male,Implausible,No Noise,Exposure,bread_ketchup,Implausible
+3,exp3_100,5.58,male,Implausible,No Noise,Exposure,flowers_donut,Implausible
+3,exp3_100,5.58,male,Implausible,No Noise,Exposure,house_nose,Implausible
+3,exp3_100,5.58,male,Implausible,No Noise,Exposure,knife_camel,Implausible
+3,exp3_100,5.58,male,Implausible,No Noise,Exposure,wooden_apples,Implausible
+3,exp3_100,5.58,male,Implausible,No Noise,Exposure,book_plane,Implausible
+3,exp3_100,5.58,male,Implausible,No Noise,Test,shirt_die,Plausible
+3,exp3_100,5.58,male,Implausible,No Noise,Test,carrots_bees,Implausible
+3,exp3_100,5.58,male,Implausible,No Noise,Test,worms_bags,Implausible
+3,exp3_100,5.58,male,Implausible,No Noise,Test,coats_horses,Plausible
+3,exp3_100,5.58,male,Implausible,No Noise,Test,paper_pan,Implausible
+3,exp3_100,5.58,male,Implausible,No Noise,Test,fan_airport,Implausible
+3,exp3_100,5.58,male,Implausible,No Noise,Test,marker_cup,Implausible
+3,exp3_100,5.58,male,Implausible,No Noise,Test,beach_bowl,Plausible
+3,exp3_101,4,male,Implausible,No Noise,Exposure,cat_hammers,Implausible
+3,exp3_101,4,male,Implausible,No Noise,Exposure,flowers_donut,Plausible
+3,exp3_101,4,male,Implausible,No Noise,Exposure,bread_ketchup,Implausible
+3,exp3_101,4,male,Implausible,No Noise,Exposure,knife_camel,Plausible
+3,exp3_101,4,male,Implausible,No Noise,Exposure,book_plane,Implausible
+3,exp3_101,4,male,Implausible,No Noise,Exposure,shark_racecar,Implausible
+3,exp3_101,4,male,Implausible,No Noise,Exposure,wooden_apples,Plausible
+3,exp3_101,4,male,Implausible,No Noise,Exposure,house_nose,Implausible
+3,exp3_101,4,male,Implausible,No Noise,Test,carrots_bees,Implausible
+3,exp3_101,4,male,Implausible,No Noise,Test,fan_airport,Plausible
+3,exp3_101,4,male,Implausible,No Noise,Test,worms_bags,Plausible
+3,exp3_101,4,male,Implausible,No Noise,Test,coats_horses,Implausible
+3,exp3_101,4,male,Implausible,No Noise,Test,shirt_die,Plausible
+3,exp3_101,4,male,Implausible,No Noise,Test,paper_pan,Plausible
+3,exp3_101,4,male,Implausible,No Noise,Test,beach_bowl,Plausible
+3,exp3_101,4,male,Implausible,No Noise,Test,marker_cup,Implausible
+3,exp3_102,5.55,male,Implausible,No Noise,Exposure,wooden_apples,Implausible
+3,exp3_102,5.55,male,Implausible,No Noise,Exposure,bread_ketchup,Implausible
+3,exp3_102,5.55,male,Implausible,No Noise,Exposure,shark_racecar,Implausible
+3,exp3_102,5.55,male,Implausible,No Noise,Exposure,knife_camel,Implausible
+3,exp3_102,5.55,male,Implausible,No Noise,Exposure,flowers_donut,Implausible
+3,exp3_102,5.55,male,Implausible,No Noise,Exposure,house_nose,Implausible
+3,exp3_102,5.55,male,Implausible,No Noise,Exposure,book_plane,Implausible
+3,exp3_102,5.55,male,Implausible,No Noise,Exposure,cat_hammers,Implausible
+3,exp3_102,5.55,male,Implausible,No Noise,Test,marker_cup,Implausible
+3,exp3_102,5.55,male,Implausible,No Noise,Test,worms_bags,Implausible
+3,exp3_102,5.55,male,Implausible,No Noise,Test,shirt_die,Plausible
+3,exp3_102,5.55,male,Implausible,No Noise,Test,fan_airport,Plausible
+3,exp3_102,5.55,male,Implausible,No Noise,Test,paper_pan,Plausible
+3,exp3_102,5.55,male,Implausible,No Noise,Test,carrots_bees,Implausible
+3,exp3_102,5.55,male,Implausible,No Noise,Test,beach_bowl,Implausible
+3,exp3_102,5.55,male,Implausible,No Noise,Test,coats_horses,Implausible
+3,exp3_103,4.68,male,Implausible,No Noise,Exposure,wooden_apples,Implausible
+3,exp3_103,4.68,male,Implausible,No Noise,Exposure,book_plane,Implausible
+3,exp3_103,4.68,male,Implausible,No Noise,Exposure,bread_ketchup,Implausible
+3,exp3_103,4.68,male,Implausible,No Noise,Exposure,house_nose,Implausible
+3,exp3_103,4.68,male,Implausible,No Noise,Exposure,flowers_donut,Implausible
+3,exp3_103,4.68,male,Implausible,No Noise,Exposure,knife_camel,Implausible
+3,exp3_103,4.68,male,Implausible,No Noise,Exposure,shark_racecar,Implausible
+3,exp3_103,4.68,male,Implausible,No Noise,Exposure,cat_hammers,Implausible
+3,exp3_103,4.68,male,Implausible,No Noise,Test,marker_cup,Implausible
+3,exp3_103,4.68,male,Implausible,No Noise,Test,shirt_die,Plausible
+3,exp3_103,4.68,male,Implausible,No Noise,Test,coats_horses,Implausible
+3,exp3_103,4.68,male,Implausible,No Noise,Test,fan_airport,Plausible
+3,exp3_103,4.68,male,Implausible,No Noise,Test,worms_bags,Implausible
+3,exp3_103,4.68,male,Implausible,No Noise,Test,paper_pan,Implausible
+3,exp3_103,4.68,male,Implausible,No Noise,Test,beach_bowl,Implausible
+3,exp3_103,4.68,male,Implausible,No Noise,Test,carrots_bees,Implausible
+3,exp3_104,4.76,male,Implausible,No Noise,Exposure,bread_ketchup,Implausible
+3,exp3_104,4.76,male,Implausible,No Noise,Exposure,flowers_donut,Implausible
+3,exp3_104,4.76,male,Implausible,No Noise,Exposure,knife_camel,Implausible
+3,exp3_104,4.76,male,Implausible,No Noise,Exposure,shark_racecar,Implausible
+3,exp3_104,4.76,male,Implausible,No Noise,Exposure,house_nose,Implausible
+3,exp3_104,4.76,male,Implausible,No Noise,Exposure,wooden_apples,Implausible
+3,exp3_104,4.76,male,Implausible,No Noise,Exposure,cat_hammers,Implausible
+3,exp3_104,4.76,male,Implausible,No Noise,Exposure,book_plane,Implausible
+3,exp3_104,4.76,male,Implausible,No Noise,Test,carrots_bees,Implausible
+3,exp3_104,4.76,male,Implausible,No Noise,Test,marker_cup,Implausible
+3,exp3_104,4.76,male,Implausible,No Noise,Test,beach_bowl,Implausible
+3,exp3_104,4.76,male,Implausible,No Noise,Test,paper_pan,Implausible
+3,exp3_104,4.76,male,Implausible,No Noise,Test,fan_airport,Implausible
+3,exp3_104,4.76,male,Implausible,No Noise,Test,shirt_die,Implausible
+3,exp3_104,4.76,male,Implausible,No Noise,Test,coats_horses,Implausible
+3,exp3_104,4.76,male,Implausible,No Noise,Test,worms_bags,Implausible
+3,exp3_105,4.92,female,Implausible,No Noise,Exposure,knife_camel,Implausible
+3,exp3_105,4.92,female,Implausible,No Noise,Exposure,wooden_apples,Implausible
+3,exp3_105,4.92,female,Implausible,No Noise,Exposure,flowers_donut,Implausible
+3,exp3_105,4.92,female,Implausible,No Noise,Exposure,shark_racecar,Implausible
+3,exp3_105,4.92,female,Implausible,No Noise,Exposure,book_plane,Implausible
+3,exp3_105,4.92,female,Implausible,No Noise,Exposure,house_nose,Implausible
+3,exp3_105,4.92,female,Implausible,No Noise,Exposure,cat_hammers,Implausible
+3,exp3_105,4.92,female,Implausible,No Noise,Exposure,bread_ketchup,Implausible
+3,exp3_105,4.92,female,Implausible,No Noise,Test,marker_cup,Implausible
+3,exp3_105,4.92,female,Implausible,No Noise,Test,beach_bowl,Implausible
+3,exp3_105,4.92,female,Implausible,No Noise,Test,worms_bags,Implausible
+3,exp3_105,4.92,female,Implausible,No Noise,Test,coats_horses,Implausible
+3,exp3_105,4.92,female,Implausible,No Noise,Test,shirt_die,Implausible
+3,exp3_105,4.92,female,Implausible,No Noise,Test,carrots_bees,Implausible
+3,exp3_105,4.92,female,Implausible,No Noise,Test,paper_pan,Plausible
+3,exp3_105,4.92,female,Implausible,No Noise,Test,fan_airport,Implausible
+3,exp3_106,4.97,female,Implausible,No Noise,Exposure,flowers_donut,Implausible
+3,exp3_106,4.97,female,Implausible,No Noise,Exposure,house_nose,Implausible
+3,exp3_106,4.97,female,Implausible,No Noise,Exposure,bread_ketchup,Implausible
+3,exp3_106,4.97,female,Implausible,No Noise,Exposure,wooden_apples,Implausible
+3,exp3_106,4.97,female,Implausible,No Noise,Exposure,cat_hammers,Implausible
+3,exp3_106,4.97,female,Implausible,No Noise,Exposure,knife_camel,Implausible
+3,exp3_106,4.97,female,Implausible,No Noise,Exposure,shark_racecar,Implausible
+3,exp3_106,4.97,female,Implausible,No Noise,Exposure,book_plane,Implausible
+3,exp3_106,4.97,female,Implausible,No Noise,Test,paper_pan,Implausible
+3,exp3_106,4.97,female,Implausible,No Noise,Test,coats_horses,Implausible
+3,exp3_106,4.97,female,Implausible,No Noise,Test,carrots_bees,Implausible
+3,exp3_106,4.97,female,Implausible,No Noise,Test,shirt_die,Plausible
+3,exp3_106,4.97,female,Implausible,No Noise,Test,marker_cup,Implausible
+3,exp3_106,4.97,female,Implausible,No Noise,Test,fan_airport,Implausible
+3,exp3_106,4.97,female,Implausible,No Noise,Test,beach_bowl,Plausible
+3,exp3_106,4.97,female,Implausible,No Noise,Test,worms_bags,Implausible
+3,exp3_107,4.38,female,Implausible,No Noise,Exposure,flowers_donut,Implausible
+3,exp3_107,4.38,female,Implausible,No Noise,Exposure,house_nose,Implausible
+3,exp3_107,4.38,female,Implausible,No Noise,Exposure,bread_ketchup,Implausible
+3,exp3_107,4.38,female,Implausible,No Noise,Exposure,cat_hammers,Implausible
+3,exp3_107,4.38,female,Implausible,No Noise,Exposure,knife_camel,Implausible
+3,exp3_107,4.38,female,Implausible,No Noise,Exposure,shark_racecar,Implausible
+3,exp3_107,4.38,female,Implausible,No Noise,Exposure,book_plane,Implausible
+3,exp3_107,4.38,female,Implausible,No Noise,Exposure,wooden_apples,Implausible
+3,exp3_107,4.38,female,Implausible,No Noise,Test,coats_horses,Plausible
+3,exp3_107,4.38,female,Implausible,No Noise,Test,paper_pan,Plausible
+3,exp3_107,4.38,female,Implausible,No Noise,Test,fan_airport,Implausible
+3,exp3_107,4.38,female,Implausible,No Noise,Test,carrots_bees,Plausible
+3,exp3_107,4.38,female,Implausible,No Noise,Test,shirt_die,Implausible
+3,exp3_107,4.38,female,Implausible,No Noise,Test,worms_bags,Implausible
+3,exp3_107,4.38,female,Implausible,No Noise,Test,beach_bowl,Plausible
+3,exp3_107,4.38,female,Implausible,No Noise,Test,marker_cup,Implausible
+3,exp3_108,5.41,female,Implausible,No Noise,Exposure,wooden_apples,Implausible
+3,exp3_108,5.41,female,Implausible,No Noise,Exposure,flowers_donut,Implausible
+3,exp3_108,5.41,female,Implausible,No Noise,Exposure,book_plane,Implausible
+3,exp3_108,5.41,female,Implausible,No Noise,Exposure,shark_racecar,Implausible
+3,exp3_108,5.41,female,Implausible,No Noise,Exposure,house_nose,Plausible
+3,exp3_108,5.41,female,Implausible,No Noise,Exposure,cat_hammers,Plausible
+3,exp3_108,5.41,female,Implausible,No Noise,Exposure,bread_ketchup,Implausible
+3,exp3_108,5.41,female,Implausible,No Noise,Exposure,knife_camel,Implausible
+3,exp3_108,5.41,female,Implausible,No Noise,Test,worms_bags,Implausible
+3,exp3_108,5.41,female,Implausible,No Noise,Test,marker_cup,Implausible
+3,exp3_108,5.41,female,Implausible,No Noise,Test,carrots_bees,Implausible
+3,exp3_108,5.41,female,Implausible,No Noise,Test,paper_pan,Plausible
+3,exp3_108,5.41,female,Implausible,No Noise,Test,beach_bowl,Plausible
+3,exp3_108,5.41,female,Implausible,No Noise,Test,shirt_die,Implausible
+3,exp3_108,5.41,female,Implausible,No Noise,Test,fan_airport,Implausible
+3,exp3_108,5.41,female,Implausible,No Noise,Test,coats_horses,Plausible
+3,exp3_109,5.58,male,Implausible,No Noise,Exposure,shark_racecar,Implausible
+3,exp3_109,5.58,male,Implausible,No Noise,Exposure,wooden_apples,Implausible
+3,exp3_109,5.58,male,Implausible,No Noise,Exposure,flowers_donut,Implausible
+3,exp3_109,5.58,male,Implausible,No Noise,Exposure,book_plane,Implausible
+3,exp3_109,5.58,male,Implausible,No Noise,Exposure,cat_hammers,Implausible
+3,exp3_109,5.58,male,Implausible,No Noise,Exposure,house_nose,Implausible
+3,exp3_109,5.58,male,Implausible,No Noise,Exposure,knife_camel,Implausible
+3,exp3_109,5.58,male,Implausible,No Noise,Exposure,bread_ketchup,Implausible
+3,exp3_109,5.58,male,Implausible,No Noise,Test,carrots_bees,Implausible
+3,exp3_109,5.58,male,Implausible,No Noise,Test,worms_bags,Implausible
+3,exp3_109,5.58,male,Implausible,No Noise,Test,beach_bowl,Plausible
+3,exp3_109,5.58,male,Implausible,No Noise,Test,paper_pan,Implausible
+3,exp3_109,5.58,male,Implausible,No Noise,Test,fan_airport,Implausible
+3,exp3_109,5.58,male,Implausible,No Noise,Test,marker_cup,Implausible
+3,exp3_109,5.58,male,Implausible,No Noise,Test,coats_horses,Implausible
+3,exp3_109,5.58,male,Implausible,No Noise,Test,shirt_die,Implausible
+3,exp3_110,4.13,female,Implausible,No Noise,Exposure,house_nose,Implausible
+3,exp3_110,4.13,female,Implausible,No Noise,Exposure,cat_hammers,Implausible
+3,exp3_110,4.13,female,Implausible,No Noise,Exposure,shark_racecar,Plausible
+3,exp3_110,4.13,female,Implausible,No Noise,Exposure,flowers_donut,Implausible
+3,exp3_110,4.13,female,Implausible,No Noise,Exposure,book_plane,Implausible
+3,exp3_110,4.13,female,Implausible,No Noise,Exposure,wooden_apples,Plausible
+3,exp3_110,4.13,female,Implausible,No Noise,Exposure,knife_camel,Plausible
+3,exp3_110,4.13,female,Implausible,No Noise,Exposure,bread_ketchup,Implausible
+3,exp3_110,4.13,female,Implausible,No Noise,Test,shirt_die,Plausible
+3,exp3_110,4.13,female,Implausible,No Noise,Test,paper_pan,Implausible
+3,exp3_110,4.13,female,Implausible,No Noise,Test,carrots_bees,Implausible
+3,exp3_110,4.13,female,Implausible,No Noise,Test,worms_bags,Implausible
+3,exp3_110,4.13,female,Implausible,No Noise,Test,marker_cup,Implausible
+3,exp3_110,4.13,female,Implausible,No Noise,Test,beach_bowl,Plausible
+3,exp3_110,4.13,female,Implausible,No Noise,Test,fan_airport,Plausible
+3,exp3_110,4.13,female,Implausible,No Noise,Test,coats_horses,Implausible
+3,exp3_111,4.21,female,Implausible,No Noise,Exposure,knife_camel,Implausible
+3,exp3_111,4.21,female,Implausible,No Noise,Exposure,bread_ketchup,Implausible
+3,exp3_111,4.21,female,Implausible,No Noise,Exposure,cat_hammers,Implausible
+3,exp3_111,4.21,female,Implausible,No Noise,Exposure,book_plane,Implausible
+3,exp3_111,4.21,female,Implausible,No Noise,Exposure,flowers_donut,Implausible
+3,exp3_111,4.21,female,Implausible,No Noise,Exposure,shark_racecar,Implausible
+3,exp3_111,4.21,female,Implausible,No Noise,Exposure,wooden_apples,Implausible
+3,exp3_111,4.21,female,Implausible,No Noise,Exposure,house_nose,Implausible
+3,exp3_111,4.21,female,Implausible,No Noise,Test,fan_airport,Implausible
+3,exp3_111,4.21,female,Implausible,No Noise,Test,beach_bowl,Plausible
+3,exp3_111,4.21,female,Implausible,No Noise,Test,paper_pan,Plausible
+3,exp3_111,4.21,female,Implausible,No Noise,Test,carrots_bees,Implausible
+3,exp3_111,4.21,female,Implausible,No Noise,Test,shirt_die,Implausible
+3,exp3_111,4.21,female,Implausible,No Noise,Test,marker_cup,Implausible
+3,exp3_111,4.21,female,Implausible,No Noise,Test,coats_horses,Implausible
+3,exp3_111,4.21,female,Implausible,No Noise,Test,worms_bags,Implausible

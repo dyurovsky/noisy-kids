@@ -112,7 +112,7 @@ child.overwrite.data %<>%
   filter(age >= 4, age <= 6, Exclude == FALSE) %>%
   mutate(Literal = code.literal(response,trial.type,condition)) %>%
   mutate(experiment = "replication") %>%
-  select(experiment,subj,age,condition,trial.type,word,Literal)
+  select(experiment,subj,age,gender,condition,trial.type,word,Literal)
 ```
 
 Load original child data
@@ -194,16 +194,68 @@ new.child.data <- child.overwrite.data %>%
          test.type = ifelse(condition == "Control", "Control", "Ambiguous")) %>%
   mutate(noise.type = factor(noise.type, levels = c("Noisy", "No Noise")))
 
-lm.child.v1 <- glmer(Literal ~ speaker.type + noise.type + test.type + (1|age) + 
+
+# Age differnces?
+age.data <- select(new.child.data, subj, condition, age, gender) %>%
+  distinct(subj) %>%
+  group_by(condition)
+
+condition_demos <- age.data %>%
+  group_by(condition) %>%
+  summarise(n = n(),
+            num_girls = sum(gender == "female", na.rm = T),
+            mean.age = mean(age),
+            max.age = max(age),
+            min.age = min(age))
+
+plotting.age.data <- multi_boot_standard(age.data, 'age')
+
+ggplot(plotting.age.data, aes(x=condition, y = mean)) +
+  geom_histogram(stat = "identity", fill = "steelblue") +
+  geom_linerange(aes(ymin = ci_lower, ymax = ci_upper))
+
+
+lm.child.v1 <- glmer(Literal ~ speaker.type + noise.type + test.type + 
                        (1|word) + (1|subj),
                   family = "binomial", data = filter(new.child.data,trial.type == "Test"))
 
 summary(lm.child.v1)
 
-lm.child.v2 <- glmer(Literal ~ condition  +  (1|age) + (1|word) + (1|subj),
+lm.child.v2 <- glmer(Literal ~ condition  +  (1|word) + (1|subj),
                   family = "binomial", data = filter(new.child.data,trial.type == "Test"))
 
 summary(lm.child.v2)
+
+lm.child.v2 <- glmer(Literal ~ condition  +  (1|word) + (1|subj),
+                  family = "binomial", 
+                  data = filter(new.child.data, experiment == "replication",
+                                trial.type == "Test", 
+                                condition %in% c("Implausible", "No Noise Implausible")))
+
+summary(lm.child.v2)
+
+
+lm.child.v2 <- glm(Literal ~ condition,
+                  family = "binomial", 
+                  data = filter(new.child.data, experiment == "replication",
+                                trial.type == "Test", 
+                                condition %in% c("Implausible", "No Noise Implausible")))
+
+summary(lm.child.v2)
+
+
+implausible.data <- new.child.data %>%
+  filter(experiment == "replication",
+         trial.type == "Test", 
+         condition %in% c("Implausible", "No Noise Implausible")) %>%
+  group_by(condition,subj) %>%
+  summarise(Literal = sum(Literal))
+
+ggplot(aes(x = Literal, fill = condition), data = implausible.data) +
+         facet_grid(condition ~ .) + 
+         geom_histogram()
+
+
 
 ```
 
@@ -217,17 +269,18 @@ all.long.data <- bind_rows(all.child.long.data,adult.long.data) %>%
                                                   "No Noise Implausible"))) %>%
   group_by(experiment, condition, trial.type)
 
-ns <- all.long.data %>% 
+demos <- all.long.data %>% 
   ungroup() %>% 
-  select(experiment,trial.type,condition,subj) %>% 
+  select(experiment,trial.type,condition,subj,age) %>% 
   distinct() %>% 
   group_by(experiment,condition, trial.type) %>% 
-  summarise(n = n())
+  summarise(n = n(),
+            mean.age = mean(age,na.rm = TRUE))
 
-kable(filter(ns, trial.type == "Test"))
+kable(filter(demos, trial.type == "Test"))
 
 all.results <- multi_boot_standard(all.long.data, column = "Literal") %>%
-  left_join(ns) %>%
+  left_join(demos) %>%
   ungroup() %>%
   mutate(condition = factor(condition, levels = c("Control", "Normal", 
                                                   "No Noise Normal", "Implausible",
@@ -238,7 +291,7 @@ all.results <- multi_boot_standard(all.long.data, column = "Literal") %>%
 ```
 
 Plot Separately
-```{r child_plot,fig.height=5,fig.width=9, cache = FALSE}
+```{r plot_separate,fig.height=5,fig.width=9, cache = FALSE}
 new.child.results <- filter(all.results,experiment == "replication", trial.type == "Test")
 
 exp1.results <- filter(new.child.results, condition %in% c("Normal", "Implausible"))

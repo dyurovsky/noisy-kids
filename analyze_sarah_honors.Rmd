@@ -14,7 +14,7 @@ opts_chunk$set(message=FALSE, warning=FALSE, cache=TRUE)
 
 Load libraries
 ```{r, cache = FALSE}
-source("~/Projects/Other/Ranalysis/useful_dplyr.R")
+source("~/Projects/Ranalysis/useful_dplyr.R")
 library(tidyr)
 library(magrittr)
 library(lme4)
@@ -106,7 +106,7 @@ ggplot(adult.ms, aes(x=condition, y=mean)) +
   geom_hline(aes(yintercept=0),lty=2)+
   theme(legend.position="none", panel.grid=element_blank()) +
   scale_x_discrete(name = "Condition") +
-    scale_y_continuous(name = "Preference for Literal",
+    scale_y_continuous(name = "Preference for Literal Choice",
                      limits=c(-.25,.5))
 ```
 
@@ -153,7 +153,7 @@ ggplot(child.fam.ms, aes(x=condition, y=na.mean,fill=type)) +
   theme_bw(base_size=14) +
   theme(legend.position="none", panel.grid=element_blank()) +
   scale_x_discrete(name = "Condition")+
-  scale_y_continuous(name = "Proportion Literal - .5",
+  scale_y_continuous(name = "Preference for Literal Choice",
                      limits=c(-.5,.5))
 
 lm.child.fam <- glmer(Literal ~ condition + (1|subj_id) + (1|item),
@@ -188,6 +188,7 @@ child.ms <- child.nov.data %>%
 Plot
 ```{r,fig.height=5,fig.width=6}
 #Plot alone
+quartz(width=6,height=5)
 ggplot(child.ms, aes(x=condition, y=na.mean,fill=type)) +
   geom_bar(stat="identity",position=position_dodge(1))+
   geom_linerange(aes(ymin = na.mean-ci.low,
@@ -200,12 +201,13 @@ ggplot(child.ms, aes(x=condition, y=na.mean,fill=type)) +
   theme_bw(base_size=14) +
   theme(legend.position="none", panel.grid=element_blank()) +
   scale_x_discrete(name = "Condition")+
-  scale_y_continuous(name = "Proportion Literal Choices",
+  scale_y_continuous(name = "Preference for Literal Choice",
                      limits=c(-.5,.5))
 ```
 
 Plot all data together
 ```{r,fig.width=5,fig.height=5}
+
 all.ms <- child.ms %>%
   rename(mean = na.mean) %>%
   mutate(group = "Children") %>%
@@ -226,7 +228,7 @@ ggplot(all.ms, aes(x=condition, y=mean,fill=group)) +
   theme(legend.position=c(.2,.9), panel.grid=element_blank(),
         legend.title=element_blank()) +
   scale_x_discrete(name = "Condition")+
-  scale_y_continuous(name = "Preference for Literal Choices",
+  scale_y_continuous(name = "Preference for Literal Choice",
                      limits=c(-.25,.5))
 
 ```
